@@ -13,11 +13,19 @@
             width: 100%;
             height: 100vh;
         }
+        #note{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color:aliceblue;
+            top: 0;
+            left: 0;
+        }
     </style>
 </head>
 <body>
     <!--note-->
-    <div class="note">
+    <div id="note">
         <h1>この物語はフィクションです．</h1>
         <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
         <p>開発段階の画面です．</p>
@@ -26,6 +34,9 @@
     <script>
         function agreeBtn(){
             document.documentElement.requestFullscreen();
+            document.getElementById("note").style.display = 'none';
+            const audioElem = new Audio("/static/se/tap.mp3");
+            audioElem.play();
         }
     </script>
 </body>
