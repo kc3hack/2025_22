@@ -14,9 +14,9 @@ def Play():
 def PlayStart():
     return render_template("/play/00/start.html")
 
-@app.route("/play/note")
-def PlayNote():
-    return render_template("/play/00/note.html")
+##@app.route("/play/note")
+##def PlayNote():
+##    return render_template("/play/00/note.html")
 
 @app.route("/play/chapter00")
 def PlayChapter00():
@@ -70,12 +70,21 @@ def PlayChapter04A():
 def PlayChapter04Mystery():
     return render_template("index.html")
 
+@app.route("/play/chapter04/OCRSystem")
+def PlayChapter04OCRSystem():
+    return render_template("index.html")
 
+@app.route("/play/chapter04/B")
+def PlayChapter04B():
+    return render_template("index.html")
 
+@app.route("/play/chapter05")
+def PlayChapter05():
+    return render_template("index.html")
 
-
-
-
+@app.route("/play/chapterEnd")
+def PlayChapterEnd():
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
