@@ -101,7 +101,7 @@
         }
 
         function getScreenStatus(){
-            if(window.orientation==90){
+            if(window.orientation.angle==undefined&&(Math.abs(window.orientation)==90)){
                 return true;
             }else{
                 return false;
