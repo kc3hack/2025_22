@@ -19,9 +19,14 @@
     <!--note-->
     <div class="note">
         <h1>この物語はフィクションです．</h1>
-        <button id="agreeBtn" onclick="agreeBtn">同意する</button>
+        <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
         <p>開発段階の画面です．</p>
     </div>
-    <iframe class="gameScreen" src="/play/note" frameborder="0" scrolling="no"></iframe>
+    <iframe class="gameScreen" src="/play/start" frameborder="0" scrolling="no"></iframe>
+    <script>
+        function agreeBtn(){
+            document.documentElement.requestFullscreen();
+        }
+    </script>
 </body>
 </html>
