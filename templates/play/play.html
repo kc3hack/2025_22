@@ -4,109 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|Play</title>
+    <!--スタイルシート読み込み-->
+    <link rel="stylesheet" href="/static/css/play/play.css">
     <link rel="shortcut icon" href="/static/icon.png">
-    <style>
-        body{
-            overflow: hidden;
-            position: relative;
-        }
-        .gameScreen{
-            border: none;
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        #note{
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            background-color:aliceblue;
-            top: 0;
-            left: 0;
-        }
-        #note{
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            background-color:aliceblue;
-            top: 0;
-            left: 0;
-        }
-        #warning{
-            width: 100vw;
-            height: 100vh;
-            position: fixed;
-            background-color:aliceblue;
-            top: 0;
-            left: 0;
-            display: none;
-        }
-        iframe{
-            top: 0;
-            left: 0;
-        }
-    </style>
 </head>
 <body>
+    
+    <!--js-->
+    <script src="/static/js/play/play.js"></script>
+    
+    <!--gameScreen-->
     <iframe class="gameScreen" src="/play/start" frameborder="0" scrolling="no"></iframe>
+    
     <!--note-->
-    <div id="note">
+    <div id="note" class="screen">
         <h1>この物語はフィクションです．</h1>
         <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
         <p>開発段階の画面です．</p>
     </div>
+    
     <!--warning-->
-    <div id="warning">
+    <div id="warning" class="screen">
         <h1>画面設定が正しくありません．</h1>
-    </div>
-    <script>
-        const tapAudio = new Audio("/static/se/tap.mp3");
-        const bgmAudio = new Audio("static/bgm/ryohu.mp3");
-        function agreeBtn(){
-            document.documentElement.requestFullscreen();
-            document.getElementById("note").style.display = 'none';
-            tapAudio.play();
-            bgmAudio.play();
-            bgmAudio.loop = true;   
-            screenOrientationCheck();
-        }
+    </div>  
 
-        function showWarning(){
-            document.getElementById("warning").style.display = 'block';
-        }
-
-        function hideWarning(){
-            document.getElementById("warning").style.display = 'none';
-        }
-
-        window.addEventListener("orientationchange",screenOrientationCheck);
-        window.addEventListener("fullscreenchange",screenFullCheck);
-        
-        function screenOrientationCheck(){
-            if(getScreenStatus()){
-                hideWarning();
-            }else{
-                showWarning();
-            }
-        }
-
-        function screenFullCheck(){
-            if(window.fullScreen&&getScreenStatus()){
-               hideWarning(); 
-            }else{
-                showWarning();
-            }
-        }
-
-        function getScreenStatus(){
-            if(window.orientation.angle==undefined&&(Math.abs(window.orientation)==90)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-    </script>
 </body>
 </html>

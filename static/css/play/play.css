@@ -1,0 +1,38 @@
+/* body */
+body{
+    overflow: hidden;
+    position: relative;
+}
+
+/* ゲーム画面 */
+.gameScreen{
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 画面上に表示 */
+.screen{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* お知らせ */
+#note{ 
+    background-color:aliceblue;
+}
+
+/* 警告 */
+#warning{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color:aliceblue;
+    display: none;
+}
