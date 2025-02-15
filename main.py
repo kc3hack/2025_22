@@ -6,10 +6,78 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route("/form")
-def form():
-    return render_template("form.html")
-    
+@app.route("/play")
+def Play():
+    return render_template("index.html")
+
+@app.route("/play/start")
+def PlayStart():
+    return render_template("index.html")
+
+@app.route("/play/note")
+def PlayNote():
+    return render_template("index.html")
+
+@app.route("/play/chapter00")
+def PlayChapter00():
+    return render_template("index.html")
+
+@app.route("/play/chapter01/A")
+def PlayChapter01A():
+    return render_template("index.html")
+
+@app.route("/play/chapter01/B")
+def PlayChapter01B():
+    return render_template("index.html")
+
+@app.route("/play/chapter01/mystery")
+def PlayChapter01Mystery():
+    return render_template("index.html")
+
+@app.route("/play/chapter02/A")
+def PlayChapter02A():
+    return render_template("index.html")
+
+@app.route("/play/chapter02/B")
+def PlayChapter02B():
+    return render_template("index.html")
+
+@app.route("/play/chapter02/mystery")
+def PlayChapter02Mystery():
+    return render_template("index.html")
+
+@app.route("/play/chapter03/A")
+def PlayChapter03A():
+    return render_template("index.html")
+
+@app.route("/play/chapter03/B")
+def PlayChapter03B():
+    return render_template("index.html")
+
+@app.route("/play/chapter03/mystery")
+def PlayChapter03Mystery():
+    return render_template("index.html")
+
+@app.route("/play/chapter03/QRSystem")
+def PlayChapter03QRSystem():
+    return render_template("index.html")
+
+@app.route("/play/chapter04/A")
+def PlayChapter04A():
+    return render_template("index.html")
+
+@app.route("/play/chapter04/mystery")
+def PlayChapter04Mystery():
+    return render_template("index.html")
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run()
