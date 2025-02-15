@@ -1,6 +1,6 @@
 // Audio
 const tapAudio = new Audio("/static/se/tap.mp3");
-const bgmAudio = new Audio("static/bgm/ryohu.mp3");
+const bgmAudio = new Audio("static/bgm/suzukaze.mp3");
 
 // 同意ボタン
 function agreeBtn(){
