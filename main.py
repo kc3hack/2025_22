@@ -8,15 +8,15 @@ def index():
 
 @app.route("/play")
 def Play():
-    return render_template("index.html")
+    return render_template("/play/play.html")
 
 @app.route("/play/start")
 def PlayStart():
-    return render_template("index.html")
+    return render_template("/play/00/start.html")
 
 @app.route("/play/note")
 def PlayNote():
-    return render_template("index.html")
+    return render_template("/play/00/note.html")
 
 @app.route("/play/chapter00")
 def PlayChapter00():
