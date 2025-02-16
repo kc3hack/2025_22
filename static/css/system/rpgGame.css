@@ -1,0 +1,22 @@
+/* 背景画像 */
+.backImg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#speechBox{
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 0.5em;
+    font-size: 2vw;
+    width: 90vw;
+    height: 15vh;
+}
