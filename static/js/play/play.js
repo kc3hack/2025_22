@@ -8,8 +8,7 @@ function agreeBtn(){
     document.getElementById("note").style.display = 'none';
     tapAudio.play();
     bgmAudio.play();
-    bgmAudio.loop = true;   
-    screenOrientationCheck();
+    bgmAudio.loop = true;
 }
 
 // 警告を表示
@@ -24,7 +23,7 @@ function hideWarning(){
 
 // 画面変更時のイベント
 window.addEventListener("orientationchange",screenOrientationCheck);    // 画面の向きを変更
-window.addEventListener("fullscreenchange",screenFullCheck);    // 全画面表示に関する変更
+window.addEventListener("fullscreenchange",screenCheck);    // 全画面表示に関する変更
 
 // 画面の向きをチェック：警告表示
 function screenOrientationCheck(){
@@ -35,10 +34,19 @@ function screenOrientationCheck(){
     }
 }
 
-// 全画面かどうかチェック：警告表示
-function screenFullCheck(){
-    if(window.fullScreen&&getScreenStatus()){
-       hideWarning(); 
+// 全画面かどうかチェック(正常時:true)
+function getFullScreenStatus(){
+    if(!document.fullscreenElement){
+       return false;
+    }else if(document.exitFullscreen){
+       return true;
+    }
+}
+
+// 画面異常チェック
+function screenCheck(){
+    if(getFullScreenStatus()&&getScreenStatus()){
+        hideWarning();
     }else{
         showWarning();
     }
@@ -46,7 +54,8 @@ function screenFullCheck(){
 
 //  画面状態を取得（正常：true）
 function getScreenStatus(){
-    if(window.orientation.angle==undefined&&(Math.abs(window.orientation)==90)){
+    let orientation = screen.orientation.type;
+    if(orientation=="landscape-primary"||orientation=="portrait-secondary"){
         return true;
     }else{
         return false;
