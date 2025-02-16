@@ -53,3 +53,5 @@ function screenCheck(){
     }
 }
 
+// main
+window.onload = setTimeout(screenCheck,1000);  // 画面異常を確認
