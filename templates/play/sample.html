@@ -21,16 +21,23 @@
 
         // --関数--
 
+        // 吹き出し関連
+        
+        //指定文字数まで文字を加算
+        function Loop(text,i,outText){
+            if((i)<text.length){
+                outText+=text.charAt(i);
+                writeSpeech(outText);
+                i++;
+                setTimeout(() =>Loop(text,i,outText),45);
+            }
+        }
         // 引数の文字列を１文字づつ表示する
         function showSpeech(text){
-            
-            /* 仮引数がtextなので注意!! */
-
             /* 1文字づつtextに書き出すプログラム */
-
-            
-            writeSpeech("引数の文字列がセリフの吹き出しに表示されます．");  // 引数の文字列をセリフの吹き出しに表示
-
+            let i=0;
+            let outText="";
+            Loop(text,i,outText);
         }
 
         // --実装(main)--
