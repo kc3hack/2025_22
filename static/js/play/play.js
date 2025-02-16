@@ -1,11 +1,7 @@
-// Audio
-const tapAudio = new Audio("/static/se/tap.mp3");   // tapのSE
-
 // 同意ボタン
 function agreeBtn(){
     document.documentElement.requestFullscreen();   // 全画面表示
     document.getElementById("note").style.display = 'none'; // note画面を非表示
-    tapAudio.play();    // tapのSEを再生
     document.getElementById("gameScreen").contentWindow.playBGM();  // iframe内でBGMを再生
 }
 

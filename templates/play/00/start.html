@@ -7,11 +7,16 @@
     <link rel="stylesheet" href="/static/css/00/start.css">
 </head>
 <body>
+    
+    <!--js gameAudioLib-->
+    <script src="/static/js/lib/gameAudioLib.js"></script>
+
     <img class="backImg" src="/static/file/00/top.png">
     <div class="btnBoxLayout">
         <button class="startBtn btnProperty" onclick="exitBtn();">EXIT</button>
         <button class="exitBtn btnProperty" onclick="startBtn();">START</button>
         <script>
+            
             const bgmAudio = new Audio("/static/bgm/suzukaze.mp3");  // bgm:suzukaze
 
             function playBGM(){
@@ -20,11 +25,12 @@
             }
 
             function startBtn(){
-                window.location.replace("/play/chapter00");
+                chengePlayTapSe("/play/chapter00");
             }
 
             function exitBtn(){
-                window.location.replace("/");
+                playBGM();
+                chengePlayTapSe("/");
             }
         </script>
     </div>
