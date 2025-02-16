@@ -11,27 +11,15 @@
 .btnProperty{
     width: 20vw;
     letter-spacing: 2px;
-    font-size: 2.5em;
+    font-size: 2.0em;
 }
 
 /* スタートボタン */
 .startBtn{
     background-color: rgb(21, 96, 130);
     color: white;
-    margin-left: 1vw;
 }
 .startBtn:hover{
-    background-color: rgb(13, 76, 104);
-}
-
-/* 終了ボタン */
-.exitBtn{
-    background-color: rgb(21, 96, 130);
-    color: white;
-    margin-left: 1vw;
-    width: 20vw;
-}
-.exitBtn:hover{
     background-color: rgb(13, 76, 104);
 }
 
