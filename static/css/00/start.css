@@ -7,6 +7,7 @@
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
 }
+
 /* ボタンプロパティー */
 .btnProperty{
     width: 20vw;

@@ -5,30 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|sample</title>
     <style>
-
-        .speechBubbleImg{
-            position: absolute;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            bottom: 2%;
-            width: 95vw;
-            height: 30vh;
+        /* 背景画像 */
+        .backImg{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
+        #speechBox{
+            position: absolute;
+            left: 50%;
+            bottom: 3%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            padding: 0.5em;
+            font-size: 2vw;
+            width: 90vw;
+            height: 15vh;
+        }
     </style>
 </head>
 <body>
-
+    
     <!--js gameAudio-->
     <script src="/static/js/system/gameAudio.js"></script>
 
     <!--js-->
     <script src="/static/js/00/start.js"></script>
 
+    <img class="backImg" src="/static/sample.png">
+    <div id="speechBox"></div>
 
-    <img class="speechBubbleImg" src="/static/file/system/speechBubble.png">
-    <div>文字を入力</div>
+    <script>
+        // セリフのテキストを取得
+        const speechBoxElem = document.getElementById("speechBox");
+        
+        // セリフを表示
+        function showSpeech(text){
+            speechBoxElem.innerText = text;
+        }
+
+        showSpeech("大阪の静かな古本屋に足を踏み入れた葵は、店内の古びた本の並ぶ棚を眺めていた。");
+    </script>
     
 </body>
 </html>
