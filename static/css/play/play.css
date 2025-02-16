@@ -5,7 +5,7 @@ body{
 }
 
 /* ゲーム画面 */
-.gameScreen{
+#gameScreen{
     border: none;
     width: 100vw;
     height: 100vh;

@@ -1,14 +1,12 @@
 // Audio
 const tapAudio = new Audio("/static/se/tap.mp3");   // tapのSE
-const bgmAudio = new Audio("static/bgm/suzukaze.mp3");  // bgm:suzukaze
 
 // 同意ボタン
 function agreeBtn(){
     document.documentElement.requestFullscreen();   // 全画面表示
     document.getElementById("note").style.display = 'none'; // note画面を非表示
     tapAudio.play();    // tapのSEを再生
-    bgmAudio.play();    // bgm:suzukazeを再生
-    bgmAudio.loop = true;   // bgmをループ
+    document.getElementById("gameScreen").contentWindow.playBGM();  // iframe内でBGMを再生
 }
 
 // 警告を表示
@@ -54,4 +52,6 @@ function screenCheck(){
 }
 
 // main
+/*
 window.onload = setTimeout(screenCheck,1000);  // 画面異常を確認
+*/
