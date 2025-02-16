@@ -23,25 +23,18 @@
 
         // 吹き出し関連
         
-        //指定文字数まで文字を加算
-        function Loop(text,i,outText){
-            if((i)<text.length){
-                outText+=text.charAt(i);
-                writeSpeech(outText);
+        // --実装(main)--
+
+        const msg = ["葵はスライムに100ダメージの攻撃を与えた！！","翔太はスライムに100ダメージの攻撃を受けた！！"];
+        let i = 0;
+        function next(){
+            if(i<msg.length){
+                showSpeech(msg[i]);
                 i++;
-                setTimeout(() =>Loop(text,i,outText),45);
+            }else{
+                showSpeech("物語は終了しました．");
             }
         }
-        // 引数の文字列を１文字づつ表示する
-        function showSpeech(text){
-            /* 1文字づつtextに書き出すプログラム */
-            let i=0;
-            let outText="";
-            Loop(text,i,outText);
-        }
-
-        // --実装(main)--
-        showSpeech("葵はスライムに100ダメージの攻撃を与えた！！");
 
     </script>
     
