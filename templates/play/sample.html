@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGSystem|sample</title>
+    <style>
+        /* セリフエリア */
+        .speechBoxLayout{
+            bottom: 2%;    /* 下からの位置 */
+            position: absolute; /* 絶対配置 */
+            /* 左右中央揃え */
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+        }
+
+        /* ボタンプロパティー */
+        .btnProperty{
+            width: 20vw;
+            letter-spacing: 2px;
+            font-size: 2.0em;
+        }
+
+        .speechBubbleImg{
+            position: absolute;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            bottom: 0;
+            width: 95vw;
+            height: 30vh;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--js gameAudio-->
+    <script src="/static/js/system/gameAudio.js"></script>
+
+    <!--js-->
+    <script src="/static/js/00/start.js"></script>
+
+    <div class="speechBoxLayout">
+        <img class="speechBubbleImg" src="/static/file/system/speechBubble.png">
+    </div>
+    <div>セリフ</div>
+
+    
+
+</body>
+</html>

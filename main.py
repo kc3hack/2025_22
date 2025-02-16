@@ -86,6 +86,10 @@ def PlayChapter05():
 def PlayChapterEnd():
     return render_template("index.html")
 
+@app.route("/play/sample")
+def PlaySample():
+    return render_template("/play/sample.html")
+
 
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する

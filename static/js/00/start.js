@@ -7,5 +7,5 @@ function playBGM(){
 }
 
 function startBtn(){
-    chengePlayTapSe("/play/chapter00");
+    chengePlayTapSe("/play/sample");
 }
