@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|sample</title>
-    <link rel="stylesheet" href="/static/css/system/rpgGame.css">
+    <link rel="stylesheet" href="/static/system/rpgGame.css">
 </head>
 <body>
     
-    <!--js gameAudio-->
-    <script src="/static/js/system/gameAudio.js"></script>
-
     <!--js-->
     <script src="/static/js/00/start.js"></script>
 
@@ -18,10 +15,24 @@
     <div id="speechBox"></div>
 
     <!--js rpgGame-->
-    <script src="/static/js/system/rpgGame.js"></script>
+    <script src="/static/system/rpgGame.js"></script>
 
     <script>
-        showSpeech("大阪の静かな古本屋に足を踏み入れた葵は、店内の古びた本の並ぶ棚を眺めていた。");
+
+        // --関数--
+
+        // 引数の文字列を１文字づつ表示する
+        function showSpeech(text){
+            // 引数の文字列をセリフの吹き出しに表示
+
+            /* 1文字づつtextに書き出すプログラム */
+
+            writeSpeech("引数の文字列がセリフの吹き出しに表示されます．");
+        }
+
+        // --実装(main)--
+        showSpeech("葵はスライムに100ダメージの攻撃を与えた！！");
+
     </script>
     
 </body>
