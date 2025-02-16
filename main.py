@@ -90,6 +90,10 @@ def PlayChapterEnd():
 def PlaySample():
     return render_template("/play/sample.html")
 
+@app.route("/system/chat")
+def chatSystem():
+    return render_template("/system/chat.html")
+
 
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
