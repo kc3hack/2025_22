@@ -7,13 +7,13 @@ function agreeBtn(){
 }
 
 // 警告を表示
-function showWarning(){
-    document.getElementById("warning").style.display = 'block';
+function showWarning(id){
+    document.getElementById(id).style.display = 'block';
 }
 
 // 警告を非表示
-function hideWarning(){
-    document.getElementById("warning").style.display = 'none';
+function hideWarning(id){
+    document.getElementById(id).style.display = 'none';
 }
 
 // 画面変更時のイベント
@@ -41,10 +41,13 @@ function getScreenStatus(){
 
 // 画面異常チェック(異常時警告を表示)
 function screenCheck(){
-    if(getFullScreenStatus()&&getScreenStatus()){
-        hideWarning();
+    if(!getScreenStatus()){
+        showWarning("warningScreenOrientation");
+    }else if(!getFullScreenStatus()){
+        showWarning("warningScreenFull");
     }else{
-        showWarning();
+        hideWarning("warningScreenOrientation");
+        hideWarning("warningScreenFull");
     }
 }
 

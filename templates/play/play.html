@@ -27,8 +27,16 @@
     </div>
     
     <!--warning-->
-    <div id="warning" class="screen">
-        <h1>画面設定が正しくありません．</h1>
+
+    <!--画面の向き異常-->
+    <div id="warningScreenOrientation" class="screen warning">
+        <h1>画面の向きを横向きにしてください．</h1>
+    </div>
+    
+    <!--全画面表示異常-->
+    <div id="warningScreenFull" class="screen warning">
+        <h1>画面を全画面表示にしてください．</h1>
+        <button onclick="document.documentElement.requestFullscreen(); ">全画面表示</button>
     </div>
 
 </body>
