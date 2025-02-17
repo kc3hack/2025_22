@@ -13,3 +13,11 @@ function chengePlayTapSe(url){
         window.location.replace(url);
     },1500);
 }
+
+// bgmをプレイ
+function playBGM(music){
+    const BGM = new Audio(`/static/bgm/${music}`);
+    BGM.volume = 0.5;  // 音量設定（0~1)
+    BGM.play();    // 再生開始
+    BGM.loop = true;   // ループ
+}

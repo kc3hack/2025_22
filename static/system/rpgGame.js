@@ -304,6 +304,10 @@ let selectNum;
 // 正しい選択肢
 let okNum;
 
+// チョイス変数
+let choiceMes;  // 選択肢のメッセージ
+let choiceText = [];    // 選択肢
+
 // 正しい選択肢
 function setNextChoice(num){
     okNum = num;
@@ -326,4 +330,13 @@ function next02(){
 function next03(){
     selectNum = 3
     next();
+}
+
+// 選択肢をセット
+function setChoice(choiceNum,mes,choice01,choice02,choice03){
+    okNum = choiceNum;
+    choiceMes = mes;
+    choiceText[0] = choice01;
+    choiceText[1] = choice02;
+    choiceText[2] = choice03;
 }
