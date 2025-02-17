@@ -9,6 +9,7 @@
 
 /* セリフBOX */
 #speechBox{
+    font-weight: bold;
     position: absolute;
     left: 50%;
     bottom: 3%;
