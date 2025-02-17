@@ -25,7 +25,7 @@
 /* キャラクター関係*/
 .character{
     position: absolute;
-    bottom: 20vh;
+    bottom: 30vh;
     height: 60vh;
     width: 20vw;
 }
