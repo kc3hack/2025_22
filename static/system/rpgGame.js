@@ -184,7 +184,12 @@ const choice3Story = new storySet();    // 選択肢3ストーリー
 const mainStory2 = new storySet(); // メインストーリー2
 
 // ストーリーキー管理
-const storyKey = {"mainStory":mainStory1,"choice1Story":choice1Story,"choice2Story":choice2Story,"choice3Story":choice3Story,"mainStory2":mainStory2};
+const storyKey = {
+    "mainStory1":mainStory1,
+    "choice1Story":choice1Story,
+    "choice2Story":choice2Story,"choice3Story":choice3Story,
+    "mainStory2":mainStory2
+};
 
 // 会話クラス
 class dialog{
@@ -210,7 +215,12 @@ class dialog{
 
 // ストーリーを取得(.getCharacterId:.getWord)
 function getStory(storyId){
-    return storyKey[storyId].getStory();
+    if(storyKey[storyId]==undefined){
+        console.error("The storyId is incorrect.");
+        return null;
+    }else{
+        return storyKey[storyId].getStory();
+    }
 }
 
 // 分岐管理(使用できるか)
