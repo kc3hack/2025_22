@@ -178,6 +178,10 @@ class storySet{
     getRestStoryNumber(){
         return this.storyData.length-this.StoryNum;
     }
+    // リセットストーリーナンバー
+    resertStoryNum(){
+        this.StoryNum = 0;
+    }
 }
 
 // ストーリー管理
@@ -245,5 +249,15 @@ function getStoryNextStatus(storyId){
         return null;
     }else{
         return storyKey[storyId].getRestStoryNumber();
+    }
+}
+
+// ストーリーを最初からにリセット
+function resetStory(storyId){
+    if(storyKey[storyId]==undefined){
+        console.error("The storyId is incorrect.");
+        return null;
+    }else{
+        return storyKey[storyId].resertStoryNum();
     }
 }

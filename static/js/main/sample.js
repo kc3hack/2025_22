@@ -47,6 +47,9 @@ function chengeBtn(func){
 
 // 次へボタンに戻す
 function resetBtn(){
+    nextBtn.removeEventListener('click',next01);
+    nextBtn.removeEventListener('click',next02);
+    nextBtn.removeEventListener('click',next03);
     nextBtn.addEventListener('click',nextBtnClick);
 }
 
@@ -59,6 +62,9 @@ function next01(){
         if(getStoryNextStatus("choice1Story")==0){
             resetBtn();
         }
+    }else{
+        showSpeech("すでに選択されました．");
+        showBtn();
     }
 }
 
@@ -71,6 +77,9 @@ function next02(){
         if(getStoryNextStatus("choice2Story")==0){
             resetBtn();
         }
+    }else{
+        showSpeech("すでに選択されました．");
+        showBtn();
     }
 }
 
@@ -83,6 +92,9 @@ function next03(){
         if(getStoryNextStatus("choice3Story")==0){
             resetBtn();
         }
+    }else{
+        showSpeech("すでに選択されました．");
+        showBtn();
     }
 }
 
