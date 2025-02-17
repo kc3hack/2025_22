@@ -1,5 +1,6 @@
 // ボタンがクリックされたとき
 function nextBtnClick(){
+    playTapSE();
     if(getStoryStatus("mainStory1")){
         // ストーリー1
         const nowStoryMain = getStory("mainStory1");
@@ -20,6 +21,7 @@ function nextBtnClick(){
 
 // 分岐時に実行される
 function next(){
+    playTapSE();
     if(getStoryStatus(`choice${selectNum}Story`)){
         const nowStoryChoice1 = getStory(`choice${selectNum}Story`);
         talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
