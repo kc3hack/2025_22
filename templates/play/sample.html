@@ -10,6 +10,7 @@
             position: absolute;
             right: 2%;
             bottom: 5%;
+            display: none;
         }
         #nextBtn:hover{
             background-color: rgba(255, 255, 255, 0.498);
@@ -48,6 +49,19 @@
     <!--フォーカス-->
     <script>
 
+        // 次へボタン
+        const nextBtn = document.getElementById("nextBtn");
+
+        function showBtn(){
+            nextBtn.style.display = 'block';
+        }
+
+        function hideBtn(){
+            nextBtn.style.display = 'none';
+        }
+
+        nextBtn.addEventListener("click",nextBtnClick);
+
         // --関数--
 
         // 吹き出し関連
@@ -56,14 +70,17 @@
 
         const msg = [["aoi","shota"],["どこに行くのですか？","大学に行ってくる！！"]];
         let i = 0;
-        function next(){
+        function nextBtnClick(){
             if(i<msg.length){
                 talkChacac(msg[0][i],msg[1][i]);
+                showBtn();
                 i++;
             }else{
                 showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
             }
         }
+
+        nextBtnClick();
 
     </script>
     
