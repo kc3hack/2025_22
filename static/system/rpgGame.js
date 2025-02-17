@@ -53,8 +53,19 @@ function resetCharacter(){
     aoi.src = getCharacterFocusOutImg("aoi");
 }
 
+hideAllCharacter(); // 初回起動時何も表示しない
+
+//  すべてのキャラクターを非表示
+function hideAllCharacter(){
+    shota.style.display = 'none';
+    rojin.style.display = 'none';
+    uranaishi.style.display = 'none';
+    aoi.style.display = 'none';
+}
+
 // idのキャラクターをフォーカス
 function focusOn(id){
+    showCharacter(id);
     resetCharacter();
     const character = document.getElementById(id);
     character.src = getCharacterFocusImg(id);
