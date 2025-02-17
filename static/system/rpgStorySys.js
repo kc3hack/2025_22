@@ -4,7 +4,6 @@ function nextBtnClick(){
         // ストーリー1
         const nowStoryMain = getStory("mainStory1");
         talkCharacter(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
-        showBtn();
     }else if(getChoiceStatus()){
         // 選択肢
         // 正しい選択肢
@@ -14,7 +13,6 @@ function nextBtnClick(){
         // ストーリー2
         const nowStoryMain2 = getStory("mainStory2");
         talkCharacter(nowStoryMain2.getCharacterId(),nowStoryMain2.getWord());
-        showBtn();
     }else{
         nextPage();
     }
@@ -26,7 +24,6 @@ function next(){
         const nowStoryChoice1 = getStory(`choice${selectNum}Story`);
         talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next);
-        showBtn();
         if(getStoryNextStatus(`choice${selectNum}Story`)==0){
             resetBtn();
             if(okNum==selectNum){

@@ -16,10 +16,13 @@ function Loop(text,i,outText){
         writeSpeech(outText);
         i++;
         setTimeout(() =>Loop(text,i,outText),45);
+    }else{
+        showBtn();
     }
 }
 // 引数の文字列を１文字づつ表示する
 function showSpeech(text){
+    hideBtn();
     /* 1文字づつtextに書き出すプログラム */
     const audioElem = new Audio("/static/se/moji.mp3");
     audioElem.play();
