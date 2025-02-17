@@ -1,5 +1,5 @@
 /* 背景画像 */
-.backImg{
+#backImg{
     width: 100vw;
     height: 100vh;
     position: fixed;

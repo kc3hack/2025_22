@@ -275,3 +275,11 @@ function getStoryStatus(storyId){
         return storyKey[storyId].getStoryStatus();
     }
 }
+
+
+/* 背景関連 */
+const backImg = document.getElementById("backImg");
+// 背景を変更
+function chengeBackImg(text){
+    backImg.src = `/static/file/backImg/${text}.jpg`;
+}
