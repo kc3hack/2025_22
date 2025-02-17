@@ -88,7 +88,7 @@ def PlayChapterEnd():
 
 @app.route("/play/sample")
 def PlaySample():
-    return render_template("/play/sample.html")
+    return render_template("/system/rpgLayout.html",jsOriginal = "sample")
 
 @app.route("/system/chat")
 def chatSystem():
