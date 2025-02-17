@@ -212,3 +212,14 @@ class dialog{
 function getStory(storyId){
     return storyKey[storyId].getStory();
 }
+
+// 分岐管理(使用できるか)
+let choiceStatus = true;
+// 選択肢の使用状況
+function getChoiceStatus(){
+    return choiceStatus;
+}
+// 選択肢を使用
+function useChoise(){
+    choiceStatus = false;
+}

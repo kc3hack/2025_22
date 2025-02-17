@@ -17,8 +17,10 @@ function nextBtnClick(){
     if(nowStory!=null){
         talkChacac(nowStory.getCharacterId(),nowStory.getWord());
         showBtn();
-    }else{
+    }else if(getChoiceStatus()){
+        console.log(getChoiceStatus());
         showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
+        useChoise();
     }
 }
 
