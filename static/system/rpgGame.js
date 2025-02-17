@@ -29,3 +29,46 @@ function talkChacac(character,text){
     showSpeech(`${character}「${text}」`);
 }
 
+// 要素を取得
+const shota = document.getElementById("shota");
+const rojin = document.getElementById("rojin");
+const uranaishi = document.getElementById("uranaishi");
+const aoi = document.getElementById("aoi");
+
+// フォーカス時のキャラクターの画像
+function getCharacterFocusImg(imageCode){
+    return `/static/file/character/focus/${imageCode}.png`;
+}
+
+// フォーカスアウト時のキャラクターの画像
+function getCharacterFocusOutImg(imageCode){
+    return `/static/file/character/focusOut/${imageCode}.png`;
+}
+
+//  すべてのキャラクターをフォーカスアウト
+function resetCharacter(){
+    shota.src = getCharacterFocusOutImg("shota");
+    rojin.src = getCharacterFocusOutImg("rojin");
+    uranaishi.src = getCharacterFocusOutImg("uranaishi");
+    aoi.src = getCharacterFocusOutImg("aoi");
+}
+
+// idのキャラクターをフォーカス
+function focusOn(id){
+    resetCharacter();
+    const character = document.getElementById(id);
+    character.src = getCharacterFocusImg(id);
+}
+
+// idのキャラクターを非表示にする
+function hideCharacter(id){
+    const character = document.getElementById(id);
+    character.style.display = 'none';
+}
+
+// idのキャラクターを表示する
+function showCharacter(id){
+    const character = document.getElementById(id);
+    character.style.display = 'block';
+    resetCharacter();
+}
