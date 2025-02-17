@@ -39,12 +39,12 @@ function next03(){
     showBtn();
 }
 
-nextBtnClick();
-
+// 初回の文字を表示
+window.onload = setTimeout(nextBtnClick,1000);
 
 /* 次へボタンのイベント */
 nextBtn.addEventListener("click",nextBtnClick);
-/* 選択肢 */
+/* 選択肢のイベント */
 choice1.addEventListener("click",next01);
 choice2.addEventListener("click",next02);
 choice3.addEventListener("click",next03);
