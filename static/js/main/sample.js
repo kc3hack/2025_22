@@ -50,56 +50,45 @@ function chengeBtn(func){
 
 // 次へボタンに戻す
 function resetBtn(){
-    nextBtn.removeEventListener('click',next01);
-    nextBtn.removeEventListener('click',next02);
-    nextBtn.removeEventListener('click',next03);
+    nextBtn.removeEventListener('click',next);
     nextBtn.addEventListener('click',nextBtnClick);
 }
 
-function next01(){
-    if(getStoryStatus("choice1Story")){
-        const nowStoryChoice1 = getStory("choice1Story");
+let selectNum;
+
+let okNum = 1;
+
+function next(){
+    if(getStoryStatus(`choice${selectNum}Story`)){
+        const nowStoryChoice1 = getStory(`choice${selectNum}Story`);
         talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
-        chengeBtn(next01);
+        chengeBtn(next);
         showBtn();
-        if(getStoryNextStatus("choice1Story")==0){
+        if(getStoryNextStatus(`choice${selectNum}Story`)==0){
             resetBtn();
-            cancelChoise(); // ループから抜ける
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
         }
     }else{
         showSpeech("すでに選択されました．");
         showBtn();
     }
+}
+
+function next01(){
+    selectNum = 1;
+    next();
 }
 
 function next02(){
-    if(getStoryStatus("choice2Story")){
-        const nowStoryChoice1 = getStory("choice2Story");
-        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
-        chengeBtn(next02);
-        showBtn();
-        if(getStoryNextStatus("choice2Story")==0){
-            resetBtn();
-        }
-    }else{
-        showSpeech("すでに選択されました．");
-        showBtn();
-    }
+    selectNum = 2;
+    next();
 }
 
 function next03(){
-    if(getStoryStatus("choice3Story")){
-        const nowStoryChoice1 = getStory("choice3Story");
-        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
-        chengeBtn(next03);
-        showBtn();
-        if(getStoryNextStatus("choice3Story")==0){
-            resetBtn();
-        }
-    }else{
-        showSpeech("すでに選択されました．");
-        showBtn();
-    }
+    selectNum = 3
+    next();
 }
 
 
