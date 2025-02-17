@@ -38,7 +38,6 @@ function nextBtnClick(){
         showBtn();
     }else if(getChoiceStatus()){
         showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
-        useChoise();
     }
 
 }
@@ -60,18 +59,12 @@ function next01(){
         talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next01);
         showBtn();
-    }else{
-        resetBtn();
+        if(getStoryNextStatus("choice1Story")==0){
+            resetBtn();
+        }
     }
 }
 
-function next02(){
-    showBtn();
-}
-
-function next03(){
-    showBtn();
-}
 
 // 初回の文字を表示
 window.onload = setTimeout(nextBtnClick,500);

@@ -174,6 +174,10 @@ class storySet{
     setStories(story){
         this.storyData.push(story);
     }
+    // 残りのストーリーナンバーを取得
+    getRestStoryNumber(){
+        return this.storyData.length-this.StoryNum;
+    }
 }
 
 // ストーリー管理
@@ -229,7 +233,17 @@ let choiceStatus = true;
 function getChoiceStatus(){
     return choiceStatus;
 }
-// 選択肢を使用
-function useChoise(){
+// 選択肢のループを解除
+function cancelChoise(){
     choiceStatus = false;
+}
+
+// ストーリーの次の状態を取得
+function getStoryNextStatus(storyId){
+    if(storyKey[storyId]==undefined){
+        console.error("The storyId is incorrect.");
+        return null;
+    }else{
+        return storyKey[storyId].getRestStoryNumber();
+    }
 }
