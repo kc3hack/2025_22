@@ -17,9 +17,15 @@ function Loop(text,i,outText){
     }
 }
 // 引数の文字列を１文字づつ表示する
-async function showSpeech(text){
+function showSpeech(text){
     /* 1文字づつtextに書き出すプログラム */
     let i=0;
     let outText="";
     Loop(text,i,outText);
 }
+
+// キャラクターを指定して文字表示
+function talkChacac(character,text){
+    showSpeech(`${character}「${text}」`);
+}
+
