@@ -283,3 +283,47 @@ const backImg = document.getElementById("backImg");
 function chengeBackImg(text){
     backImg.src = `/static/file/backImg/${text}.jpg`;
 }
+
+
+/* 選択システム関係 */
+
+// ボタンを選択肢用に変更
+function chengeBtn(func){
+    nextBtn.removeEventListener('click',nextBtnClick);
+    nextBtn.addEventListener('click',func);
+}
+
+// 次へボタンに戻す
+function resetBtn(){
+    nextBtn.removeEventListener('click',next);
+    nextBtn.addEventListener('click',nextBtnClick);
+}
+
+// 選ばれている番号を記録
+let selectNum;
+// 正しい選択肢
+let okNum;
+
+// 正しい選択肢
+function setNextChoice(num){
+    okNum = num;
+}
+
+
+// 選択肢1が選択された
+function next01(){
+    selectNum = 1;
+    next();
+}
+
+// 選択肢2が選択された
+function next02(){
+    selectNum = 2;
+    next();
+}
+
+// 選択肢3が選択された
+function next03(){
+    selectNum = 3
+    next();
+}
