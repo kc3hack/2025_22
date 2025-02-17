@@ -109,13 +109,13 @@ function showChoice(mes,text01,text02,text03){
     message.innerText = mes;
     message.style.display = 'block';
     setTimeout(()=>{
-        choice1.innerText = text01;
+        choice1.innerText = `▶ ${text01}`;
         choice1.style.display = 'block';
         setTimeout(()=>{
-            choice2.innerText = text02;
+            choice2.innerText = `▶ ${text02}`;
             choice2.style.display = 'block';
             setTimeout(()=>{
-                choice3.innerText = text03;
+                choice3.innerText = `▶ ${text03}`;
                 choice3.style.display = 'block';
             },500);
         },500);
