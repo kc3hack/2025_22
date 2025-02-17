@@ -182,6 +182,10 @@ class storySet{
     resertStoryNum(){
         this.StoryNum = 0;
     }
+    // ストーリー状況
+    getStoryStatus(){
+        return this.StoryNum<this.storyData.length ? true:false;
+    }
 }
 
 // ストーリー管理
@@ -259,5 +263,15 @@ function resetStory(storyId){
         return null;
     }else{
         return storyKey[storyId].resertStoryNum();
+    }
+}
+
+// ストーリーを状態を取得
+function getStoryStatus(storyId){
+    if(storyKey[storyId]==undefined){
+        console.error("The storyId is incorrect.");
+        return null;
+    }else{
+        return storyKey[storyId].getStoryStatus();
     }
 }

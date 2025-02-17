@@ -28,13 +28,16 @@ new dialog("shota","ただいま！！","mainStory2");
 // ボタンがクリックされたとき
 function nextBtnClick(){
 
-    const nowStoryMain = getStory("mainStory1");
-
-    if(nowStoryMain!=null){
+    if(getStoryStatus("mainStory1")){
+        const nowStoryMain = getStory("mainStory1");
         talkChacac(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
         showBtn();
     }else if(getChoiceStatus()){
         showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
+    }else if(getStoryStatus("mainStory2")){
+        const nowStoryMain2 = getStory("mainStory2");
+        talkChacac(nowStoryMain2.getCharacterId(),nowStoryMain2.getWord());
+        showBtn();
     }
 
 }
@@ -54,13 +57,14 @@ function resetBtn(){
 }
 
 function next01(){
-    const nowStoryChoice1 = getStory("choice1Story");
-    if(nowStoryChoice1!=null){
+    if(getStoryStatus("choice1Story")){
+        const nowStoryChoice1 = getStory("choice1Story");
         talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next01);
         showBtn();
         if(getStoryNextStatus("choice1Story")==0){
             resetBtn();
+            cancelChoise(); // ループから抜ける
         }
     }else{
         showSpeech("すでに選択されました．");
@@ -69,9 +73,9 @@ function next01(){
 }
 
 function next02(){
-    const nowStoryChoice2 = getStory("choice2Story");
-    if(nowStoryChoice2!=null){
-        talkChacac(nowStoryChoice2.getCharacterId(),nowStoryChoice2.getWord());
+    if(getStoryStatus("choice2Story")){
+        const nowStoryChoice1 = getStory("choice2Story");
+        talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next02);
         showBtn();
         if(getStoryNextStatus("choice2Story")==0){
@@ -84,9 +88,9 @@ function next02(){
 }
 
 function next03(){
-    const nowStoryChoice3 = getStory("choice3Story");
-    if(nowStoryChoice3!=null){
-        talkChacac(nowStoryChoice3.getCharacterId(),nowStoryChoice3.getWord());
+    if(getStoryStatus("choice3Story")){
+        const nowStoryChoice1 = getStory("choice3Story");
+        talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next03);
         showBtn();
         if(getStoryNextStatus("choice3Story")==0){
