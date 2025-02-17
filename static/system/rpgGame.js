@@ -21,6 +21,8 @@ function Loop(text,i,outText){
 // 引数の文字列を１文字づつ表示する
 function showSpeech(text){
     /* 1文字づつtextに書き出すプログラム */
+    const audioElem = new Audio("/static/se/moji.mp3");
+    audioElem.play();
     let i=0;
     let outText="";
     Loop(text,i,outText);
