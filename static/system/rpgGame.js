@@ -29,6 +29,8 @@ function talkChacac(character,text){
     showSpeech(`${character}「${text}」`);
 }
 
+/* キャラクター操作関係 */
+
 // 要素を取得
 const shota = document.getElementById("shota");
 const rojin = document.getElementById("rojin");
