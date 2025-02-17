@@ -30,13 +30,13 @@ function nextBtnClick(){
 
     if(getStoryStatus("mainStory1")){
         const nowStoryMain = getStory("mainStory1");
-        talkChacac(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
+        talkCharacter(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
         showBtn();
     }else if(getChoiceStatus()){
         showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
     }else if(getStoryStatus("mainStory2")){
         const nowStoryMain2 = getStory("mainStory2");
-        talkChacac(nowStoryMain2.getCharacterId(),nowStoryMain2.getWord());
+        talkCharacter(nowStoryMain2.getCharacterId(),nowStoryMain2.getWord());
         showBtn();
     }
 
@@ -59,7 +59,7 @@ function resetBtn(){
 function next01(){
     if(getStoryStatus("choice1Story")){
         const nowStoryChoice1 = getStory("choice1Story");
-        talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
+        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next01);
         showBtn();
         if(getStoryNextStatus("choice1Story")==0){
@@ -75,7 +75,7 @@ function next01(){
 function next02(){
     if(getStoryStatus("choice2Story")){
         const nowStoryChoice1 = getStory("choice2Story");
-        talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
+        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next02);
         showBtn();
         if(getStoryNextStatus("choice2Story")==0){
@@ -90,7 +90,7 @@ function next02(){
 function next03(){
     if(getStoryStatus("choice3Story")){
         const nowStoryChoice1 = getStory("choice3Story");
-        talkChacac(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
+        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
         chengeBtn(next03);
         showBtn();
         if(getStoryNextStatus("choice3Story")==0){

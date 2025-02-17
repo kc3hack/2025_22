@@ -31,7 +31,7 @@ function showSpeech(text){
 const characterSet = {"shota":"翔太","rojin":"謎の老人","uranaishi":"占い師","aoi":"葵"};
 
 // キャラクターを指定して文字表示
-function talkChacac(id,text){
+function talkCharacter(id,text){
     showSpeech(`${characterSet[id]}「${text}」`);
     focusOn(id);
 }
