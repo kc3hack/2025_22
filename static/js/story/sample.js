@@ -2,8 +2,10 @@
 playBGM("yoake.m4a");
 
 // メインストーリー1
+new dialog("narration","翔太と葵のとある１日．．．","mainStory1");
 new dialog("aoi","どこに行くのですか？","mainStory1");
 new dialog("shota","大学に行ってくる!","mainStory1");
+new dialog("narration","なぜだか，謎の老人と占い師もやってきました．","mainStory1");
 new dialog("rojin","それはおいしいのかね？","mainStory1");
 new dialog("uranaishi","何を言ってるんじゃ？","mainStory1");
 

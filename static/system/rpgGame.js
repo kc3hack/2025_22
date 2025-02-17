@@ -31,12 +31,17 @@ function showSpeech(text){
     Loop(text,i,outText);
 }
 
-const characterSet = {"shota":"翔太","rojin":"謎の老人","uranaishi":"占い師","aoi":"葵"};
+const characterSet = {"shota":"翔太","rojin":"謎の老人","uranaishi":"占い師","aoi":"葵","narration":false};
 
 // キャラクターを指定して文字表示
 function talkCharacter(id,text){
-    showSpeech(`${characterSet[id]}「${text}」`);
-    focusOn(id);
+    if(characterSet[id]!=false){
+        showSpeech(`${characterSet[id]}「${text}」`);
+        focusOn(id);
+    }else{
+        resetCharacter();
+        showSpeech(text);
+    }
 }
 
 /* キャラクター操作関係 */
