@@ -1,10 +1,17 @@
 // main(jsOriginal)
+
+
+
+
+
+
+// BGMを用意
 const yoakeBGM = new Audio("/static/bgm/yoake.m4a");
-yoakeBGM.volume = 0.5;
-yoakeBGM.play();
-yoakeBGM.loop = true;
+yoakeBGM.volume = 0.5;  // 音量設定（0~1)
+yoakeBGM.play();    // 再生開始
+yoakeBGM.loop = true;   // ループ
 
-
+// 会話内容
 const msg = [["aoi","shota"],["どこに行くのですか？","大学に行ってくる！！"]];
 let i = 0;
 function nextBtnClick(){
