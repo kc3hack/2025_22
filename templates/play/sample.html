@@ -62,6 +62,21 @@
             }
         }
 
+        function next01(){
+            talkChacac("aoi","プログラミング頑張のですよ！！");
+            showBtn();
+        }
+
+        function next02(){
+            talkChacac("aoi","翔太さん、まだJava演習終わってなかったんですね！！");
+            showBtn();
+        }
+
+        function next03(){
+            talkChacac("aoi","翔太さん、まだC演習やってるんですか！！");
+            showBtn();
+        }
+
         nextBtnClick();
 
     </script>
@@ -70,6 +85,10 @@
     <script>
         /* 次へボタンのイベント */
         nextBtn.addEventListener("click",nextBtnClick);
+        /* 選択肢 */
+        choice1.addEventListener("click",next01);
+        choice2.addEventListener("click",next02);
+        choice3.addEventListener("click",next03);
     </script>
     
 </body>
