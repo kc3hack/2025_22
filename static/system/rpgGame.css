@@ -46,3 +46,9 @@
     position: absolute;
     right: 5%;
 }
+
+/* 選択肢関連 */
+/* 選択肢を選んだ時にホバー */
+.choiceBtn:hover{
+    background-color: rgba(255, 255, 255, 0.498);
+}

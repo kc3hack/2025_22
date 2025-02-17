@@ -88,3 +88,42 @@ function showCharacter(id){
     character.style.display = 'block';
     resetCharacter();
 }
+
+
+// 選択肢の要素を取得
+const message = document.getElementById("message");
+const choice1 = document.getElementById("choice1");
+const choice2 = document.getElementById("choice2");
+const choice3 = document.getElementById("choice3");
+
+// 選択肢がクリックされたときに音を鳴らす
+choice1.addEventListener("click",playTapSE);
+choice2.addEventListener("click",playTapSE);
+choice3.addEventListener("click",playTapSE);
+
+// 選択肢を表示する
+function showChoice(mes,text01,text02,text03){
+    hideChoise();
+    message.innerText = mes;
+    message.style.display = 'block';
+    setTimeout(()=>{
+        choice1.innerText = text01;
+        choice1.style.display = 'block';
+        setTimeout(()=>{
+            choice2.innerText = text02;
+            choice2.style.display = 'block';
+            setTimeout(()=>{
+                choice3.innerText = text03;
+                choice3.style.display = 'block';
+            },500);
+        },500);
+    },500); 
+}
+
+// 選択肢を非表示にする
+function hideChoise(){
+    message.style.display = 'none';
+    choice1.style.display = 'none';
+    choice2.style.display = 'none';
+    choice3.style.display = 'none';
+}
