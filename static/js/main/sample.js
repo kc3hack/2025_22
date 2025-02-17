@@ -56,7 +56,12 @@ function resetBtn(){
 
 let selectNum;
 
-let okNum = 1;
+let okNum;
+
+// 正しい選択肢
+function setNextChoice(num){
+    okNum = num;
+}
 
 function next(){
     if(getStoryStatus(`choice${selectNum}Story`)){
