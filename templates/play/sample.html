@@ -6,15 +6,7 @@
     <title>RPGSystem|sample</title>
     <link rel="stylesheet" href="/static/system/rpgGame.css">
     <style>
-        #nextBtn{
-            position: absolute;
-            right: 2%;
-            bottom: 5%;
-            display: none;
-        }
-        #nextBtn:hover{
-            background-color: rgba(255, 255, 255, 0.498);
-        }
+
     </style>
 </head>
 <body>
@@ -46,21 +38,10 @@
     <!--js rpgGame-->
     <script src="/static/system/rpgGame.js"></script>
 
+    
+
     <!--フォーカス-->
     <script>
-
-        // 次へボタン
-        const nextBtn = document.getElementById("nextBtn");
-
-        function showBtn(){
-            nextBtn.style.display = 'block';
-        }
-
-        function hideBtn(){
-            nextBtn.style.display = 'none';
-        }
-
-        nextBtn.addEventListener("click",nextBtnClick);
 
         // --関数--
 
@@ -82,6 +63,12 @@
 
         nextBtnClick();
 
+    </script>
+
+    <!--イベント登録-->
+    <script>
+        /* 次へボタンのイベント */
+        nextBtn.addEventListener("click",nextBtnClick);
     </script>
     
 </body>

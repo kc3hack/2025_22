@@ -107,6 +107,7 @@ choice3.addEventListener("click",playTapSE);
 
 // 選択肢を表示する
 function showChoice(mes,text01,text02,text03){
+    hideBtn();
     hideChoise();
     message.innerText = mes;
     message.style.display = 'block';
@@ -131,3 +132,20 @@ function hideChoise(){
     choice2.style.display = 'none';
     choice3.style.display = 'none';
 }
+
+
+// 次へボタン
+const nextBtn = document.getElementById("nextBtn");
+
+// 次へボタンを表示
+function showBtn(){
+    nextBtn.style.display = 'block';
+}
+
+//次へボタンを非表示
+function hideBtn(){
+    nextBtn.style.display = 'none';
+}
+
+/* 次へボタンのイベント */
+//nextBtn.addEventListener("click",nextBtnClick);
