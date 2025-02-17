@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|sample</title>
     <link rel="stylesheet" href="/static/system/rpgGame.css">
+    <style>
+        .choiceBtn:hover{
+            background-color: rgba(255, 255, 255, 0.498);
+        }
+    </style>
 </head>
 <body>
     
@@ -22,9 +27,9 @@
 
     <!--吹き出し-->
     <div id="speechBox">
-        <div>▶選択肢１</div>
-        <div>▶選択肢２</div>
-        <div>▶選択肢３</div>
+        <div id="choice1" class="choiceBtn">▶選択肢１</div>
+        <div id="choice2" class="choiceBtn">▶選択肢２</div>
+        <div id="choice3" class="choiceBtn">▶選択肢３</div>
     </div>
 
     <!--js rpgGame-->
