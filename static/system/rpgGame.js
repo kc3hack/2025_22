@@ -149,3 +149,66 @@ function hideBtn(){
 
 /* 次へボタンのイベント */
 //nextBtn.addEventListener("click",nextBtnClick);
+
+
+
+
+
+// ストーリーデータクラス
+class storySet{
+    constructor(){
+        this.storyData = [];
+        this.StoryNum = 0;
+    }
+    // 現在のストーリーを取得
+    getStory(){
+        if(this.StoryNum<this.storyData.length){
+            const newStory = this.storyData[this.StoryNum];
+            this.StoryNum++;
+            return newStory;
+        }else{
+            return null;
+        }
+    }
+    // ストーリーを設定
+    setStories(story){
+        this.storyData.push(story);
+    }
+}
+
+// ストーリー管理
+const mainStory1 = new storySet(); // メインストーリー 1
+const choice1Story = new storySet();    // 選択肢1ストーリー
+const choice2Story = new storySet();    // 選択肢2ストーリー
+const choice3Story = new storySet();    // 選択肢3ストーリー
+const mainStory2 = new storySet(); // メインストーリー2
+
+// ストーリーキー管理
+const storyKey = {"mainStory":mainStory1,"choice1Story":choice1Story,"choice2Story":choice2Story,"choice3Story":choice3Story,"mainStory2":mainStory2};
+
+// 会話クラス
+class dialog{
+    // コンストラクタ（キャラクターid,文章,保存場所）
+    constructor(characterId,word,storyId){
+        this.characterId = characterId;
+        this.word = word;
+        if(storyKey[storyId]==undefined){
+            return null;
+        }else{
+            storyKey[storyId].setStories(this);
+        }
+    }
+    // キャラクターId取得
+    getCharacterId(){
+        return this.characterId;
+    }
+    // 文章取得
+    getWord(){
+        return this.word;
+    }
+}
+
+// ストーリーを取得(.getCharacterId:.getWord)
+function getStory(storyId){
+    return storyKey[storyId].getStory();
+}
