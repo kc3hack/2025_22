@@ -22,17 +22,14 @@ new dialog("shota","はい．．．Java演習終わってないです．","choic
 new dialog("aoi","まだC演習終わってなかったんですか？","choice3Story");
 new dialog("shota","はい．．．C演習終わってないです．","choice3Story");
 // メインストーリー2
-new dialog("aoi","おかえりなさい","choice3Story","mainStory2");
+new dialog("aoi","おかえりなさい","mainStory2");
 new dialog("shota","ただいま！！","mainStory2");
 
 // ボタンがクリックされたとき
 function nextBtnClick(){
 
     const nowStoryMain = getStory("mainStory1");
-    const nowStoryChoice2 = getStory("choice2Story");
-    const nowStoryChoice3 = getStory("choice3Story");
-    const nowStoryChoice4 = getStory("mainStory2");
-    
+
     if(nowStoryMain!=null){
         talkChacac(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
         showBtn();
@@ -60,6 +57,30 @@ function next01(){
         chengeBtn(next01);
         showBtn();
         if(getStoryNextStatus("choice1Story")==0){
+            resetBtn();
+        }
+    }
+}
+
+function next02(){
+    const nowStoryChoice2 = getStory("choice2Story");
+    if(nowStoryChoice2!=null){
+        talkChacac(nowStoryChoice2.getCharacterId(),nowStoryChoice2.getWord());
+        chengeBtn(next02);
+        showBtn();
+        if(getStoryNextStatus("choice2Story")==0){
+            resetBtn();
+        }
+    }
+}
+
+function next03(){
+    const nowStoryChoice3 = getStory("choice3Story");
+    if(nowStoryChoice3!=null){
+        talkChacac(nowStoryChoice3.getCharacterId(),nowStoryChoice3.getWord());
+        chengeBtn(next03);
+        showBtn();
+        if(getStoryNextStatus("choice3Story")==0){
             resetBtn();
         }
     }
