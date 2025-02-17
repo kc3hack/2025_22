@@ -39,14 +39,6 @@
 
     <!--フォーカス-->
     <script>
-        //resetCharacter();
-    </script>
-
-    <script>
-
-
-
-
 
         // --関数--
 
@@ -54,14 +46,14 @@
         
         // --実装(main)--
 
-        const msg = ["葵はスライムに100ダメージの攻撃を与えた！！","翔太はスライムに100ダメージの攻撃を受けた！！"];
+        const msg = [["aoi","shota"],["どこに行くのですか？","大学に行ってくる！！"]];
         let i = 0;
         function next(){
             if(i<msg.length){
-                showSpeech(msg[i]);
+                talkChacac(msg[0][i],msg[1][i]);
                 i++;
             }else{
-                showSpeech("物語は終了しました．");
+                showChoice("あなたの行動を選んでください．","プログラミングする","Java演習する","C演習する");
             }
         }
 
