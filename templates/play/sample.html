@@ -27,9 +27,10 @@
 
     <!--吹き出し-->
     <div id="speechBox">
-        <div id="choice1" class="choiceBtn">▶選択肢１</div>
-        <div id="choice2" class="choiceBtn">▶選択肢２</div>
-        <div id="choice3" class="choiceBtn">▶選択肢３</div>
+        <div id="message"></div>
+        <div id="choice1" class="choiceBtn"></div>
+        <div id="choice2" class="choiceBtn"></div>
+        <div id="choice3" class="choiceBtn"></div>
     </div>
 
     <!--js rpgGame-->
@@ -42,7 +43,33 @@
 
     <script>
 
+        // 選択肢の要素を取得
+        const message = document.getElementById("message");
+        const choice1 = document.getElementById("choice1");
+        const choice2 = document.getElementById("choice2");
+        const choice3 = document.getElementById("choice3");
+
+        function showChoice(mes,text01,text02,text03){
+            message.style.display = 'block';
+            choice1.style.display = 'block';
+            choice2.style.display = 'block';
+            choice3.style.display = 'block';
+            message.innerText = mes;
+            choice1.innerText = text01;
+            choice2.innerText = text02;
+            choice3.innerText = text03;
+        }
+
+        function hideChoise(){
+            message.style.display = 'none';
+            choice1.style.display = 'none';
+            choice2.style.display = 'none';
+            choice3.style.display = 'none';
+        }
+
         // --関数--
+
+        showChoice("選択してください．","すごい","まぁいいんじゃない","いいでしょ！！");
 
         // 吹き出し関連
         
