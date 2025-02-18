@@ -1,6 +1,13 @@
 // BGMを再生
 playBGM("yoake.m4a");
 
+// テスト用
+new dialog("playSe","音源名","mainStory1");
+new dialog("playBgm","音源名","mainStory1");
+new dialog("showCharacter","キャラクター名","mainStory1");
+new dialog("hideCharacter","キャラクター名","mainStory1");
+new dialog("chengeBackImg","背景名","mainStory1");
+
 // メインストーリー1
 new dialog("narration","翔太と葵のとある１日．．．","mainStory1");
 new dialog("aoi","どこに行くのですか？","mainStory1");
