@@ -29,7 +29,7 @@
             border: 2px solid;
         }
 
-        #agreeBtn{
+        .Btn{
 
             position: absolute;
             left: 50%;
@@ -39,7 +39,6 @@
             -ms-transform: translate(-50%,-50%);
 
             width: 30vw;
-            
             font-size: x-large;
             font-weight: bold;
 
@@ -62,7 +61,7 @@
         <div class="noteBox">
             <h1>この物語はフィクションです．</h1>
             <p>開発段階の画面です．</p>
-            <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
+            <button id="agreeBtn" class="Btn" onclick="agreeBtn();">同意する</button>
         </div>
     </div>
     
@@ -70,13 +69,18 @@
 
     <!--画面の向き異常-->
     <div id="warningScreenOrientation" class="screen warning">
-        <h1>画面の向きを横向きにしてください．</h1>
+        <div class="noteBox">
+            <h1>画面を横向きにしてください．</h1>
+        </div>
     </div>
     
     <!--全画面表示異常-->
     <div id="warningScreenFull" class="screen warning">
-        <h1>画面を全画面表示にしてください．</h1>
-        <button onclick="document.documentElement.requestFullscreen(); ">全画面表示</button>
+        <div class="noteBox">
+            <h1>全画面表示にしてください．</h1>
+            <button onclick="document.documentElement.requestFullscreen(); " class="Btn">全画面表示</button>
+        </div>
+        
     </div>
 
 </body>

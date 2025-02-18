@@ -33,6 +33,6 @@ body{
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color:aliceblue;
+    background-color:rgba(58, 116, 167, 0.411);
     display: none;
 }
