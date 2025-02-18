@@ -4,8 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Credit</title>
+    <link rel="stylesheet" href="/static/css/credit/credit.css">
+    <link rel="shortcut icon" href="/static/icon.png">
+    <style>
+
+            
+        /* 選択肢関連 */
+        /* 選択肢を選んだ時にホバー */
+        #btn:hover{
+            background-color: rgba(0, 0, 0, 0.947);
+        }
+
+        #btn{
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            bottom: 3%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            background-color: rgba(0, 0, 0,0.6);
+            color: white;
+            padding: 0.2em;
+            font-size: 2vw;
+            width: 50vw;
+            text-align: center;
+            border: solid;
+        }
+
+
+        /* 背景画像 */
+        .backImg{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .creditBox{
+
+            position: absolute;
+
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            padding: 20px;
+
+            background-color: black;
+            color: white;
+
+            text-align: center;
+
+            width: 80vw;
+            height: 70vh;
+            border: 2px solid;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body>
+    <img class="backImg" src="/static/file/backImg/yuhi.jpg">
+
+    <div class="creditBox">
+        <!--クレジット-->
+        <div class="creditText">
+
+
+            <!--ChatGPTの生成-->
+            作品名『架空の世界』<br><br>
+
+            <strong>制作</strong><br>
+            プロデューサー：田中 一郎<br>
+            ディレクター：鈴木 花子<br>
+            アシスタントディレクター：山本 太郎<br><br>
+
+            <strong>脚本</strong><br>
+            メインライター：佐藤 優<br>
+            サブライター：高橋 真紀<br><br>
+
+            <strong>キャスト</strong><br>
+            主人公（タケル）：中村 翔<br>
+            ヒロイン（ユイ）：山田 美咲<br>
+            ライバル（リョウ）：近藤 健太<br>
+            師匠（老人）：松本 和夫<br>
+            ナレーション：大谷 亮<br><br>
+
+            <strong>音楽</strong><br>
+            作曲：森川 遼<br>
+            編曲：江口 彩<br>
+            演奏：架空フィルハーモニー楽団<br>
+            音響監督：渡辺 陽子<br><br>
+
+            <strong>アートデザイン</strong><br>
+            キャラクターデザイン：藤井 直樹<br>
+            背景デザイン：石井 さくら<br>
+            CGモデリング：岡田 涼<br>
+            UIデザイン：川村 望<br><br>
+
+            <strong>アニメーション</strong><br>
+            アニメーション監督：三浦 真<br>
+            作画監督：坂本 誠<br>
+            原画：大塚 佳奈<br>
+            動画：吉田 拓<br><br>
+
+            <strong>撮影</strong><br>
+            撮影監督：長谷川 勇<br>
+            撮影助手：小林 翔太<br><br>
+
+            <strong>編集</strong><br>
+            編集：池田 雅<br>
+            アシスタントエディター：宮本 純<br><br>
+
+            <strong>特殊効果</strong><br>
+            VFXスーパーバイザー：竹内 翔<br>
+            CGエフェクト：佐々木 剛<br><br>
+
+            <strong>制作協力</strong><br>
+            スタジオA<br>
+            スタジオB<br>
+            サウンドデザイン株式会社<br>
+            CGワークス合同会社<br><br>
+
+            <strong>スペシャルサンクス</strong><br>
+            ファンの皆様<br>
+            開発チームの家族・友人<br>
+            技術サポートの皆様<br><br>
+
+            <strong>制作著作</strong><br>
+            © 2025 架空プロダクション<br>
+        </div>
+    </div>
+
     
+
+    <div id="btn">戻る</div>
 </body>
 </html>
