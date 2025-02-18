@@ -128,6 +128,7 @@ choice3.addEventListener("click",playTapSE);
 function showChoice(mes,text01,text02,text03){
     hideBtn();
     hideChoise();
+    resetCharacter();
     message.innerText = mes;
     message.style.display = 'block';
     setTimeout(()=>{

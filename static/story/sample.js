@@ -7,7 +7,7 @@ let nowStoryName = "mainStory1";
 setBackImage("taki.jpg",nowStoryName);
 setPlayBgm("yoake.m4a",nowStoryName);
 setShowCharacter("aoi",nowStoryName);
-setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 setNarration("翔太と葵のとある１日．．．",nowStoryName);
 setBackImage("yuhi.jpg",nowStoryName);
 setTalk("aoi","どこに行くのですか？",nowStoryName);
