@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGSystem | {{ jsOriginal }}</title>
+    <link rel="shortcut icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/system/rpgGame.css">
+    <style>
+        /* 選択ボタン */
+        .answerBox{
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%,-30%);
+            -webkit-transform: translate(-50%,-30%);
+            -ms-transform: translate(-50%,-30%);
+            background-color: rgba(0, 0, 0,0.6);
+            color: white;
+            padding: 0.5em;
+            font-size: 2vw;
+            width: 50vw;
+            height: 40vh;
+            text-align: center;
+            border: solid;
+        }
+
+        .upDownCenter{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            width: 50vw;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--背景-->
+    <img id="backImg">
+
+    <!--画像を表示-->
+    <img id="tempImage">
+    
+    <!--吹き出し-->
+    <div id="speechBox">
+        <div id="" class="choiceBtn">回答する</div>
+        <div id="" class="choiceBtn">チャットを開く</div>
+    </div>
+
+    <!--選択肢-->
+    <div class="answerBox">
+        <div class="upDownCenter">
+            <div>答えを選択してください．</div>
+            <div id="" class="choiceBtn">ア</div>
+            <div id="" class="choiceBtn">イ</div>
+            <div id="" class="choiceBtn">ウ</div>
+            <div id="" class="choiceBtn">エ</div>
+            <div id="" class="choiceBtn">オ</div>
+        </div>
+    </div>
+
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
+    <!--js rpgGame-->
+    <script src="/static/system/rpgGame.js"></script>
+
+    <!--js rpgStorySys-->
+    <script src="/static/system/rpgStorySys.js"></script>
+
+    <!--js rpgLib-->
+    <script src="/static/system/rpgLib.js"></script>
+
+    <!--js original-->
+    <script src="/static/js/main/{{ jsOriginal }}.js"></script>
+
+    <!--js rpgStory
+    <script src="/static/story/{{ jsOriginal }}.js"></script>
+    -->
+
+    <!--js event-->
+    <script src="/static/system/event.js"></script>
+
+</body>
+</html>

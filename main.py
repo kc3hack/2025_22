@@ -86,9 +86,6 @@ def PlayChapter05():
 def PlayChapterEnd():
     return render_template("index.html")
 
-@app.route("/play/sample")
-def PlaySample():
-    return render_template("/system/rpgLayout.html",jsOriginal = "sample")
 
 @app.route("/system/chat")
 def chatSystem():
@@ -97,6 +94,15 @@ def chatSystem():
 @app.route("/play/credit")
 def credit():
     return render_template("/play/credit/credit.html")
+
+# サンプル------------------------------------------------------------------------
+@app.route("/play/sample")
+def playSample():
+    return render_template("/system/rpgLayout.html",jsOriginal = "sample")
+
+@app.route("/play/nazotokiSample")
+def nazotokiSample():
+    return render_template("/system/nazotoki.html",jsOriginal = "sample")
 
 
 if __name__ == '__main__':
