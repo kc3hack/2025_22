@@ -1,20 +1,21 @@
 // コード分析
 function checkCode(story,func){
     const characterCode = story.getCharacterId();
+    const argument = story.getWord();
     if(characterCode=="playSe"){
-        console.log("SEが指定された");
+        playSe(argument);
         func();
     }else if(characterCode=="playBgm"){
-        console.log("BGMが指定された");
+        playBGM(argument);
         func();
     }else if(characterCode=="showCharacter"){
-        console.log("キャラクター表示");
+        showCharacter(argument);
         func();
     }else if(characterCode=="hideCharacter"){
-        console.log("キャラクター非表示");
+        hideCharacter(argument);
         func();
     }else if(characterCode=="chengeBackImg"){
-        console.log("背景変更");
+        chengeBackImg(argument);
         func();
     }else{
         talkCharacter(story.getCharacterId(),story.getWord());

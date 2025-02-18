@@ -14,9 +14,22 @@ function chengePlayTapSe(url){
     },1500);
 }
 
+// seをプレイ
+function playSe(fileName){
+    const newSe = new Audio(`/static/se/${fileName}`);
+    newSe.play();
+}
+
+// 現在のBGM
+let nowBgm = null;
+
 // bgmをプレイ
-function playBGM(music){
-    const BGM = new Audio(`/static/bgm/${music}`);
+function playBGM(fileName){
+    const BGM = new Audio(`/static/bgm/${fileName}`);
+    if(nowBgm!=null){
+        nowBgm.pause();
+    }
+    nowBgm = BGM;
     BGM.volume = 0.5;  // 音量設定（0~1)
     BGM.play();    // 再生開始
     BGM.loop = true;   // ループ

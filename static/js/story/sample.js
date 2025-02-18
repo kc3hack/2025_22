@@ -1,17 +1,15 @@
-// BGMを再生
-playBGM("yoake.m4a");
 
 // テスト用
-new dialog("playSe","音源名","mainStory1");
-new dialog("playBgm","音源名","mainStory1");
-new dialog("showCharacter","キャラクター名","mainStory1");
-new dialog("hideCharacter","キャラクター名","mainStory1");
-new dialog("chengeBackImg","背景名","mainStory1");
+new dialog("playSe","tap.mp3","mainStory1");
+new dialog("playBgm","yoake.m4a","mainStory1");
+new dialog("showCharacter","uranaishi","mainStory1");
+new dialog("chengeBackImg","yuhi","mainStory1");
 
 // メインストーリー1
 new dialog("narration","翔太と葵のとある１日．．．","mainStory1");
 new dialog("aoi","どこに行くのですか？","mainStory1");
 new dialog("shota","大学に行ってくる!","mainStory1");
+new dialog("hideCharacter","uranaishi","mainStory1");
 new dialog("narration","なぜだか，謎の老人と占い師もやってきました．","mainStory1");
 new dialog("rojin","それはおいしいのかね？","mainStory1");
 new dialog("uranaishi","何を言ってるんじゃ？","mainStory1");
