@@ -4,3 +4,4 @@ nextBtn.addEventListener("click",nextBtnClick);
 choice1.addEventListener("click",next01);
 choice2.addEventListener("click",next02);
 choice3.addEventListener("click",next03);
+

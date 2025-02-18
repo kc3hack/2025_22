@@ -81,3 +81,8 @@ function setHideTempImage(storyId){
         console.error("hideTempImage:指定されたストーリーIDは存在しません．");
     }
 }
+
+// 次のページを設定
+function setNextPage(url){
+    nextPageUrl = url;
+}

@@ -55,3 +55,5 @@ setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("aoi","おかえりなさい",nowStoryName);
 setTalk("shota","ただいま！！",nowStoryName);
 
+// 次のページ指定
+setNextPage("/play/nazotokiSample");
