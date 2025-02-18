@@ -32,7 +32,7 @@ function getFullScreenStatus(){
 //  画面状態を取得（正常：true）
 function getScreenStatus(){
     let orientation = screen.orientation.type;
-    if(orientation=="landscape-primary"||orientation=="portrait-secondary"){
+    if(orientation=="landscape-primary"||orientation=="landscape-secondary"){
         return true;
     }else{
         return false;
