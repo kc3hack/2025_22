@@ -1,10 +1,28 @@
+// コード分析
+function checkCode(story){
+    const characterCode = story.getCharacterId();
+    if(characterCode=="playSe"){
+        console.log("SEが指定された");
+    }else if(characterCode=="playBgm"){
+        console.log("BGMが指定された")
+    }else if(characterCode=="showCharacter"){
+        console.log("キャラクター表示");
+    }else if(characterCode=="hideCharacter"){
+        console.log("キャラクター非表示")
+    }else if(characterCode=="chengeBackImg"){
+        console.log("背景変更")
+    }else{
+        talkCharacter(story.getCharacterId(),story.getWord());
+    }
+}
+
 // ボタンがクリックされたとき
 function nextBtnClick(){
     playTapSE();
     if(getStoryStatus("mainStory1")){
         // ストーリー1
         const nowStoryMain = getStory("mainStory1");
-        talkCharacter(nowStoryMain.getCharacterId(),nowStoryMain.getWord());
+        checkCode(nowStoryMain);
     }else if(getChoiceStatus()){
         // 選択肢
         // 正しい選択肢
@@ -13,7 +31,7 @@ function nextBtnClick(){
     }else if(getStoryStatus("mainStory2")){
         // ストーリー2
         const nowStoryMain2 = getStory("mainStory2");
-        talkCharacter(nowStoryMain2.getCharacterId(),nowStoryMain2.getWord());
+        checkCode(nowStoryMain2);
     }else{
         nextPage();
     }
@@ -23,8 +41,8 @@ function nextBtnClick(){
 function next(){
     playTapSE();
     if(getStoryStatus(`choice${selectNum}Story`)){
-        const nowStoryChoice1 = getStory(`choice${selectNum}Story`);
-        talkCharacter(nowStoryChoice1.getCharacterId(),nowStoryChoice1.getWord());
+        const nowStoryChoice = getStory(`choice${selectNum}Story`);
+        checkCode(nowStoryChoice);
         chengeBtn(next);
         if(getStoryNextStatus(`choice${selectNum}Story`)==0){
             resetBtn();

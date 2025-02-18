@@ -31,7 +31,18 @@ function showSpeech(text){
     Loop(text,i,outText);
 }
 
-const characterSet = {"shota":"翔太","rojin":"謎の老人","uranaishi":"占い師","aoi":"葵","narration":false};
+const characterSet = {
+    "shota":"翔太",
+    "rojin":"謎の老人",
+    "uranaishi":"占い師",
+    "aoi":"葵",
+    "narration":false,
+    "playSe":"playSe",
+    "playBgm":"playBgm",
+    "showCharacter":"showCharacter",
+    "hideCharacter":"hideCharacter",
+    "chengeBackImg":"chengeBackImg"
+};
 
 // キャラクターを指定して文字表示
 function talkCharacter(id,text){
