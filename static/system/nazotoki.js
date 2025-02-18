@@ -31,6 +31,7 @@ function showResult(text){
 
 // 結果を非表示
 function hideResult(){
+    hideAnswerBtn();    // SEもなる
     notificateBox.style.display = "none";
     if(correct){
         chengePlayTapSe(nextUrl);
@@ -50,6 +51,7 @@ function setAnswerBtn(text01,text02,text03,text04,text05,ans){
 
 // ボタンを表示
 function showAnswerBtn(){
+    playSe("windowopen.mp3");
     doAnswer.innerText = "閉じる";
     doAnswer.onclick = hideAnswerBtn;
     answerBox.style.display = 'block';
@@ -57,6 +59,7 @@ function showAnswerBtn(){
 
 // ボタンを非表示
 function hideAnswerBtn(){
+    playSe("windowopen.mp3");
     doAnswer.innerText = "開く";
     doAnswer.onclick = showAnswerBtn;
     answerBox.style.display = 'none';
@@ -65,9 +68,11 @@ function hideAnswerBtn(){
 // 回答確認
 function ans(num){
     if(num==ansNum){
+        playSe("seikai.mp3");
         showResult("正解です！おめでとうございます！");
         correct = true;
     }else{
+        playSe("huseikai.mp3");
         showResult("残念ながら不正解です。もう一度挑戦しましょう！！");
     }
 }
