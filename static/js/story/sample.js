@@ -65,6 +65,8 @@ function setBackImage(imageName,storyId){
 
 
 // メインストーリー1
+// developMent();
+
 let nowStoryName = "mainStory1";
 setPlayBgm("yoake.m4a",nowStoryName);
 setShowCharacter("aoi",nowStoryName);

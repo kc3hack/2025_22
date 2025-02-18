@@ -45,7 +45,7 @@ function nextStory(){
         checkCode(nowStoryMain2);
     }else{
         if(!debug){
-            //nextPage();
+            nextPage();
         }
     }
 }
