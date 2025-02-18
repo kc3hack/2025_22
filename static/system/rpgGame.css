@@ -65,3 +65,16 @@
 #nextBtn:hover{
     background-color: rgba(255, 255, 255, 0.498);
 }
+
+/* 画像を表示 */
+#tempImage{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    -webkit-transform: translate(-50%,-10%);
+    -ms-transform: translate(-50%,-10%);
+    height: 60vh;
+    width: 55vw;
+    display: none;
+}
