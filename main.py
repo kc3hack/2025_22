@@ -94,6 +94,11 @@ def PlaySample():
 def chatSystem():
     return render_template("/system/chat.html")
 
+@app.route("/play/credit")
+def credit():
+    return "クレジット"
+    #return render_template("/system/index.html")
+
 
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する

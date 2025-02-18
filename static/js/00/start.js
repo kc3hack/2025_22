@@ -9,3 +9,7 @@ function playBGM(){
 function startBtn(){
     chengePlayTapSe("/play/sample");
 }
+
+function creditBtn(){
+    chengePlayTapSe("/play/credit");
+}
