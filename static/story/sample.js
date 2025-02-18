@@ -15,7 +15,7 @@ setTalk("shota","大学に行ってくる!",nowStoryName);
 setNarration("なぜだか，謎の老人と占い師もやってきました．",nowStoryName);
 setShowCharacter("rojin",nowStoryName);
 setShowCharacter("uranaishi",nowStoryName);
-setPlayBgm("suzukaze.mp3",nowStoryName);
+setPlayBgm("hitoiki.m4a",nowStoryName);
 setTalk("rojin","それはおいしいのかね？",nowStoryName);
 setTalk("uranaishi","何を言ってるんじゃ？",nowStoryName);
 setTalk("matigai","これは間違いです．",nowStoryName);
@@ -30,20 +30,24 @@ setChoice(1,"あなたの行動を選択してください．","プログラム�
 
 // 選択肢1
 nowStoryName = "choice1Story"
+setPlayBgm("seiu.mp3",nowStoryName);
 setTalk("aoi","勉強熱心ですね！！",nowStoryName);
 setTalk("shota","それほどでもないよ",nowStoryName);
 
 // 選択肢2
 nowStoryName = "choice2Story";
+setPlayBgm("sabitsuitasekai.mp3",nowStoryName);
 setTalk("aoi","まだJava演習終わってなかったんですか？",nowStoryName);
 setTalk("shota","はい．．．Java演習終わってないです．",nowStoryName);
 
 // 選択肢3
 nowStoryName = "choice3Story";
+setPlayBgm("souryou.mp3",nowStoryName);
 setTalk("aoi","まだC演習終わってなかったんですか？",nowStoryName);
 setTalk("shota","はい．．．C演習終わってないです．",nowStoryName);
 
 // メインストーリー2
 nowStoryName = "mainStory2";
+setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("aoi","おかえりなさい",nowStoryName);
 setTalk("shota","ただいま！！",nowStoryName);

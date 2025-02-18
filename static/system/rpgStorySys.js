@@ -40,7 +40,7 @@ function nextStory(){
     }else if(getStoryStatus("mainStory2")){
         // ストーリー2
         const nowStoryMain2 = getStory("mainStory2");
-        checkCode(nowStoryMain2);
+        checkCode(nowStoryMain2,nextStory);
     }else{
         if(!debug){
             nextPage();
