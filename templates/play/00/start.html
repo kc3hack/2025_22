@@ -32,6 +32,15 @@
         .choiceBtn{
             padding: 0.5vh;
         }
+        .upDownCenter{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            width: 50vw;
+        }
     </style>
 </head>
 <body>
@@ -47,8 +56,10 @@
         <!--<button class="startBtn btnProperty" onclick="startBtn();">START</button>-->
         <!--吹き出し-->
         <div id="box">
-            <div id="choice1" class="choiceBtn">スタート</div>
-            <div id="choice2" class="choiceBtn">クレジット</div>
+            <div class="upDownCenter">
+                <div id="choice1" class="choiceBtn">スタート</div>
+                <div id="choice2" class="choiceBtn">クレジット</div>
+            </div>
         </div>
     </div>
 
