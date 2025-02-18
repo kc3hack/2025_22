@@ -2,7 +2,7 @@
 function agreeBtn(){
     document.documentElement.requestFullscreen();   // 全画面表示
     document.getElementById("note").style.display = 'none'; // note画面を非表示
-    document.getElementById("gameScreen").contentWindow.playBGM();  // iframe内でBGMを再生
+    document.getElementById("gameScreen").contentWindow.playBGM("natunoyozora.mp3");  // iframe内でBGMを再生
     playTapSE();
 }
 

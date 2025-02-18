@@ -67,6 +67,9 @@
 <body>
     <img class="backImg" src="/static/file/backImg/yuhi.jpg">
 
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
     <div class="creditBox">
         <!--クレジット-->
         <div class="creditText">
@@ -140,8 +143,11 @@
         </div>
     </div>
 
-    
+    <script>
+        playBGM("natunoyozora.mp3");
+    </script>
 
-    <div id="btn">戻る</div>
+    <div id="btn" onclick="chengePlayTapSe('/play/start')">戻る</div>
+
 </body>
 </html>
