@@ -83,7 +83,6 @@ function resetCharacter(){
     aoi.src = getCharacterFocusOutImg("aoi");
 }
 
-hideAllCharacter(); // 初回起動時何も表示しない
 
 //  すべてのキャラクターを非表示
 function hideAllCharacter(){
@@ -362,4 +361,17 @@ function setChoice(choiceNum,mes,choice01,choice02,choice03){
     choiceText[1] = choice02;
     choiceText[2] = choice03;
     choiceStatus = true;
+}
+
+
+// 追加画像関連
+const tempImage = document.getElementById("tempImage");
+// 追加画像表示
+function showTempImage(fileName){
+    tempImage.style.display = 'block';
+    tempImage.src = `/static/tempImage/${fileName}`;
+}
+// 追加画像非表示
+function hideTempImage(){
+    tempImage.style.display = 'none';
 }

@@ -4,38 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem | {{ jsOriginal }}</title>
-    <link rel="shortcut icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/system/nazotoki.css">
     <link rel="stylesheet" href="/static/system/rpgGame.css">
-    <style>
-        /* 選択ボタン */
-        .answerBox{
-            font-weight: bold;
-            position: absolute;
-            left: 50%;
-            top: 30%;
-            transform: translate(-50%,-30%);
-            -webkit-transform: translate(-50%,-30%);
-            -ms-transform: translate(-50%,-30%);
-            background-color: rgba(0, 0, 0,0.6);
-            color: white;
-            padding: 0.5em;
-            font-size: 2vw;
-            width: 50vw;
-            height: 40vh;
-            text-align: center;
-            border: solid;
-        }
-
-        .upDownCenter{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            -webkit-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-            width: 50vw;
-        }
-    </style>
+    <link rel="shortcut icon" href="/static/icon.png">
 </head>
 <body>
     
@@ -47,20 +18,30 @@
     
     <!--吹き出し-->
     <div id="speechBox">
-        <div id="" class="choiceBtn">回答する</div>
+        <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">回答する</div>
         <div id="" class="choiceBtn">チャットを開く</div>
     </div>
 
     <!--選択肢-->
-    <div class="answerBox">
-        <div class="upDownCenter">
+    <div id="answerBox">
+        <div class="answerCenter">
             <div>答えを選択してください．</div>
-            <div id="" class="choiceBtn">ア</div>
-            <div id="" class="choiceBtn">イ</div>
-            <div id="" class="choiceBtn">ウ</div>
-            <div id="" class="choiceBtn">エ</div>
-            <div id="" class="choiceBtn">オ</div>
+            <div id="choice1" class="choiceBtn" onclick="ans(1);"></div>
+            <div id="choice2" class="choiceBtn" onclick="ans(2);"></div>
+            <div id="choice3" class="choiceBtn" onclick="ans(3);"></div>
+            <div id="choice4" class="choiceBtn" onclick="ans(4);"></div>
+            <div id="choice5" class="choiceBtn" onclick="ans(5);"></div>
         </div>
+    </div>
+
+    <!--通知-->
+    <div id="notificateBox">
+        <div class="mesBox">
+            <div class="title">結果</div>
+            <br>
+            <div class="textMes" id="result"></div>
+        </div>
+        <button id="agreeBtn" class="Btn" onclick="hideResult();">閉じる</button>
     </div>
 
     <!--js gameAudio-->
@@ -69,21 +50,11 @@
     <!--js rpgGame-->
     <script src="/static/system/rpgGame.js"></script>
 
-    <!--js rpgStorySys-->
-    <script src="/static/system/rpgStorySys.js"></script>
+    <!--js nazotoki-->
+    <script src="/static/system/nazotoki.js"></script>
 
-    <!--js rpgLib-->
-    <script src="/static/system/rpgLib.js"></script>
-
-    <!--js original-->
-    <script src="/static/js/main/{{ jsOriginal }}.js"></script>
-
-    <!--js rpgStory
+    <!--js story-->
     <script src="/static/story/{{ jsOriginal }}.js"></script>
-    -->
-
-    <!--js event-->
-    <script src="/static/system/event.js"></script>
 
 </body>
 </html>

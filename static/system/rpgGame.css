@@ -29,6 +29,7 @@
     bottom: 30vh;
     height: 60vh;
     width: 20vw;
+    display: none;
 }
 #shota{
     position: absolute;

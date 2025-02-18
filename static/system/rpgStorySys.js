@@ -96,14 +96,3 @@ function storyIdStatus(storyId){
 }
 
 
-// 追加画像関連
-const tempImage = document.getElementById("tempImage");
-// 追加画像表示
-function showTempImage(fileName){
-    tempImage.style.display = 'block';
-    tempImage.src = `/static/tempImage/${fileName}`;
-}
-// 追加画像非表示
-function hideTempImage(){
-    tempImage.style.display = 'none';
-}

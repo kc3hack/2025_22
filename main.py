@@ -102,7 +102,7 @@ def playSample():
 
 @app.route("/play/nazotokiSample")
 def nazotokiSample():
-    return render_template("/system/nazotoki.html",jsOriginal = "sample")
+    return render_template("/system/nazotoki.html",jsOriginal = "sampleNazo")
 
 
 if __name__ == '__main__':
