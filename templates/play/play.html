@@ -43,6 +43,23 @@
             font-weight: bold;
 
         }
+
+        .title{
+            font-size: 3vw;
+        }
+        .textMes{
+            font-size: 2vw;
+        }
+
+        .mesBox{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            width: 80vw;
+        }
     </style>
 </head>
 <body>
@@ -59,8 +76,13 @@
     <!--note-->
     <div id="note" class="screen">
         <div class="noteBox">
-            <h1>この物語はフィクションです．</h1>
-            <p>開発段階の画面です．</p>
+            <div class="mesBox">
+                <div class="title">ご注意</div>
+                <br>
+                <div class="textMes">この物語はフィクションです。</div>
+                <div class="textMes">実在の人物・団体・事件などには一切関係ありません。</div>
+                <div class="textMes">また、登場する名称や設定の一部は架空のものであり、現実のものとは異なります。</div>
+            </div>
             <button id="agreeBtn" class="Btn" onclick="agreeBtn();">同意する</button>
         </div>
     </div>
