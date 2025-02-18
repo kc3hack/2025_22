@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|start</title>
     <link rel="stylesheet" href="/static/css/00/start.css">
+    <style>
+        #box{
+            font-weight: bold;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            background-color: rgba(0, 0, 0,0.6);
+            color: white;
+            padding: 0.5em;
+            font-size: 2vw;
+            width: 50vw;
+            height: 15vh;
+            text-align: center;
+            border: solid;
+        }
+
+        /* 選択肢関連 */
+        /* 選択肢を選んだ時にホバー */
+        .choiceBtn:hover{
+            background-color: rgba(255, 255, 255, 0.498);
+        }
+
+        .choiceBtn{
+            padding: 0.5vh;
+        }
+    </style>
 </head>
 <body>
     
@@ -16,8 +44,15 @@
 
     <img class="backImg" src="/static/file/00/top.png">
     <div class="btnBoxLayout">
-        <button class="startBtn btnProperty" onclick="startBtn();">START</button>
+        <!--<button class="startBtn btnProperty" onclick="startBtn();">START</button>-->
+        <!--吹き出し-->
+        <div id="box">
+            <div id="choice1" class="choiceBtn">スタート</div>
+            <div id="choice2" class="choiceBtn">クレジット</div>
+        </div>
     </div>
+
+    
     
 </body>
 </html>
