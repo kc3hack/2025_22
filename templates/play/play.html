@@ -7,6 +7,44 @@
     <!--スタイルシート読み込み-->
     <link rel="stylesheet" href="/static/css/play/play.css">
     <link rel="shortcut icon" href="/static/icon.png">
+    <style>
+        .noteBox{
+
+            position: absolute;
+        
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            padding: 20px;
+        
+            background-color: rgba(0, 0, 0, 0.788);
+            color: white;
+        
+            text-align: center;
+        
+            width: 80vw;
+            height: 70vh;
+            border: 2px solid;
+        }
+
+        #agreeBtn{
+
+            position: absolute;
+            left: 50%;
+            bottom: 3%;
+            transform: translate(-50%,-50%);
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+
+            width: 30vw;
+            
+            font-size: x-large;
+            font-weight: bold;
+
+        }
+    </style>
 </head>
 <body>
     
@@ -21,9 +59,11 @@
     
     <!--note-->
     <div id="note" class="screen">
-        <h1>この物語はフィクションです．</h1>
-        <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
-        <p>開発段階の画面です．</p>
+        <div class="noteBox">
+            <h1>この物語はフィクションです．</h1>
+            <p>開発段階の画面です．</p>
+            <button id="agreeBtn" onclick="agreeBtn();">同意する</button>
+        </div>
     </div>
     
     <!--warning-->
