@@ -51,3 +51,15 @@ nowStoryName = "mainStory2";
 setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("aoi","おかえりなさい",nowStoryName);
 setTalk("shota","ただいま！！",nowStoryName);
+
+// 追加画像関連
+const tempImage = document.getElementById("tempImage");
+
+function showTempImage(fileName){
+    tempImage.style.display = 'block';
+    tempImage.src = `/static/tempImage/${fileName}`;
+}
+
+function hideTempImage(){
+    tempImage.style.display = 'none';
+}
