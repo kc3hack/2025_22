@@ -1,8 +1,6 @@
-// 
+// 開発者モード 
 let debug = false;
-function developMent(){
-    debug = true;
-}
+
 
 // コード分析
 function checkCode(story,func){
@@ -79,4 +77,14 @@ function nextChoiceStory(){
         showSpeech("すでに選択されました．");
         showBtn();
     }
+}
+
+// キャラクターIDの存在確認
+function characterIdStatus(characterId){
+    return characterSet[characterId]!= undefined ? true:false;
+}
+
+// ストーリーIDの存在確認
+function storyIdStatus(storyId){
+    return storyKey[storyId]!=undefined ? true:false;
 }
