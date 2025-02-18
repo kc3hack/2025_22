@@ -21,6 +21,12 @@ function checkCode(story,func){
     }else if(characterCode=="chengeBackImg"){
         chengeBackImg(argument);
         func();
+    }else if(characterCode=="showTempImage"){
+        showTempImage(argument);
+        func();
+    }else if(characterCode=="hideTempImage"){
+        hideTempImage();
+        func();
     }else{
         talkCharacter(story.getCharacterId(),story.getWord());
     }
@@ -87,4 +93,17 @@ function characterIdStatus(characterId){
 // ストーリーIDの存在確認
 function storyIdStatus(storyId){
     return storyKey[storyId]!=undefined ? true:false;
+}
+
+
+// 追加画像関連
+const tempImage = document.getElementById("tempImage");
+// 追加画像表示
+function showTempImage(fileName){
+    tempImage.style.display = 'block';
+    tempImage.src = `/static/tempImage/${fileName}`;
+}
+// 追加画像非表示
+function hideTempImage(){
+    tempImage.style.display = 'none';
 }

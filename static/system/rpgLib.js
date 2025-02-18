@@ -56,10 +56,28 @@ function setPlaySe(fileName,storyId){
 }   
 
 // 背景を設定：（ファイル名，ストーリーID）
-function setBackImage(imageName,storyId){
+function setBackImage(fileName,storyId){
     if(storyIdStatus(storyId)){
-        new dialog("chengeBackImg",imageName,storyId);
+        new dialog("chengeBackImg",fileName,storyId);
     }else{
         console.error("setBackImage:指定されたストーリーIDは存在しません．");
+    }
+}
+
+// 追加画像を表示
+function setShowTempImage(fileName,storyId){
+    if(storyIdStatus(storyId)){
+        new dialog("showTempImage",fileName,storyId);
+    }else{
+        console.error("setTempImage:指定されたストーリーIDは存在しません．");
+    }
+}
+
+// 追加画像を非表示
+function setHideTempImage(storyId){
+    if(storyIdStatus(storyId)){
+        new dialog("hideTempImage",null,storyId);
+    }else{
+        console.error("hideTempImage:指定されたストーリーIDは存在しません．");
     }
 }

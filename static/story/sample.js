@@ -9,17 +9,19 @@ setPlayBgm("yoake.m4a",nowStoryName);
 setShowCharacter("aoi",nowStoryName);
 setShowCharacter("shota",nowStoryName);
 setNarration("翔太と葵のとある１日．．．",nowStoryName);
+setTalk("shota","画像を表示します．",nowStoryName);
+setShowTempImage("sample.png",nowStoryName);
 setBackImage("yuhi.jpg",nowStoryName);
 setTalk("aoi","どこに行くのですか？",nowStoryName);
 setTalk("shota","大学に行ってくる!",nowStoryName);
+setHideTempImage(nowStoryName);
+setTalk("aoi","画面を非表示にしました．",nowStoryName);
 setNarration("なぜだか，謎の老人と占い師もやってきました．",nowStoryName);
 setShowCharacter("rojin",nowStoryName);
 setShowCharacter("uranaishi",nowStoryName);
 setPlayBgm("hitoiki.m4a",nowStoryName);
 setTalk("rojin","それはおいしいのかね？",nowStoryName);
 setTalk("uranaishi","何を言ってるんじゃ？",nowStoryName);
-setTalk("matigai","これは間違いです．",nowStoryName);
-setTalk("rojin","これも間違い","sonzaishinaiStory");
 setNarration("二人はさっていった",nowStoryName);
 setBackImage("uranainoheya.png",nowStoryName);
 setHideCharacter("uranaishi",nowStoryName);
@@ -52,14 +54,3 @@ setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("aoi","おかえりなさい",nowStoryName);
 setTalk("shota","ただいま！！",nowStoryName);
 
-// 追加画像関連
-const tempImage = document.getElementById("tempImage");
-
-function showTempImage(fileName){
-    tempImage.style.display = 'block';
-    tempImage.src = `/static/tempImage/${fileName}`;
-}
-
-function hideTempImage(){
-    tempImage.style.display = 'none';
-}

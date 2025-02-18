@@ -41,7 +41,9 @@ const characterSet = {
     "playBgm":"playBgm",
     "showCharacter":"showCharacter",
     "hideCharacter":"hideCharacter",
-    "chengeBackImg":"chengeBackImg"
+    "chengeBackImg":"chengeBackImg",
+    "showTempImage":"showTempImage",
+    "hideTempImage":"hideTempImage"
 };
 
 // キャラクターを指定して文字表示
