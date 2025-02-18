@@ -96,8 +96,7 @@ def chatSystem():
 
 @app.route("/play/credit")
 def credit():
-    return "クレジット"
-    #return render_template("/system/index.html")
+    return render_template("/play/credit/credit.html")
 
 
 if __name__ == '__main__':
