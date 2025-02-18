@@ -1,3 +1,6 @@
+// 謎解きコーナ開始の音
+playSe("nazotokiko-na.mp3");
+playBGM("cryonicpulse.mp3");
 // ボタンの要素
 const btn01 = document.getElementById("choice1");
 const btn02 = document.getElementById("choice2");
