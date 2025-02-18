@@ -299,8 +299,8 @@ function getStoryStatus(storyId){
 /* 背景関連 */
 const backImg = document.getElementById("backImg");
 // 背景を変更
-function chengeBackImg(text){
-    backImg.src = `/static/file/backImg/${text}.jpg`;
+function chengeBackImg(fileName){
+    backImg.src = `/static/file/backImg/${fileName}`;
 }
 
 
@@ -351,7 +351,7 @@ function next03(){
     next();
 }
 
-// 選択肢をセット
+// 選択肢をセット(選択番号，メッセージ，選択肢1,選択肢2,選択肢3)
 function setChoice(choiceNum,mes,choice01,choice02,choice03){
     okNum = choiceNum;
     choiceMes = mes;

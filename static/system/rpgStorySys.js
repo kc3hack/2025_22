@@ -1,3 +1,9 @@
+// 
+let debug = false;
+function developMent(){
+    debug = true;
+}
+
 // コード分析
 function checkCode(story,func){
     const characterCode = story.getCharacterId();
@@ -38,7 +44,9 @@ function nextStory(){
         const nowStoryMain2 = getStory("mainStory2");
         checkCode(nowStoryMain2);
     }else{
-        nextPage();
+        if(!debug){
+            //nextPage();
+        }
     }
 }
 
