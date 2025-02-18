@@ -1,4 +1,4 @@
-playBGM("natunoyozora.mp3");
+playBGM("suzukaze.mp3");
 
 function startBtn(){
     chengePlayTapSe("/play/sample");
