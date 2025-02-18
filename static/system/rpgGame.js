@@ -244,7 +244,7 @@ function getStory(storyId){
 }
 
 // 分岐管理(使用できるか)
-let choiceStatus = true;
+let choiceStatus = false;
 // 選択肢の使用状況
 function getChoiceStatus(){
     return choiceStatus;
@@ -347,4 +347,5 @@ function setChoice(choiceNum,mes,choice01,choice02,choice03){
     choiceText[0] = choice01;
     choiceText[1] = choice02;
     choiceText[2] = choice03;
+    choiceStatus = true;
 }
