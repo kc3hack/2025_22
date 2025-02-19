@@ -220,7 +220,8 @@ const mainStory2 = new storySet(); // メインストーリー2
 const storyKey = {
     "mainStory1":mainStory1,
     "choice1Story":choice1Story,
-    "choice2Story":choice2Story,"choice3Story":choice3Story,
+    "choice2Story":choice2Story,
+    "choice3Story":choice3Story,
     "mainStory2":mainStory2
 };
 
