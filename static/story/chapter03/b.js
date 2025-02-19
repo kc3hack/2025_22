@@ -7,7 +7,7 @@
 let nowStoryName = "mainStory1";
 setBackImage("yuhi.jpg",nowStoryName);  // 画像を設定
 setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
-setNarration("タイトル",nowStoryName);  // ナレーション
+setNarration("chapter03のbです．",nowStoryName);  // ナレーション
 
 // 選択肢を設定
 

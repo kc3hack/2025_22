@@ -11,7 +11,7 @@ setShowCharacter("aoi",nowStoryName);
 setShowCharacter("shota",nowStoryName);
 setNarration("翔太と葵のとある１日．．．",nowStoryName);
 setTalk("shota","画像を表示します．",nowStoryName);
-setShowTempImage("sample.png",nowStoryName);
+setShowTempImage("paper.png",nowStoryName);
 setBackImage("yuhi.jpg",nowStoryName);
 setTalk("aoi","どこに行くのですか？",nowStoryName);
 setTalk("shota","大学に行ってくる!",nowStoryName);
