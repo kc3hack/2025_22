@@ -121,6 +121,11 @@ setHideTempImage(storyId);
 setNextPage(url);
 ```
 
+### 選択肢を設定（正しい選択肢，テキスト,選択肢1,選択肢2,選択肢3）
+```
+setChoice(ans,text,choice1,choice2,choice3);
+```
+
 
 # howToUse
 RPGのシナリオデータ（プログラム）は，下記のディレクトリに格納する
