@@ -1,7 +1,7 @@
 playBGM("suzukaze.mp3");
 
 function startBtn(){
-    chengePlayTapSe("/play/sample");
+    chengePlayTapSe("/play/sample/a/sample");
 }
 
 function creditBtn(){
