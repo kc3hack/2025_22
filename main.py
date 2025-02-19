@@ -53,7 +53,10 @@ def showStory(chapter,code):
 def showNazo(chapter,code):
     return render_template("/system/nazotokiLayout.html",jsOriginal = f"/{chapter}/{code}")
 
-    
+# ページが存在しない（404）
+@app.errorhandler(404)
+def pageNotFound(e):
+    return render_template("error.html")
     
 
 
