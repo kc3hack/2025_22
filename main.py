@@ -15,7 +15,7 @@ def Play():
 # スタート画面
 @app.route("/play/start")
 def PlayStart():
-    return render_template("/play/00/start.html")
+    return render_template("/play/start/start.html")
 
 # QRシステム
 @app.route("/play/QRSystem")
