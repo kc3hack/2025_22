@@ -125,9 +125,19 @@ setNextPage(url);
 # howToUse
 RPGのシナリオデータ（プログラム）は，下記のディレクトリに格納する
 ```
-/static/story/<チャプターコード>.js
+/static/story/
 ```
+次のコマンドでディレクトリを移動しておく
+```
+cd static/story
+```
+Visual Studio Codeを起動する
+```
+code .
+```
+>【Tips】storyフォルダーに格納されている「rpgLib.js」もVisual Studio Codeで開いておくと予測変換が出る．
 シナリオデータ（プログラム）は以下のように記述する．
+
 ※メインストーリー2や選択肢がない場合は記述しない．
 ```
 /* ストーリー設定 */
