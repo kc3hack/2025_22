@@ -2,107 +2,59 @@ from flask import Flask, request, render_template
 
 app = Flask(__name__)
     
+# トップページ
 @app.route('/')
 def index():
     return render_template('index.html')
 
+# プレイページ
 @app.route("/play")
 def Play():
     return render_template("/play/play.html")
 
+# スタート画面
 @app.route("/play/start")
 def PlayStart():
     return render_template("/play/00/start.html")
 
-##@app.route("/play/note")
-##def PlayNote():
-##    return render_template("/play/00/note.html")
-
-@app.route("/play/chapter00")
-def PlayChapter00():
-    return render_template("index.html")
-
-@app.route("/play/chapter01/A")
-def PlayChapter01A():
-    return render_template("index.html")
-
-@app.route("/play/chapter01/B")
-def PlayChapter01B():
-    return render_template("index.html")
-
-@app.route("/play/chapter01/mystery")
-def PlayChapter01Mystery():
-    return render_template("index.html")
-
-@app.route("/play/chapter02/A")
-def PlayChapter02A():
-    return render_template("index.html")
-
-@app.route("/play/chapter02/B")
-def PlayChapter02B():
-    return render_template("index.html")
-
-@app.route("/play/chapter02/mystery")
-def PlayChapter02Mystery():
-    return render_template("index.html")
-
-@app.route("/play/chapter03/A")
-def PlayChapter03A():
-    return render_template("index.html")
-
-@app.route("/play/chapter03/B")
-def PlayChapter03B():
-    return render_template("index.html")
-
-@app.route("/play/chapter03/mystery")
-def PlayChapter03Mystery():
-    return render_template("index.html")
-
-@app.route("/play/chapter03/QRSystem")
+# QRシステム
+@app.route("/play/QRSystem")
 def PlayChapter03QRSystem():
     return render_template("index.html")
 
-@app.route("/play/chapter04/A")
-def PlayChapter04A():
-    return render_template("index.html")
-
-@app.route("/play/chapter04/mystery")
-def PlayChapter04Mystery():
-    return render_template("index.html")
-
-@app.route("/play/chapter04/OCRSystem")
+# OCRシステム
+@app.route("/play/OCRSystem")
 def PlayChapter04OCRSystem():
     return render_template("index.html")
 
-@app.route("/play/chapter04/B")
-def PlayChapter04B():
-    return render_template("index.html")
-
-@app.route("/play/chapter05")
-def PlayChapter05():
-    return render_template("index.html")
-
+# エンドロール
 @app.route("/play/chapterEnd")
 def PlayChapterEnd():
     return render_template("index.html")
 
-
-@app.route("/system/chat")
-def chatSystem():
-    return render_template("/system/chat.html")
-
+# クレジット
 @app.route("/play/credit")
 def credit():
     return render_template("/play/credit/credit.html")
 
-# サンプル------------------------------------------------------------------------
-@app.route("/play/sample")
-def playSample():
-    return render_template("/system/rpgLayout.html",jsOriginal = "sample")
+# チャットシステム
+@app.route("/system/chat")
+def chatSystem():
+    return render_template("/system/chat.html")
 
-@app.route("/play/nazotokiSample")
-def nazotokiSample():
-    return render_template("/system/nazotokiLayout.html",jsOriginal = "sampleNazo")
+
+# ストーリシステム
+@app.route('/play/<string:chapter>/<string:code>/<string:fileName>')
+def showStory(chapter,code,fileName):
+    return render_template("/system/rpgLayout.html",jsOriginal = f"/{chapter}/{code}/{fileName}")
+
+# 謎解きシステム
+@app.route('/play/nazo/<string:chapter>/<string:code>/<string:fileName>')
+def showNazo(chapter,code,fileName):
+    return render_template("/system/nazotokiLayout.html",jsOriginal = f"/{chapter}/{code}/{fileName}")
+
+    
+    
 
 
 if __name__ == '__main__':
