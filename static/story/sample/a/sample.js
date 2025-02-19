@@ -56,4 +56,4 @@ setTalk("aoi","おかえりなさい",nowStoryName);
 setTalk("shota","ただいま！！",nowStoryName);
 
 // 次のページ指定
-setNextPage("/play/nazotokiSample");
+setNextPage("/play/nazo/sample/nazo/sampleNazo");
