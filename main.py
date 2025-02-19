@@ -44,14 +44,14 @@ def chatSystem():
 
 
 # ストーリシステム
-@app.route('/play/<string:chapter>/<string:code>/<string:fileName>')
-def showStory(chapter,code,fileName):
-    return render_template("/system/rpgLayout.html",jsOriginal = f"/{chapter}/{code}/{fileName}")
+@app.route('/play/<string:chapter>/<string:code>')
+def showStory(chapter,code):
+    return render_template("/system/rpgLayout.html",jsOriginal = f"/{chapter}/{code}")
 
 # 謎解きシステム
-@app.route('/play/nazo/<string:chapter>/<string:code>/<string:fileName>')
-def showNazo(chapter,code,fileName):
-    return render_template("/system/nazotokiLayout.html",jsOriginal = f"/{chapter}/{code}/{fileName}")
+@app.route('/play/nazo/<string:chapter>/<string:code>')
+def showNazo(chapter,code):
+    return render_template("/system/nazotokiLayout.html",jsOriginal = f"/{chapter}/{code}")
 
     
     
