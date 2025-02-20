@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPGSystem | Chat</title>
+    <style>
+        body{
+            background-color: rgba(44, 49, 78, 0.733);
+        }
+        /* ボタン */
+        #btn{
+            margin-left: 5px;
+            width: 10vw;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        #textBox{
+            margin-right: 5px;
+            margin: 10px;
+            width: 30vw;
+            font-size: x-large;
+            font-weight: bold;
+        }
+
+        .submitBox{
+            position: absolute;
+            width: 80vw;
+            left: 50%;
+            bottom: 3%;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            background-color: rgba(0, 0, 0,0.6);
+            color: white;
+            padding: 0.2em;
+        }
+
+        #mesBox{
+
+            position: absolute;
+        
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-10%);
+            -webkit-transform: translate(-50%,-10%);
+            -ms-transform: translate(-50%,-10%);
+            padding: 20px;
+        
+            background-color: rgba(0, 0, 0, 0.788);
+            color: white;
+        
+            width: 80vw;
+            height: 65vh;
+            border: 2px solid;
+            overflow-y: scroll;
+        }
+    </style>
 </head>
 <body>
+    <div id="mesBox">
+        <!--サンプル ChatGPTにより生成-->
+        ショウタ（Shota）**：関西弁のノリがいいプレイヤー。<br>
+        カズ（Kazu）**：冷静で戦略的なプレイヤー。<br>
+        リョウ（Ryo）**：突っ込むのが好きなアグレッシブプレイヤー。<br>
+        ユイ（Yui）**：サポート役が得意な女性プレイヤー。<br>
+        <br>
+        VC（ボイスチャット）開始**<br>
+        <br>
+        ショウタ**：「みんな聞こえる？ 今日も勝ちに行くでー！」<br>
+        <br>
+        カズ**：「聞こえるよ。まずはマップ確認して動き決めよう。」<br>
+        <br>
+        リョウ**：「いや、もう突っ込もうや！先手必勝やろ！」<br>
+        <br>
+        ユイ**：「リョウくん、また特攻するつもり…？」<br>
+        <br>
+        ショウタ**：「ちょ、リョウ！まだ準備できてへんやん！撃たれてるで！」<br>
+        <br>
+        （敵の銃撃音 🔫💥）<br>
+        <br>
+        リョウ**：「あっ……やられた……（即死）」<br>
+        <br>
+        ユイ**：「だから言ったのに……💧」<br>
+        <br>
+        カズ**：「ほらな。じゃあ3人で立て直そう。ショウタ、左から回って。」<br>
+        <br>
+        ショウタ**：「了解！ユイ、回復頼むで！」<br>
+        <br>
+        ユイ**：「回復いれるね。カバーお願い！」<br>
+        <br>
+        （ショウタが敵を倒す 🎯）<br>
+        <br>
+        ショウタ**：「よっしゃ！1ダウン！カズ、そっち大丈夫？」<br>
+        <br>
+        カズ**：「問題ない。あと1人、詰めよう。」<br>
+        <br>
+        リョウ**：「（観戦しながら）俺のこと置いて盛り上がるなよ……」<br>
+        <br>
+        ショウタ**：「お前が突っ込むからやろw」<br>
+        <br>
+        （最後の敵を倒して勝利 🏆）<br>
+        <br>
+        ユイ**：「やった！勝ったね！」<br>
+        <br>
+        リョウ**：「ええなあ、俺も生きてたかった……」<br>
+        <br>
+        ショウタ**：「せやから言うたやろw 次はちゃんと連携取ろな！」<br>
+
+    </div>
+
+    <div class="submitBox">
+        <input type="text" id="textBox"><button id="btn">送信</button>
+    </div>
     
 </body>
 </html>
