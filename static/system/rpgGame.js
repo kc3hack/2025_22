@@ -34,6 +34,7 @@ function showSpeech(text){
 const characterSet = {
     "shota":"翔太",
     "rojin":"謎の老人",
+    "jushoku":"住職",
     "uranaishi":"占い師",
     "aoi":"葵",
     "narration":false,
@@ -62,6 +63,7 @@ function talkCharacter(id,text){
 // 要素を取得
 const shota = document.getElementById("shota");
 const rojin = document.getElementById("rojin");
+const jushoku = document.getElementById("jushoku");
 const uranaishi = document.getElementById("uranaishi");
 const aoi = document.getElementById("aoi");
 
@@ -79,6 +81,7 @@ function getCharacterFocusOutImg(imageCode){
 function resetCharacter(){
     shota.src = getCharacterFocusOutImg("shota");
     rojin.src = getCharacterFocusOutImg("rojin");
+    jushoku.src = getCharacterFocusOutImg("jushoku");
     uranaishi.src = getCharacterFocusOutImg("uranaishi");
     aoi.src = getCharacterFocusOutImg("aoi");
 }
@@ -88,6 +91,7 @@ function resetCharacter(){
 function hideAllCharacter(){
     shota.style.display = 'none';
     rojin.style.display = 'none';
+    jushoku.style.display = 'none';
     uranaishi.style.display = 'none';
     aoi.style.display = 'none';
 }

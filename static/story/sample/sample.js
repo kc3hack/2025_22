@@ -24,9 +24,15 @@ setPlayBgm("hitoiki.m4a",nowStoryName);
 setTalk("rojin","それはおいしいのかね？",nowStoryName);
 setTalk("uranaishi","何を言ってるんじゃ？",nowStoryName);
 setNarration("二人はさっていった",nowStoryName);
-setBackImage("uranainoheya.png",nowStoryName);
 setHideCharacter("uranaishi",nowStoryName);
 setHideCharacter("rojin",nowStoryName);
+setNarration("住職が現れた",nowStoryName);
+setShowCharacter("jushoku",nowStoryName);
+setTalk("jushoku","まったく，あの二人は...",nowStoryName);
+setTalk("aoi","あの，あなた誰です？",nowStoryName);
+setHideCharacter("jushoku",nowStoryName);
+setBackImage("uranainoheya.png",nowStoryName);
+
 
 // 選択肢を設定
 setChoice(1,"あなたの行動を選択してください．","プログラムの勉強をする","Java演習をする","C演習をする");
