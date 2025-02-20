@@ -186,7 +186,6 @@ nowStoryName = "mainStory2";
 setNextPage("");
 ```
 
-
 ### サンプルプログラム
 ```
 /* ストーリー設定 */
