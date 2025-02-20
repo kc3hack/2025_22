@@ -41,9 +41,8 @@ body{
     position: absolute;       
     width: 95vw;
     height: 80vh;
-    padding-top: 20px;
     left: 50%;
-    top: 0;
+    top: 10px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
