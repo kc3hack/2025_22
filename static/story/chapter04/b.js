@@ -8,7 +8,7 @@ let nowStoryName = "mainStory1";
 setBackImage("takedajho.jpg",nowStoryName);  // 画像を設定
   // BGMを設定
 setNarration("翔太と葵が竹田城跡で少し休憩していると、再び謎の老人が現れる");
-setPlayBgm("hitoiki.m4a",nowStoryName); 
+setPlayBgm("akaneironokazetotomoni.mp3",nowStoryName); 
 setTalk("rojin", "お前ら、次に行くべき場所は…もうわかるだろ。", nowStoryName);
 setTalk("shota", "知らねぇーよ！！", nowStoryName);
 setTalk("aoi", "え、翔太さん、さすがにそれは…", nowStoryName);

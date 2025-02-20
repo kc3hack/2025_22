@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("yuhi.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("souryou.mp3",nowStoryName);   // BGMを設定
 setNarration("翔太と葵は協力して「浪速の財」を探す冒険を始めることに決める。", nowStoryName);
 setNarration("最初の手がかりを元に、大阪の名所を巡りながら謎を解いていく。", nowStoryName);
 
@@ -31,7 +31,7 @@ setTalk("shota", "ほら来たぁぁぁぁ！！ 絶対なんかあるやつ！�
 setTalk("aoi", "ただの風です。", nowStoryName);
 setPlaySe("konohagahukareru.mp3",nowStoryName);
 setTalk("shota", "いや、これはフラグだって！！ 俺たち、今まさに運命の瞬間を——", nowStoryName);
-setPlayBgm("torigatobidatsu.mp3",nowStoryName);
+setPlaySe("torigatobidatsu.mp3",nowStoryName);
 setNarration("ピチュン！（鳥が飛び立つ）", nowStoryName);
 
 setTalk("shota", "えっ、今の鳥！？ もしかして神の使い！？ 何かの啓示！？", nowStoryName);
@@ -41,7 +41,6 @@ setTalk("aoi", "気のせいですね。", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
 setBackImage("shoutengai.jpg",nowStoryName);
-setPlayBgm("hitoiki.m4a",nowStoryName);
 setTalk("shota", "えっと……葵？ 俺さっき『まずは近くの神社に行ってみるか？』って言ったよな？", nowStoryName);
 setTalk("aoi", "はい、仰っていましたね。", nowStoryName);
 setTalk("shota", "なのに、なんで俺たち商店街にいるんだ……？", nowStoryName);

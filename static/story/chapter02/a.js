@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("taki.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("natunoyozora.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("hitoiki.m4a",nowStoryName);   // BGMを設定
 setTalk("shota", "おお！ ついに箕面大滝に到着だな！", nowStoryName);
 setTalk("aoi", "ええ、箕面大滝は大阪府箕面市にある、府営箕面公園内にある滝で、『日本の滝百選』にも選ばれているんですよ。", nowStoryName);
 setTalk("shota", "え、百選！？ それって、超有名な滝ってこと？", nowStoryName);
@@ -41,7 +41,6 @@ setChoice(2, "あなたの行動を選択して下さい", "魔法陣を書い�
 
 // 選択肢1
 nowStoryName = "choice1Story";
-setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("shota", "よし、とりあえず魔法陣を描いて…", nowStoryName);
 setTalk("aoi", "翔太さん、それ、一体何をしているんですか？", nowStoryName);
 setTalk("shota", "魔法陣を書いてるんだ！、これを使えば謎が解けるはずだ！ 輪を描いて、次に矢印を…", nowStoryName);
@@ -54,7 +53,6 @@ setTalk("shota", "うーん、確かに…でも、魔法陣を描くと気分�
 setTalk("aoi", "それなら別の場所で気分転換してください！ ここでは謎解きに集中しましょう。さあ、もう一度紙を見てください。どうやら隠されたヒントがあるようです。", nowStoryName);
 setTalk("shota", "うーん、分かったよ…。じゃあ、もう一度じっくり読んでみるか。", nowStoryName);
 setTalk("aoi", "その方が賢明です。魔法陣よりも、きっとこっちの方が役に立つはずですから。", nowStoryName);
-setPlayBgm("natunoyozora.m4a",nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
 setTalk("shota", "よし、葵！ 俺が漢字で書いてみるから、何かヒントがあるかもしれないぞ！", nowStoryName);

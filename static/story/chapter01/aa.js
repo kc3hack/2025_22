@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("huruhonya.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定        ##ここまだ！！！！！！！！！！
+setPlayBgm("kodokunashonin.mp3",nowStoryName);   // BGMを設定        ##ここまだ！！！！！！！！！！
 setNarration("大阪の静かな古本屋に足を踏み入れた葵は、店内の古びた本の並ぶ棚を眺めていた。", nowStoryName);
 setNarration("取材のために関西の歴史資料を探していたが、ふと、一人の青年が手にしている本が目に留まった。", nowStoryName);
 setNarration("分厚い紙に書かれた文字が、彼女の好奇心を刺激する。", nowStoryName);

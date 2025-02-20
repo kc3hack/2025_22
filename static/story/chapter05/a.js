@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("suzumusidera.png",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("tennkyuu.mp3",nowStoryName);   // BGMを設定
 
 // 選択肢を設定
 setNarration("二人は鈴虫寺に到着した");
@@ -47,6 +47,8 @@ setTalk("shota", "う…うるさい！ それは冗談だよ、冗談！", nowS
 
 setTalk("aoi", "まあ、冗談でも、素敵な願い事が叶うといいですね。", nowStoryName);
 
+setPlayBgm("yuugure.MP3",nowStoryName);
+
 setNarration("鈴虫寺での散策を終え、二人が境内を歩いていると、再び謎の老人が現れる");
 
 setTalk("rojin", "宝は見つけたようだな。", nowStoryName);
@@ -74,7 +76,7 @@ setTalk("aoi", "でも、気づかぬうちに関西の魅力を感じ、守る�
 setTalk("rojin", "あとで占い師をしごかないと…。まぁ、それはまた別の話だ。", nowStoryName);
 
 setTalk("shota", "あ、あれ？ なんだか心配だな…", nowStoryName);
-setPlayBgm("suzukaze.mp3",nowStoryName);
+
 
 setTalk("aoi", "でも、きっと大丈夫ですよ。あの占い師も何か学んだはずですから。", nowStoryName);
 

@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("takedajho.png",nowStoryName);  // 画像を設定
-setPlayBgm("seiu.mp3",nowStoryName);   // BGMを設定
+setPlayBgm("sabitsuitasekai.mp3",nowStoryName);   // BGMを設定
 setPlaySe("kumonoue.mp3",nowStoryName);
 setNarration("翔太と葵は竹田城跡に到着した");
 
