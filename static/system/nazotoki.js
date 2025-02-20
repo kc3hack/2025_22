@@ -54,7 +54,7 @@ function setAnswerBtn(text01,text02,text03,text04,text05,ans){
 function showAnswerBtn(){
     playSe("windowopen.mp3");
     hideChatBox();
-    doAnswer.innerText = "回答ボタンを非表示にする";
+    doAnswer.innerText = "▶ 回答ボタンを非表示にする";
     doAnswer.onclick = hideAnswerBtn;
     answerBox.style.display = 'block';
 }
@@ -62,7 +62,7 @@ function showAnswerBtn(){
 // ボタンを非表示
 function hideAnswerBtn(){
     playSe("windowopen.mp3");
-    doAnswer.innerText = "回答ボタンを表示する";
+    doAnswer.innerText = "▶ 回答ボタンを表示する";
     doAnswer.onclick = showAnswerBtn;
     answerBox.style.display = 'none';
 }
@@ -92,13 +92,13 @@ const chat = document.getElementById("chatBox");
 function showChatBox(){
     chat.style.display = "block";
     hideResult();   // 音も鳴る
-    doChat.innerText = "チャットを閉じる";
+    doChat.innerText = "▶ チャットを閉じる";
     doChat.onclick = hideChatBox;
 }
 // チャット欄を非表示
 function hideChatBox(){
     playSe("windowopen.mp3");
     chat.style.display ="none";
-    doChat.innerText = "チャットを開く";
+    doChat.innerText = "▶ チャットを開く";
     doChat.onclick = showChatBox;
 }

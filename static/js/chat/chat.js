@@ -18,6 +18,7 @@ function getTextBox(){
 
 // 送信
 function submit(){
+    playTapSE();
     talk("管理者",getTextBox());
     textBox.value = "";
 }
