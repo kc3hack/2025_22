@@ -10,15 +10,17 @@
     <style>
         #chatBox{
             position: absolute;
-            top: 50%;
+            top: 10%;
             left: 50%;
-            transform: translate(-50%,-50%);
-            -webkit-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-10%);
+            -webkit-transform: translate(-50%,-10%);
+            -ms-transform: translate(-50%,-10%);
 
             width: 90vw;
-            height: 80vh;
+            height: 60vh;
             border: solid white;
+
+            display: none;
         }
     </style>
 </head>
@@ -32,8 +34,8 @@
     
     <!--吹き出し-->
     <div id="speechBox">
-        <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">回答する</div>
-        <div id="" class="choiceBtn">チャットを開く</div>
+        <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">回答ボタンを表示する</div>
+        <div id="doChat" class="choiceBtn" onclick="showChatBox();">チャットを開く</div>
     </div>
 
     <!--選択肢-->
@@ -72,6 +74,26 @@
 
     <!--js story-->
     <script src="/static/story/{{ jsOriginal }}.js"></script>
+
+    <script>
+        // チャットラン
+        const chat = document.getElementById("chatBox");
+
+        function showChatBox(){
+            chat.style.display = "block";
+            hideResult();   // 音も鳴る
+            doChat.innerText = "チャットを閉じる";
+            doChat.onclick = hideChatBox;
+        }
+
+        function hideChatBox(){
+            playSe("windowopen.mp3");
+            chat.style.display ="none";
+            doChat.innerText = "チャットを開く";
+            doChat.onclick = showChatBox;
+        }
+
+    </script>
 
 </body>
 </html>

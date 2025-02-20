@@ -40,7 +40,7 @@ body{
 #mesBox{     
     position: absolute;       
     width: 95vw;
-    height: 80vh;
+    height: 75vh;
     left: 50%;
     top: 10px;
     transform: translateX(-50%);

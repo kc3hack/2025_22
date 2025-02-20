@@ -15,6 +15,7 @@ const notificateBox = document.getElementById("notificateBox");
 
 // セリフボタン
 const doAnswer = document.getElementById("doAnswer");
+const doChat = document.getElementById("doChat");
 
 // 回答番号
 let ansNum;
@@ -52,7 +53,8 @@ function setAnswerBtn(text01,text02,text03,text04,text05,ans){
 // ボタンを表示
 function showAnswerBtn(){
     playSe("windowopen.mp3");
-    doAnswer.innerText = "閉じる";
+    hideChatBox();
+    doAnswer.innerText = "回答ボタンを非表示にする";
     doAnswer.onclick = hideAnswerBtn;
     answerBox.style.display = 'block';
 }
@@ -60,7 +62,7 @@ function showAnswerBtn(){
 // ボタンを非表示
 function hideAnswerBtn(){
     playSe("windowopen.mp3");
-    doAnswer.innerText = "開く";
+    doAnswer.innerText = "回答ボタンを表示する";
     doAnswer.onclick = showAnswerBtn;
     answerBox.style.display = 'none';
 }
