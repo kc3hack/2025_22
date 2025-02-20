@@ -83,3 +83,22 @@ function ans(num){
 function setNextPage(url){
     nextUrl = url;
 }
+
+
+
+// チャット欄
+const chat = document.getElementById("chatBox");
+// チャット欄を表示
+function showChatBox(){
+    chat.style.display = "block";
+    hideResult();   // 音も鳴る
+    doChat.innerText = "チャットを閉じる";
+    doChat.onclick = hideChatBox;
+}
+// チャット欄を非表示
+function hideChatBox(){
+    playSe("windowopen.mp3");
+    chat.style.display ="none";
+    doChat.innerText = "チャットを開く";
+    doChat.onclick = showChatBox;
+}
