@@ -66,6 +66,8 @@ uranainoheya.png
 wakayamajho.png
 - 夕日
 yuhi.jpg
+- 商店街
+shotengai.jpg
 
 ## メソッド
 ### 開発者モードに切り替える
