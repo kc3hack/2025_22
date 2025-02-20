@@ -17,6 +17,11 @@ def Play():
 def PlayStart():
     return render_template("/play/start/start.html")
 
+# クレジット
+@app.route("/play/choseCharacter")
+def choseCharacter():
+    return render_template("/play/choseCharacter/choseCharacter.html")
+
 # QRシステム
 @app.route("/play/QRSystem")
 def PlayChapter03QRSystem():
