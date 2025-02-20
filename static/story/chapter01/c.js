@@ -112,7 +112,7 @@ setTalk("aoi", "ええ、見せてください……ふむふむ……。なる�
 setTalk("shota", "え...", nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
-setNarration("刻印を調べているうちに、翔太は不思議な模様が一部隠れていることに気づく。それを掘り起こすと、そこには古い紙が現れた。", nowStoryName);
+setNarration("刻印を調べているうちに、翔太は不思議な模様が一部隠れていることに気づく。\nそれを掘り起こすと、そこには古い紙が現れた。", nowStoryName);
 
 setTalk("shota", "この紙、漢字がたくさん書かれているな……。", nowStoryName);
 setTalk("aoi", "この謎を解いて四角に入る文字を答えろ...ということですね", nowStoryName);
