@@ -5,7 +5,7 @@
 // developMent();   // 開発者モードに切り替える（ページ遷移オフ）
 // メインストーリー1
 let nowStoryName = "mainStory1";
-setBackImage("yuhi.jpg",nowStoryName);  // 画像を設定
+setBackImage("jinja.jpg",nowStoryName);  // 画像を設定
 setPlayBgm("akisame.mp3",nowStoryName);   // BGMを設定
 setNarration("翔太と葵は、神社に到着した。", nowStoryName);
 
@@ -16,7 +16,7 @@ setTalk("aoi", "もちろんです。この神社には大物主大神が祀ら�
 setTalk("shota", "国造りの神！？ それって、まさに『建国の神様』ってこと？", nowStoryName);
 setTalk("aoi", "その通りです！ だから、国を守る神様として、昔からとても重要な存在なんです。", nowStoryName);
 setTalk("shota", "なるほどな。国の神様かぁ……なんかすごい力がありそうだな。", nowStoryName);
-setPlaySe("kigigayureru",nowStoryName);
+setPlaySe("kigigayureru.mp3",nowStoryName);
 setNarration("道の脇に立つ大木が揺れる", nowStoryName);
 
 setTalk("shota", "おお！ あの木、神様が宿ってそうだな！", nowStoryName);

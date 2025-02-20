@@ -31,6 +31,7 @@
 - yoake.m4a
 - yuugure.MP3
 - dojinamajo.m4a
+- twilightmemory.mp3
 ### SE
 - 不正解
 huseikai.mp3
@@ -75,6 +76,8 @@ sora.jpg
 uranaiyaSoto.jpg
 - 古本屋外
 huruhonyaSoto.jpg
+- 神社への道
+jinjaHenoMiti.jpg
 
 ## メソッド
 ### 開発者モードに切り替える

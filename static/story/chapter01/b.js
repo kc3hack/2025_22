@@ -17,7 +17,7 @@ setChoice(1, "あなたの行動を選択してください．", "神社に行�
 // 選択肢1
 nowStoryName = "choice1Story";
 setPlayBgm("hitoiki.m4a",nowStoryName);
-setBackImage("jinja.jpg",nowStoryName);
+setBackImage("jinjaHenoMiti.jpg",nowStoryName);
 setTalk("shota", "いや～、神社に行くのってなんかワクワクするよな！", nowStoryName);
 setTalk("aoi", "そうですか？ 私はどちらかというと厳かな気持ちになりますけど……。", nowStoryName);
 setTalk("shota", "だってさ、神社って『何かが封印されてる率』高くない？", nowStoryName);
@@ -32,7 +32,7 @@ setTalk("shota", "ほら来たぁぁぁぁ！！ 絶対なんかあるやつ！�
 setTalk("aoi", "ただの風です。", nowStoryName);
 setPlaySe("konohagahukareru.mp3",nowStoryName);
 setTalk("shota", "いや、これはフラグだって！！ 俺たち、今まさに運命の瞬間を——", nowStoryName);
-setPlaySe("torigatobidatsu.mp3",nowStoryName);
+setPlaySe("torigatobitatsu.mp3",nowStoryName);
 setNarration("ピチュン！（鳥が飛び立つ）", nowStoryName);
 
 setTalk("shota", "えっ、今の鳥！？ もしかして神の使い！？ 何かの啓示！？", nowStoryName);
@@ -41,7 +41,7 @@ setTalk("shota", "……なんか俺だけすごい冒険してる気がする�
 setTalk("aoi", "気のせいですね。", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
-setPlayBgm("hitoiki.m4a",nowStoryName);
+setPlayBgm("twilightmemory.mp3",nowStoryName);
 setBackImage("shotengai.jpg",nowStoryName);
 setTalk("shota", "えっと……葵？ 俺さっき『まずは近くの神社に行ってみるか？』って言ったよな？", nowStoryName);
 setTalk("aoi", "はい、仰っていましたね。", nowStoryName);
@@ -118,4 +118,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter01/c");
