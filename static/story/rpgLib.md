@@ -46,7 +46,7 @@ seidenki.mp3
 - 正解
 seikai.mp3
 - 雀が鳴く朝
-suzumagenakuasa.mp3
+suzumeganakuasa.mp3
 - 鳥が飛び立つ
 torigatobitatsu.mp3
 ### 背景
