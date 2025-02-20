@@ -51,68 +51,43 @@
             -ms-transform: translateX(-50%);
             color: white;
             overflow-y: scroll;
-
-            
         }
 
     </style>
 </head>
 <body>
     <div id="mesBox">
-        <!--サンプル ChatGPTにより生成-->
-        ショウタ（Shota）**：関西弁のノリがいいプレイヤー。<br>
-        カズ（Kazu）**：冷静で戦略的なプレイヤー。<br>
-        リョウ（Ryo）**：突っ込むのが好きなアグレッシブプレイヤー。<br>
-        ユイ（Yui）**：サポート役が得意な女性プレイヤー。<br>
-        <br>
-        VC（ボイスチャット）開始**<br>
-        <br>
-        ショウタ**：「みんな聞こえる？ 今日も勝ちに行くでー！」<br>
-        <br>
-        カズ**：「聞こえるよ。まずはマップ確認して動き決めよう。」<br>
-        <br>
-        リョウ**：「いや、もう突っ込もうや！先手必勝やろ！」<br>
-        <br>
-        ユイ**：「リョウくん、また特攻するつもり…？」<br>
-        <br>
-        ショウタ**：「ちょ、リョウ！まだ準備できてへんやん！撃たれてるで！」<br>
-        <br>
-        （敵の銃撃音 🔫💥）<br>
-        <br>
-        リョウ**：「あっ……やられた……（即死）」<br>
-        <br>
-        ユイ**：「だから言ったのに……💧」<br>
-        <br>
-        カズ**：「ほらな。じゃあ3人で立て直そう。ショウタ、左から回って。」<br>
-        <br>
-        ショウタ**：「了解！ユイ、回復頼むで！」<br>
-        <br>
-        ユイ**：「回復いれるね。カバーお願い！」<br>
-        <br>
-        （ショウタが敵を倒す 🎯）<br>
-        <br>
-        ショウタ**：「よっしゃ！1ダウン！カズ、そっち大丈夫？」<br>
-        <br>
-        カズ**：「問題ない。あと1人、詰めよう。」<br>
-        <br>
-        リョウ**：「（観戦しながら）俺のこと置いて盛り上がるなよ……」<br>
-        <br>
-        ショウタ**：「お前が突っ込むからやろw」<br>
-        <br>
-        （最後の敵を倒して勝利 🏆）<br>
-        <br>
-        ユイ**：「やった！勝ったね！」<br>
-        <br>
-        リョウ**：「ええなあ、俺も生きてたかった……」<br>
-        <br>
-        ショウタ**：「せやから言うたやろw 次はちゃんと連携取ろな！」<br>
-
     </div>
 
 
     <div class="submitBox">
-        <input type="text" id="textBox"><button id="btn">送信</button>
+        <input type="text" id="textBox"><button id="btn" onclick="submit();">送信</button>
     </div>
+
+    <script>
+        // 要素
+        const textBox = document.getElementById("textBox");
+        const messageBox = document.getElementById("mesBox");
+
+        let chat = "";
+
+        // 話す
+        function talk(name,text){
+            chat += `${name}:「${text}」\n`;
+            messageBox.innerText = chat;
+        }
+
+        // テキストボックスのデータ取得
+        function getTextBox(){
+            return textBox.value;
+        }
+
+        // 送信
+        function submit(){
+            talk("管理者",getTextBox());
+            textBox.value = "";
+        }
+    </script>
 
     
 
