@@ -17,7 +17,7 @@ def Play():
 def PlayStart():
     return render_template("/play/start/start.html")
 
-# クレジット
+# キャラクター選択
 @app.route("/play/choseCharacter")
 def choseCharacter():
     return render_template("/play/choseCharacter/choseCharacter.html")
