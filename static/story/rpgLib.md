@@ -30,6 +30,7 @@
 - tennkyuu.mp3
 - yoake.m4a
 - yuugure.MP3
+- dojinamajo.m4a
 ### SE
 - 不正解
 huseikai.mp3
@@ -68,6 +69,12 @@ wakayamajho.png
 yuhi.jpg
 - 商店街
 shotengai.jpg
+- 空
+sora.jpg
+- 占い部屋外
+uranaiyaSoto.jpg
+- 古本屋外
+huruhonyaSoto.jpg
 
 ## メソッド
 ### 開発者モードに切り替える

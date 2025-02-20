@@ -5,8 +5,8 @@
 // developMent();   // 開発者モードに切り替える（ページ遷移オフ）
 // メインストーリー1
 let nowStoryName = "mainStory1";
-setBackImage("huruhonya.jpg",nowStoryName);  // 画像を設定
 setPlayBgm("kodokunashonin.mp3",nowStoryName);   // BGMを設定
+setBackImage("huruhonya.jpg",nowStoryName);  // 画像を設定
 setNarration("あなたは大阪の静かな古本屋に足を踏み入れる。", nowStoryName);
 setNarration("埃っぽい棚の中から一冊の古びた本を見つける。", nowStoryName);
 setNarration("手に取ると、厚い紙に「浪速の財、四つに分かれし」と書かれている。", nowStoryName);
@@ -40,4 +40,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter01/b");
