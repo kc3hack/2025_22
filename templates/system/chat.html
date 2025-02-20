@@ -6,55 +6,49 @@
     <title>RPGSystem | Chat</title>
     <style>
         body{
-            background-color: rgba(44, 49, 78, 0.733);
+            background-color: rgb(0, 0, 0);
         }
         /* ボタン */
         #btn{
-            margin-left: 5px;
+            margin-left: 2px;
             width: 10vw;
             font-size: x-large;
             font-weight: bold;
         }
 
         #textBox{
-            margin-right: 5px;
-            margin: 10px;
-            width: 30vw;
+            margin-right: 2px;
+            width: 70vw;
             font-size: x-large;
             font-weight: bold;
         }
 
         .submitBox{
             position: absolute;
-            width: 80vw;
             left: 50%;
-            bottom: 3%;
+            bottom: 2%;
+            transform: translateX(-50%);
             -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
-            background-color: rgba(0, 0, 0,0.6);
-            color: white;
-            padding: 0.2em;
+            white-space: nowrap;    /* 改行禁止 */
         }
 
-        #mesBox{
-
-            position: absolute;
-        
-            top: 10%;
+        #mesBox{     
+            position: absolute;       
+            width: 95vw;
+            height: 85vh;
+            padding-top: 20px;
             left: 50%;
-            transform: translate(-50%,-10%);
-            -webkit-transform: translate(-50%,-10%);
-            -ms-transform: translate(-50%,-10%);
-            padding: 20px;
-        
-            background-color: rgba(0, 0, 0, 0.788);
+            top: 0;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
             color: white;
-        
-            width: 80vw;
-            height: 65vh;
-            border: 2px solid;
             overflow-y: scroll;
+
+            
         }
+
     </style>
 </head>
 <body>
@@ -109,9 +103,15 @@
 
     </div>
 
+
     <div class="submitBox">
         <input type="text" id="textBox"><button id="btn">送信</button>
     </div>
+
+    
+
+
+
     
 </body>
 </html>
