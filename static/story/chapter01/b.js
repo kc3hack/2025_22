@@ -42,7 +42,7 @@ setTalk("aoi", "気のせいですね。", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
 setPlayBgm("hitoiki.m4a",nowStoryName);
-setBackImage("shoutengai.jpg",nowStoryName);
+setBackImage("shotengai.jpg",nowStoryName);
 setTalk("shota", "えっと……葵？ 俺さっき『まずは近くの神社に行ってみるか？』って言ったよな？", nowStoryName);
 setTalk("aoi", "はい、仰っていましたね。", nowStoryName);
 setTalk("shota", "なのに、なんで俺たち商店街にいるんだ……？", nowStoryName);
