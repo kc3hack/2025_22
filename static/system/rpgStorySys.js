@@ -130,7 +130,6 @@ function nextChoiceStory(){
         }
     }else{
         showSpeech("すでに選択されました．");
-        showBtn();
     }
 }
 
