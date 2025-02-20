@@ -4,96 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem | Chat</title>
-    <style>
-        body{
-            background-color: rgba(8, 28, 111, 0.753);
-        }
-        /* ボタン */
-        #btn{
-            margin-left: 2px;
-            width: 10vw;
-            font-size: x-large;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-        #btn:hover{
-            background-color: rgb(206, 203, 203);
-        }
-
-        #textBox{
-            margin-right: 2px;
-            width: 70vw;
-            font-size: x-large;
-            color: (8, 28, 111);
-            background-color: rgba(255, 255, 255, 0.792);
-            border-radius: 5px;
-        }
-
-        .submitBox{
-            position: absolute;
-            left: 50%;
-            bottom: 2%;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            white-space: nowrap;    /* 改行禁止 */
-        }
-
-        #mesBox{     
-            position: absolute;       
-            width: 95vw;
-            height: 80vh;
-            padding-top: 20px;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            color: white;
-            overflow-y: scroll;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/static/css/chat/chat.css">
 </head>
 <body>
+
+    <!--チャット欄-->
     <div id="mesBox">
     </div>
 
-
+    <!--入力送信関係-->
     <div class="submitBox">
         <input type="text" id="textBox"><button id="btn" onclick="submit();">送信</button>
     </div>
 
-    <script>
-        // 要素
-        const textBox = document.getElementById("textBox");
-        const messageBox = document.getElementById("mesBox");
-
-        let chat = "";
-
-        // 話す
-        function talk(name,text){
-            chat += `${name}:「${text}」\n`;
-            messageBox.innerText = chat;
-            messageBox.scrollTop = messageBox.scrollHeight;
-        }
-
-        // テキストボックスのデータ取得
-        function getTextBox(){
-            return textBox.value;
-        }
-
-        // 送信
-        function submit(){
-            talk("管理者",getTextBox());
-            textBox.value = "";
-        }
-    </script>
-
-    
-
-
-
+    <!--チャットプログラム-->
+    <script src="/static/js/chat/chat.js"></script>
     
 </body>
 </html>

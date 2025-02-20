@@ -1,0 +1,52 @@
+/* 背景 */
+body{
+    background-color: rgba(8, 28, 111, 0.753);
+}
+
+/* 送信ボタン */
+#btn{
+    margin-left: 2px;
+    width: 10vw;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#btn:hover{
+    background-color: rgb(206, 203, 203);
+}
+
+/* テキストボックス */
+#textBox{
+    margin-right: 2px;
+    width: 70vw;
+    font-size: x-large;
+    color: (8, 28, 111);
+    background-color: rgba(255, 255, 255, 0.792);
+    border-radius: 5px;
+}
+
+/* テキストボックス&送信ボタン */
+.submitBox{
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    white-space: nowrap;    /* 改行禁止 */
+}
+
+/* チャット欄 */
+#mesBox{     
+    position: absolute;       
+    width: 95vw;
+    height: 80vh;
+    padding-top: 20px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    color: white;
+    overflow-y: scroll;
+}
