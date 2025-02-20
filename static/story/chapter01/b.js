@@ -99,7 +99,7 @@ setHideCharacter("aoi",nowStoryName);
 
 
 setNarration("翔太と葵は占い師の言葉に納得いかないながらも、占い師から教えられた「近く」の手がかりを頼りに調査を続ける。しかし…", nowStoryName);
-
+setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setNarration("そのころ、占い師は．．．", nowStoryName);
 
 setTalk("uranaishi", "フフフ…これで宝を独り占めできる…お前たちが動き出した瞬間、わしの計画通りだ。", nowStoryName);
