@@ -110,6 +110,8 @@ setNarration("占い師がゆっくりとテントの中で準備を始める", 
 setHideCharacter("uranaishi",nowStoryName);
 setPlayBgm("souryou.mp3",nowStoryName);
 setBackImage("huruhonyaSoto.jpg",nowStoryName); 
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 
 // メインストーリー2
 nowStoryName = "mainStory2";
