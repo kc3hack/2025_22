@@ -75,6 +75,7 @@
         function talk(name,text){
             chat += `${name}:「${text}」\n`;
             messageBox.innerText = chat;
+            messageBox.scrollTop = messageBox.scrollHeight;
         }
 
         // テキストボックスのデータ取得
