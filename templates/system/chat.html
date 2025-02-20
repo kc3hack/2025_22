@@ -1,1 +1,27 @@
-チャット
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGSystem | Chat</title>
+    <link rel="stylesheet" href="/static/css/chat/chat.css">
+</head>
+<body>
+
+    <!--チャット欄-->
+    <div id="mesBox">
+    </div>
+
+    <!--入力送信関係-->
+    <div class="submitBox">
+        <input type="text" id="textBox"><button id="btn" onclick="submit();">送信</button>
+    </div>
+
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
+    <!--チャットプログラム-->
+    <script src="/static/js/chat/chat.js"></script>
+    
+</body>
+</html>

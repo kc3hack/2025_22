@@ -18,8 +18,8 @@
     
     <!--吹き出し-->
     <div id="speechBox">
-        <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">回答する</div>
-        <div id="" class="choiceBtn">チャットを開く</div>
+        <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">▶ 回答ボタンを表示する</div>
+        <div id="doChat" class="choiceBtn" onclick="showChatBox();">▶ チャットを開く</div>
     </div>
 
     <!--選択肢-->
@@ -33,6 +33,9 @@
             <div id="choice5" class="choiceBtn" onclick="ans(5);"></div>
         </div>
     </div>
+
+    <!--チャットBox-->
+    <iframe src="/system/chat" id="chatBox"></iframe>
 
     <!--通知-->
     <div id="notificateBox">

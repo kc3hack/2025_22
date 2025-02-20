@@ -94,3 +94,19 @@
 .choiceBtn:hover{
     background-color: rgba(255, 255, 255, 0.498);
 }
+
+/* チャットボックス */
+#chatBox{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    -webkit-transform: translate(-50%,-10%);
+    -ms-transform: translate(-50%,-10%);
+
+    width: 90vw;
+    height: 60vh;
+    border: solid white;
+
+    display: none;
+}

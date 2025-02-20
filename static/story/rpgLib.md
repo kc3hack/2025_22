@@ -1,8 +1,8 @@
 # 「rpgLib」
 ## キャラクターID
-|翔太|謎の老人|  占い師   |葵|
-|----|------|---------|---|
-|shota|rojin|uranaishi|aoi|
+|翔太|謎の老人|住職|  占い師   |葵|
+|----|------|----|---------|---|
+|shota|rojin|jushoku|uranaishi|aoi|
 ## ストーリーID
 |メインストーリー1|メインストーリー2|
 |---------------|--------------|
@@ -46,7 +46,7 @@ seidenki.mp3
 - 正解
 seikai.mp3
 - 雀が鳴く朝
-suzumagenakuasa.mp3
+suzumeganakuasa.mp3
 - 鳥が飛び立つ
 torigatobitatsu.mp3
 ### 背景
@@ -66,6 +66,8 @@ uranainoheya.png
 wakayamajho.png
 - 夕日
 yuhi.jpg
+- 商店街
+shotengai.jpg
 
 ## メソッド
 ### 開発者モードに切り替える
