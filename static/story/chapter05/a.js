@@ -11,6 +11,8 @@ setPlayBgm("tennkyuu.mp3",nowStoryName);   // BGMを設定
 // 選択肢を設定
 setNarration("二人は鈴虫寺に到着した");
 
+setPlaySe("natunoyama1.mp3",nowStoryName);
+
 setTalk("shota", "鈴虫寺、なんかすごく静かな場所だな。鈴虫の音が年中聞こえるっていうけど、これって…ほんとにずっと鳴いてるの？", nowStoryName);
 
 setTalk("aoi", "はい、鈴虫寺は年中鈴虫の音が聞こえることで有名です。まるで、鈴虫たちがお寺を守ってるかのように鳴き続けているんですよ。", nowStoryName);
@@ -67,7 +69,9 @@ setTalk("aoi", "…そういうことだったんですね。私たちが見て�
 
 setTalk("shota", "なるほど…。鈴虫の音とか、竹田城の景色とか、和歌山城の石垣とか、ただの観光地じゃなくて、何百年も積み重ねられた宝だったんだ。", nowStoryName);
 
-setTalk("rojin", "占い師は、宝を奪おうとしていた。歴史の記憶を、そして人々の思い出を奪おうとしていたのだ。しかし、二人はどんな困難があっても、この日を忘れることはないだろう。つまり、関西からこれらの記憶は決して消えることはない。関西の宝を、二人はしっかりと守ってくれた。感謝する。", nowStoryName);
+setTalk("rojin", "占い師は、宝を奪おうとしていた。歴史の記憶を、そして人々の思い出を奪おうとしていたのだ。", nowStoryName);
+setTalk("rojin","しかし、二人はどんな困難があっても、この日を忘れることはないだろう。",nowStoryName);
+setTalk("rojin","つまり、関西からこれらの記憶は決して消えることはない。関西の宝を、二人はしっかりと守ってくれた。感謝する。",nowStoryName);
 
 setTalk("shota", "守ったって…俺たちがそんな大それたことをしたなんて。", nowStoryName);
 
@@ -88,6 +92,8 @@ setTalk("aoi", "はい、きっとこれからも新しい発見が待ってい�
 
 setTalk("rojin", "フフ、じゃあな。お前らの冒険は、まだまだ続くんだろうな。楽しんでおけ。", nowStoryName);
 
+setHideCharacter("rojin",nowStoryName);
+
 setNarration("謎の老人は微笑みながら消えていき、二人は静かな境内に立ち尽くす");
 
 setTalk("shota", "なんだか、すごく感動的だな。自分たちが守ってきたのは、目に見えるものだけじゃなかったんだって、今になって気づいたよ。", nowStoryName);
@@ -100,7 +106,11 @@ setTalk("aoi", "これからも、その言葉を胸に、いろんな場所を�
 
 setTalk("shota", "うん、これからも一緒に、たくさんの宝を見つけていこう！", nowStoryName);
 
-setNarration("二人は微笑み合い、関西の空を見上げる。彼らの冒険は、これからも続いていく…");
+setPlaySe("natunoyama2.mp3",nowStoryName);
+
+setBackImage("yuhi.jpg",nowStoryName);
+
+setNarration("二人は微笑み合い、関西の空を見上げる。彼らの冒険は、これからも続いていく…",nowStoryName);
 
 // 選択肢を設定
 
@@ -120,4 +130,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapterEnd");

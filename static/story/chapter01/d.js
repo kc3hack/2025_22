@@ -5,13 +5,12 @@
 // developMent();   // 開発者モードに切り替える（ページ遷移オフ）
 // メインストーリー1
 let nowStoryName = "mainStory1";
-setBackImage("yuhi.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
+setBackImage("jinja.jpg",nowStoryName);  // 画像を設定
+setPlaySe("kazeniyureru.mp3",nowStoryName);
 setTalk("shota", "おっ！？ なんだ、急に風が……", nowStoryName);
 setTalk("aoi", "これは……まさか、何かの予兆か？", nowStoryName);
-setPlaySe("kazeniyureru",nowStoryName);
 setNarration("その時、木の陰から謎の老人がゆっくりと現れる", nowStoryName);
-setPlayBgm("syuuennwokanaderumono",nowStoryName);
+setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("rojin", "ふむ、これは……若者たち、運命に導かれし者よ。", nowStoryName);
 setTalk("shota", "えっ！？ ど、どこから……？", nowStoryName);
 setTalk("aoi", "あの……あなたは一体？", nowStoryName);
@@ -25,7 +24,8 @@ setTalk("aoi", "箕面大滝ですか？", nowStoryName);
 setTalk("rojin", "その地で、何かを感じるだろう。", nowStoryName);
 
 setNarration("老人は言い残して、ふわりと風に乗って消えていく", nowStoryName);
-
+setHideCharacter("rojin",nowStoryName);
+setPlayBgm("yoake.m4a",nowStoryName);
 setTalk("shota", "ちょ、ちょっと待って！ なんで急に消えるんだ！？", nowStoryName);
 setTalk("aoi", "……一体、何だったのでしょう。", nowStoryName);
 setTalk("shota", "でも、言ってたことは覚えておこう。次は『箕面大滝』だ！", nowStoryName);
@@ -51,4 +51,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter02/a");

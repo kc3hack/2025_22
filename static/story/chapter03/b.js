@@ -61,4 +61,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter04/a");

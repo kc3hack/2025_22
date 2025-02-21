@@ -89,4 +89,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter02/nazo");

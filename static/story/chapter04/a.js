@@ -8,7 +8,9 @@ let nowStoryName = "mainStory1";
 setBackImage("takedajho.png",nowStoryName);  // 画像を設定
 setPlayBgm("sabitsuitasekai.mp3",nowStoryName);   // BGMを設定
 setPlaySe("kumonoue.mp3",nowStoryName);
-setNarration("翔太と葵は竹田城跡に到着した");
+setNarration("翔太と葵は竹田城跡に到着した",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setShowCharacter("aoi",nowStoryName);
 
 setTalk("shota", "うーん、竹田城跡か…どんなところなんだろうな。", nowStoryName);
 
@@ -86,4 +88,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter04/nazo");

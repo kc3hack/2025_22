@@ -5,9 +5,11 @@
 // developMent();   // 開発者モードに切り替える（ページ遷移オフ）
 // メインストーリー1
 let nowStoryName = "mainStory1";
-setBackImage("takedajho.jpg",nowStoryName);  // 画像を設定
+setBackImage("takedajho.png",nowStoryName);  // 画像を設定
   // BGMを設定
-setNarration("翔太と葵が竹田城跡で少し休憩していると、再び謎の老人が現れる");
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setNarration("翔太と葵が竹田城跡で少し休憩していると、再び謎の老人が現れる",nowStoryName);
 setPlayBgm("akaneironokazetotomoni.mp3",nowStoryName); 
 setTalk("rojin", "お前ら、次に行くべき場所は…もうわかるだろ。", nowStoryName);
 setTalk("shota", "知らねぇーよ！！", nowStoryName);
@@ -48,4 +50,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter04/nazo02");

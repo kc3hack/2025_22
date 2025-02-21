@@ -103,7 +103,7 @@ setNarration("スマートフォンの画面には謎のメッセージが表示
 setNarration("ここからは、画面の前のあなたが試してみてね！！", nowStoryName);
 
 setTalk("shota", "画面の前のあなたって、誰だよ！", nowStoryName);
-setTalk("aoi", "さすがです。忍者なら、画面の向こう側にいる人の存在にも気が付くことができるんですね。", nowStoryName);
+setTalk("aoi", "忍者なら、画面の向こう側にいる人の存在にも気が付くことができるんですね。", nowStoryName);
 setTalk("shota", "まあ、忍者っぽいから、俺たちも任務みたいな感じで解読するか！", nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
@@ -112,4 +112,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter02/nazo");

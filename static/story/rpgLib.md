@@ -51,6 +51,10 @@ seikai.mp3
 suzumeganakuasa.mp3
 - 鳥が飛び立つ
 torigatobitatsu.mp3
+- 夏の山1
+natunoyama1.mp3
+- 夏の山2
+natunoyama2.mp3
 ### 背景
 - 古本屋
 huruhonya.jpg
