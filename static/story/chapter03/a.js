@@ -53,6 +53,7 @@ setTalk("shota", "え、そんなこと言っても、ただの紙だよ？ な�
 setTalk("aoi", "翔太さん、ただの紙だと思いますか？ この紙、どこかに秘密が隠されているかもしれません。忍者の目を持って、見逃してはならぬのです。", nowStoryName);
 setTalk("shota", "えー、なんだよそれ…でも、まさか本当に何か書いてあるのか？", nowStoryName);
 setTalk("aoi", "ちょっと見てみますね…", nowStoryName);
+setShowTempImage("nazo03.png",nowStoryName);
 
 // 選択肢を設定
 setChoice(3, "あなたの行動を選択して下さい", "暗記パンを取り出す", "炎上しそうな発言をツイートする", "QRコードを読み込む");
