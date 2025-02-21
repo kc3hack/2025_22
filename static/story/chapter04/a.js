@@ -49,7 +49,7 @@ setNarration("葵は周囲を注意深く調査しながら歩く。すると、
 setTalk("aoi", "翔太さん、これを見てください。石碑みたいですが、かなり古いものですね。", nowStoryName);
 setTalk("shota", "うわ、本当だ！ こんな場所にこんなものがあったなんて…何が書かれてるんだ？", nowStoryName);
 
-setNarration("石碑には、風化して読みづらくなった文字が刻まれていたが、かろうじていくつかの文字を判読できた。");
+setNarration("石碑には、風化して読みづらくなった文字が刻まれていたが、かろうじていくつかの文字を判読できた。",nowStoryName);
 
 setTalk("aoi", "これは…暗号のようですね。何か意味がありそうです。", nowStoryName);
 setTalk("shota", "やった！ ついに手がかりを見つけたかも！ どんな謎が隠されてるんだろう？", nowStoryName);
@@ -62,7 +62,7 @@ setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる",n
 setTalk("aoi", "ふむ…この大地…歴史の鼓動を感じますね…。この石垣も、大地の一部…。まるで、戦国の時代に包まれるような…zzz…", nowStoryName);
 setTalk("shota", "おいおいおい、寝るなーーー！！！", nowStoryName);
 
-setNarration("翔太が慌てて葵を揺さぶる");
+setNarration("翔太が慌てて葵を揺さぶる",nowStoryName);
 
 setTalk("shota", "なに大地と一体化しようとしてんだよ！ ここ、竹田城だぞ！？ 戦国の浪漫感じるのはいいけど、今すぐ寝るな！", nowStoryName);
 setTalk("aoi", "…んん？ あれ？ もう戦国時代終わりました？", nowStoryName);
