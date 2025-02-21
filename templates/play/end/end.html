@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|start</title>
     <link rel="stylesheet" href="/static/css/start/start.css">
+    <style>
+        #movie{
+            border: none;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>エンドロール製作中</h1>
+    <video src="/static/file/introduceMovie.mp4" id="movie" disablepictureinpicture></video>
     <script>
         // 右クリックの禁止
         document.oncontextmenu = function() {return false;}
+        const movie = document.getElementById("movie");
+        movie.play();
+        movie.volume = 0.4;
+        movie.addEventListener("ended",()=>{
+            window.location.replace("/play/start");
+        });
     </script>
 </body>
 </html>
