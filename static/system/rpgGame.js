@@ -1,6 +1,7 @@
 // セリフのテキストを取得
 const speechBoxElem = document.getElementById("message");
 
+
 // セリフを表示
 function writeSpeech(text){
     hideChoise();

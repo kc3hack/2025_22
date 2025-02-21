@@ -1,3 +1,6 @@
+// 右クリックの禁止
+document.oncontextmenu = function() {return false;}
+
 // 同意ボタン
 function agreeBtn(){
     document.documentElement.requestFullscreen();   // 全画面表示
