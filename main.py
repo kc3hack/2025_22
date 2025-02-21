@@ -35,7 +35,7 @@ def PlayChapter04OCRSystem():
 # エンドロール
 @app.route("/play/chapterEnd")
 def PlayChapterEnd():
-    return render_template("index.html")
+    return render_template("/play/end/end.html")
 
 # クレジット
 @app.route("/play/credit")
