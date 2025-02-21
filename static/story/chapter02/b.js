@@ -6,6 +6,8 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("taki.jpg",nowStoryName);  // 画像を設定
+setShowCharacter("shota",nowStoryName);
+setShowCharacter("aoi",nowStoryName);
 setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);  // BGMを設定
 setPlaySe("kumonoue.mp3",nowStoryName);
 setNarration("突然、謎の老人が現れる", nowStoryName);
@@ -19,6 +21,8 @@ setTalk("aoi", "え、和歌山城ですか？ それだけ？", nowStoryName);
 setTalk("rojin", "うむ、それだけじゃ。何も言えぬ…行くがよい。", nowStoryName);
 
 setNarration("老人がその場から消える", nowStoryName);
+
+setHideCharacter("rojin",nowStoryName);
 
 setTalk("shota", "待ってくれよ！ なんで和歌山城なんだよ！ 何かヒントもないのか？", nowStoryName);
 
@@ -52,4 +56,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter03/a");

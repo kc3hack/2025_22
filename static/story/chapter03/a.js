@@ -53,6 +53,7 @@ setTalk("shota", "え、そんなこと言っても、ただの紙だよ？ な�
 setTalk("aoi", "翔太さん、ただの紙だと思いますか？ この紙、どこかに秘密が隠されているかもしれません。忍者の目を持って、見逃してはならぬのです。", nowStoryName);
 setTalk("shota", "えー、なんだよそれ…でも、まさか本当に何か書いてあるのか？", nowStoryName);
 setTalk("aoi", "ちょっと見てみますね…", nowStoryName);
+setShowTempImage("nazo03.png",nowStoryName);
 
 // 選択肢を設定
 setChoice(3, "あなたの行動を選択して下さい", "暗記パンを取り出す", "炎上しそうな発言をツイートする", "QRコードを読み込む");
@@ -103,7 +104,7 @@ setNarration("スマートフォンの画面には謎のメッセージが表示
 setNarration("ここからは、画面の前のあなたが試してみてね！！", nowStoryName);
 
 setTalk("shota", "画面の前のあなたって、誰だよ！", nowStoryName);
-setTalk("aoi", "さすがです。忍者なら、画面の向こう側にいる人の存在にも気が付くことができるんですね。", nowStoryName);
+setTalk("aoi", "忍者なら、画面の向こう側にいる人の存在にも気が付くことができるんですね。", nowStoryName);
 setTalk("shota", "まあ、忍者っぽいから、俺たちも任務みたいな感じで解読するか！", nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
@@ -112,4 +113,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter03/nazo");

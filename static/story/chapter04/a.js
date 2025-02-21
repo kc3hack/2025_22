@@ -6,9 +6,11 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("takedajho.png",nowStoryName);  // 画像を設定
-setPlayBgm("seiu.mp3",nowStoryName);   // BGMを設定
+setPlayBgm("sabitsuitasekai.mp3",nowStoryName);   // BGMを設定
 setPlaySe("kumonoue.mp3",nowStoryName);
-setNarration("翔太と葵は竹田城跡に到着した");
+setNarration("翔太と葵は竹田城跡に到着した",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setShowCharacter("aoi",nowStoryName);
 
 setTalk("shota", "うーん、竹田城跡か…どんなところなんだろうな。", nowStoryName);
 
@@ -42,25 +44,26 @@ setChoice(1, "あなたの行動を選択して下さい", "辺りを隈なく�
 
 // 選択肢1
 nowStoryName = "choice1Story";
-setNarration("葵は周囲を注意深く調査しながら歩く。すると、古びた石碑を発見した。");
-
+setNarration("葵は周囲を注意深く調査しながら歩く。すると、古びた石碑を発見した。",nowStoryName);
+setShowTempImage("nazo04.png",nowStoryName);
 setTalk("aoi", "翔太さん、これを見てください。石碑みたいですが、かなり古いものですね。", nowStoryName);
 setTalk("shota", "うわ、本当だ！ こんな場所にこんなものがあったなんて…何が書かれてるんだ？", nowStoryName);
 
-setNarration("石碑には、風化して読みづらくなった文字が刻まれていたが、かろうじていくつかの文字を判読できた。");
+setNarration("石碑には、風化して読みづらくなった文字が刻まれていたが、かろうじていくつかの文字を判読できた。",nowStoryName);
 
 setTalk("aoi", "これは…暗号のようですね。何か意味がありそうです。", nowStoryName);
 setTalk("shota", "やった！ ついに手がかりを見つけたかも！ どんな謎が隠されてるんだろう？", nowStoryName);
 setTalk("aoi", "まずは解読してみましょう。もしかしたら、何か重要な情報が隠されているかもしれません。", nowStoryName);
 setTalk("shota", "よし、やってみよう！", nowStoryName);
+
 // 選択肢2
 nowStoryName = "choice2Story";
-setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる");
+setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる",nowStoryName);
 
 setTalk("aoi", "ふむ…この大地…歴史の鼓動を感じますね…。この石垣も、大地の一部…。まるで、戦国の時代に包まれるような…zzz…", nowStoryName);
 setTalk("shota", "おいおいおい、寝るなーーー！！！", nowStoryName);
 
-setNarration("翔太が慌てて葵を揺さぶる");
+setNarration("翔太が慌てて葵を揺さぶる",nowStoryName);
 
 setTalk("shota", "なに大地と一体化しようとしてんだよ！ ここ、竹田城だぞ！？ 戦国の浪漫感じるのはいいけど、今すぐ寝るな！", nowStoryName);
 setTalk("aoi", "…んん？ あれ？ もう戦国時代終わりました？", nowStoryName);
@@ -86,4 +89,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter04/nazo");

@@ -7,7 +7,9 @@
 let nowStoryName = "mainStory1";
 setBackImage("wakayamajho.png",nowStoryName);   // 画像を設定
 setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);  // BGMを設定
-setNarration("葵と翔太が歩いていると、近くで占い師がウロウロしているのを見つける");
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setNarration("葵と翔太が歩いていると、近くで占い師がウロウロしているのを見つける",nowStoryName);
 setShowCharacter("shota",nowStoryName);
 setShowCharacter("aoi",nowStoryName);
 setShowCharacter("uranaishi",nowStoryName);
@@ -17,7 +19,7 @@ setTalk("aoi", "確かに、なんだか落ち着かない感じですね。で�
 setHideCharacter("aoi",nowStoryName);
 setHideCharacter("shota",nowStoryName);
 setShowCharacter("rojin",nowStoryName);
-setNarration("すると、突然謎の老人が現れ、占い師に向かって歩み寄る");
+setNarration("すると、突然謎の老人が現れ、占い師に向かって歩み寄る",nowStoryName);
 
 setTalk("rojin", "おい、あんた、何ウロウロしてるんだ？ 仕事しろ、早く帰れ。", nowStoryName);
 setTalk("uranaishi", "えっ！？ ええと、私は今、未来を…", nowStoryName);
@@ -27,14 +29,14 @@ setTalk("shota", "お、おじいさん、何かすごいこと言ってる…",
 setTalk("aoi", "うーん…何か気になる発言ですね。でも、占い師もただ仕事してるだけなのに…", nowStoryName);
 
 setHideCharacter("uranaishi",nowStoryName);
-setNarration("謎の老人が占い師を無視して、翔太と葵に向かって話し始める");
+setNarration("謎の老人が占い師を無視して、翔太と葵に向かって話し始める",nowStoryName);
 
 setTalk("rojin", "お前ら、次に行くべき場所は『竹田城跡』だ。そこにはお前らが次に進むためのヒントがあるだろう。", nowStoryName);
 setTalk("shota", "竹田城跡！？ どこだそれ？", nowStoryName);
 setTalk("aoi", "あれ、竹田城跡って…あの有名な遺跡ですか？ どうしてその場所が？", nowStoryName);
 setTalk("rojin", "知らないのか？ とにかく行け。ヒントがあるからな。詳しいことは自分で確かめろ。", nowStoryName);
 setHideCharacter("rojin",nowStoryName);
-setNarration("謎の老人が言い残すと、何も言わずに姿を消す");
+setNarration("謎の老人が言い残すと、何も言わずに姿を消す",nowStoryName);
 
 setTalk("shota", "待って、どこ行った！？ もう、突然消えるなよ…", nowStoryName);
 setTalk("aoi", "あれでヒントを得た気がするし、竹田城跡に行きますか。占い師も気になるけど、まずは目的地を…", nowStoryName);
@@ -61,4 +63,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter04/a");

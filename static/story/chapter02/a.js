@@ -6,7 +6,7 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("taki.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("natunoyozora.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("hitoiki.m4a",nowStoryName);   // BGMを設定
 setTalk("shota", "おお！ ついに箕面大滝に到着だな！", nowStoryName);
 setTalk("aoi", "ええ、箕面大滝は大阪府箕面市にある、府営箕面公園内にある滝で、『日本の滝百選』にも選ばれているんですよ。", nowStoryName);
 setTalk("shota", "え、百選！？ それって、超有名な滝ってこと？", nowStoryName);
@@ -31,17 +31,17 @@ setTalk("shota", "いやいや、滝の水を感じるだけさ！ でも、涼�
 setTalk("aoi", "そこはグッとこらえてください。", nowStoryName);
 
 setNarration("二人は古い紙を見つける", nowStoryName);
-
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "うわっ！ なんだこれ！？ 井戸、竜、滝行の絵が描かれてる！ 古い紙だけど、かなり詳細だな。", nowStoryName);
 setTalk("aoi", "これは……まさに何かの手がかりですね。でも、これだけじゃ意味がわからない。", nowStoryName);
 setTalk("shota", "うーん、でも竜に井戸、滝行……何か、古代の儀式とか伝説に関わってる感じがするな。", nowStoryName);
 setTalk("aoi", "その通りですね。では、この絵からどう読み解いていくべきかしら．．．", nowStoryName);
+setHideTempImage(nowStoryName);
 // 選択肢を設定
 setChoice(2, "あなたの行動を選択して下さい", "魔法陣を書いて儀式をしてみる", "漢字で書いてみる", "Siriに聞いてみる");
 
 // 選択肢1
 nowStoryName = "choice1Story";
-setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setTalk("shota", "よし、とりあえず魔法陣を描いて…", nowStoryName);
 setTalk("aoi", "翔太さん、それ、一体何をしているんですか？", nowStoryName);
 setTalk("shota", "魔法陣を書いてるんだ！、これを使えば謎が解けるはずだ！ 輪を描いて、次に矢印を…", nowStoryName);
@@ -54,9 +54,9 @@ setTalk("shota", "うーん、確かに…でも、魔法陣を描くと気分�
 setTalk("aoi", "それなら別の場所で気分転換してください！ ここでは謎解きに集中しましょう。さあ、もう一度紙を見てください。どうやら隠されたヒントがあるようです。", nowStoryName);
 setTalk("shota", "うーん、分かったよ…。じゃあ、もう一度じっくり読んでみるか。", nowStoryName);
 setTalk("aoi", "その方が賢明です。魔法陣よりも、きっとこっちの方が役に立つはずですから。", nowStoryName);
-setPlayBgm("natunoyozora.m4a",nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "よし、葵！ 俺が漢字で書いてみるから、何かヒントがあるかもしれないぞ！", nowStoryName);
 setTalk("aoi", "ええ、翔太さんが漢字で書くのですね。", nowStoryName);
 setTalk("shota", "じゃあ、まず井戸！ これは『井』だな！ よし、次は竜だ！ 竜は…『龍』かな？ それとも、こっちの『竜』？", nowStoryName);
@@ -78,12 +78,15 @@ setTalk("aoi", "翔太さん、それはただ漢字を書いただけですよ�
 setTalk("shota", "いやいや、見てみろよ！ これで何かがひらめくんだ！", nowStoryName);
 // 選択肢3
 nowStoryName = "choice3Story";
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "うーん、これはどういう意味だろう？ んー...そうだ！ Siriに聞いてみよう！", nowStoryName);
+setHideTempImage(nowStoryName);
 setTalk("aoi", "翔太さん、真剣に考えてるんですか？ そんなところでSiriに頼っても、答えてくれるわけないでしょう。", nowStoryName);
 setTalk("shota", "だって、便利だし、もしかしたらヒントが出るかもって思ってさ。", nowStoryName);
 setTalk("aoi", "まあ、たしかに今の時代、テクノロジーに頼るのも一つの手だけど、少しは自分で考えなさいよ。", nowStoryName);
 setTalk("shota", "はは、そうだな。でも、少しでも手がかりが見つかるかもしれないからさ！", nowStoryName);
 setTalk("aoi", "仕方ないわね…。でも、本当に大事なのは、この絵の中の詳細な部分だと思うから、もう少し深く観察してみましょう。", nowStoryName);
+
 // メインストーリー2
 nowStoryName = "mainStory2";
 
@@ -91,4 +94,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/nazo/chapter02/nazo");

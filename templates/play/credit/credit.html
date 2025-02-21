@@ -88,6 +88,8 @@
 
     <script>
         playBGM("natunoyozora.mp3");
+        // 右クリックの禁止
+        document.oncontextmenu = function() {return false;}
     </script>
 
     <div id="btn" onclick="chengePlayTapSe('/play/start')">戻る</div>

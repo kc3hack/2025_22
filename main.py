@@ -17,6 +17,11 @@ def Play():
 def PlayStart():
     return render_template("/play/start/start.html")
 
+# キャラクター選択
+@app.route("/play/choseCharacter")
+def choseCharacter():
+    return render_template("/play/choseCharacter/choseCharacter.html")
+
 # QRシステム
 @app.route("/play/QRSystem")
 def PlayChapter03QRSystem():
@@ -30,7 +35,7 @@ def PlayChapter04OCRSystem():
 # エンドロール
 @app.route("/play/chapterEnd")
 def PlayChapterEnd():
-    return render_template("index.html")
+    return render_template("/play/end/end.html")
 
 # クレジット
 @app.route("/play/credit")

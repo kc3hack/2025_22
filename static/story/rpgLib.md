@@ -30,6 +30,8 @@
 - tennkyuu.mp3
 - yoake.m4a
 - yuugure.MP3
+- dojinamajo.m4a
+- twilightmemory.mp3
 ### SE
 - 不正解
 huseikai.mp3
@@ -49,6 +51,10 @@ seikai.mp3
 suzumeganakuasa.mp3
 - 鳥が飛び立つ
 torigatobitatsu.mp3
+- 夏の山1
+natunoyama1.mp3
+- 夏の山2
+natunoyama2.mp3
 ### 背景
 - 古本屋
 huruhonya.jpg
@@ -68,6 +74,14 @@ wakayamajho.png
 yuhi.jpg
 - 商店街
 shotengai.jpg
+- 空
+sora.jpg
+- 占い部屋外
+uranaiyaSoto.jpg
+- 古本屋外
+huruhonyaSoto.jpg
+- 神社への道
+jinjaHenoMiti.jpg
 
 ## メソッド
 ### 開発者モードに切り替える
@@ -178,7 +192,6 @@ nowStoryName = "mainStory2";
 // 次のページ指定
 setNextPage("");
 ```
-
 
 ### サンプルプログラム
 ```

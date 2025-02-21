@@ -5,18 +5,20 @@
 // developMent();   // 開発者モードに切り替える（ページ遷移オフ）
 // メインストーリー1
 let nowStoryName = "mainStory1";
-setBackImage("yuhi.jpg",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("souryou.mp3",nowStoryName);   // BGMを設定
+setBackImage("huruhonyaSoto.jpg",nowStoryName);  // 画像を設定
 setNarration("翔太と葵は協力して「浪速の財」を探す冒険を始めることに決める。", nowStoryName);
 setNarration("最初の手がかりを元に、大阪の名所を巡りながら謎を解いていく。", nowStoryName);
-
-setTalk("shota", "最初の手がかりは、この古文書に書かれた言葉の通り、何かが『四つに分かれし』らしい。「まずは、歴史のありそうな神社に行ってみるか？」", nowStoryName);
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setTalk("shota", "最初の手がかりは、この古文書に書かれた言葉の通り、何かが『四つに分かれし』らしい。まずは、歴史のありそうな神社に行ってみるか？", nowStoryName);
 // 選択肢を設定
 setChoice(1, "あなたの行動を選択してください．", "神社に行く", "町の古い商店街を調べる", "街角の占い師に聞いてみる");
 
 // 選択肢1
 nowStoryName = "choice1Story";
-setBackImage("jinja.jpg",nowStoryName);
+setPlayBgm("hitoiki.m4a",nowStoryName);
+setBackImage("jinjaHenoMiti.jpg",nowStoryName);
 setTalk("shota", "いや～、神社に行くのってなんかワクワクするよな！", nowStoryName);
 setTalk("aoi", "そうですか？ 私はどちらかというと厳かな気持ちになりますけど……。", nowStoryName);
 setTalk("shota", "だってさ、神社って『何かが封印されてる率』高くない？", nowStoryName);
@@ -31,7 +33,7 @@ setTalk("shota", "ほら来たぁぁぁぁ！！ 絶対なんかあるやつ！�
 setTalk("aoi", "ただの風です。", nowStoryName);
 setPlaySe("konohagahukareru.mp3",nowStoryName);
 setTalk("shota", "いや、これはフラグだって！！ 俺たち、今まさに運命の瞬間を——", nowStoryName);
-setPlayBgm("torigatobidatsu.mp3",nowStoryName);
+setPlaySe("torigatobitatsu.mp3",nowStoryName);
 setNarration("ピチュン！（鳥が飛び立つ）", nowStoryName);
 
 setTalk("shota", "えっ、今の鳥！？ もしかして神の使い！？ 何かの啓示！？", nowStoryName);
@@ -40,8 +42,8 @@ setTalk("shota", "……なんか俺だけすごい冒険してる気がする�
 setTalk("aoi", "気のせいですね。", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
-setBackImage("shoutengai.jpg",nowStoryName);
-setPlayBgm("hitoiki.m4a",nowStoryName);
+setPlayBgm("twilightmemory.mp3",nowStoryName);
+setBackImage("shotengai.jpg",nowStoryName);
 setTalk("shota", "えっと……葵？ 俺さっき『まずは近くの神社に行ってみるか？』って言ったよな？", nowStoryName);
 setTalk("aoi", "はい、仰っていましたね。", nowStoryName);
 setTalk("shota", "なのに、なんで俺たち商店街にいるんだ……？", nowStoryName);
@@ -56,8 +58,12 @@ setTalk("shota", "なるほどな。確かに、歴史のある場所なら何�
 setTalk("aoi", "ええ。まずは、あちらの和菓子屋さんに行って、お話を伺ってみましょう。", nowStoryName);
 setTalk("shota", "いや、和菓子を食べたいだけじゃないだろうな？", nowStoryName);
 setTalk("aoi", "ふふ……バレてしまいましたか。ごめんなさい。でも途中で、和菓子をおごってくださいね。", nowStoryName);
+setBackImage("huruhonyaSoto.jpg",nowStoryName); 
+setPlayBgm("souryou.mp3",nowStoryName);
 // 選択肢3
 nowStoryName = "choice3Story";
+setPlayBgm("dojinamajo.m4a",nowStoryName);
+setBackImage("uranaiyaSoto.jpg",nowStoryName);
 setTalk("aoi", "占い師に聞きますか。少し怪しいけど、ヒントが得られるかもしれないですね。", nowStoryName);
 setTalk("shota", "占いかぁ、あんまり信じてないけど、たまにはやってみてもいいかもね！まさか、占い師が『宝の地図』を持ってるなんて…あり得ないよな？", nowStoryName);
 
@@ -89,12 +95,12 @@ setTalk("aoi", "え、近くに…具体的にどこですか？", nowStoryName)
 setTalk("uranaishi", "それを見つけるのが…君らの仕事じゃ！", nowStoryName);
 setTalk("shota", "それだけ！？全然わからないじゃないか！", nowStoryName);
 setTalk("uranaishi", "それが占いの真髄というものじゃ。さて、もう行け。お前たちの“運命”を探しに。", nowStoryName);
-setHideCharacter("shouta",nowStoryName);
+setHideCharacter("shota",nowStoryName);
 setHideCharacter("aoi",nowStoryName);
 
 
 setNarration("翔太と葵は占い師の言葉に納得いかないながらも、占い師から教えられた「近く」の手がかりを頼りに調査を続ける。しかし…", nowStoryName);
-
+setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);
 setNarration("そのころ、占い師は．．．", nowStoryName);
 
 setTalk("uranaishi", "フフフ…これで宝を独り占めできる…お前たちが動き出した瞬間、わしの計画通りだ。", nowStoryName);
@@ -103,6 +109,10 @@ setNarration("占い師が一人で水晶玉を取り出し、宝の場所を指
 setTalk("uranaishi", "さて、これからどうやって“浪速の財”を壊してやろうか…", nowStoryName);
 setNarration("占い師がゆっくりとテントの中で準備を始める", nowStoryName);
 setHideCharacter("uranaishi",nowStoryName);
+setPlayBgm("souryou.mp3",nowStoryName);
+setBackImage("huruhonyaSoto.jpg",nowStoryName); 
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 
 // メインストーリー2
 nowStoryName = "mainStory2";
@@ -111,4 +121,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter01/c");

@@ -6,7 +6,9 @@
 // メインストーリー1
 let nowStoryName = "mainStory1";
 setBackImage("takedajho.png",nowStoryName);  // 画像を設定
-setPlayBgm("yoake.m4a",nowStoryName);   // BGMを設定
+setPlayBgm("seiu.mp3",nowStoryName);   // BGMを設定
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 setTalk("aoi", "答えは．．．『鈴虫』ですよ、鈴虫寺！", nowStoryName);
 setTalk("shota", "鈴虫？ なんだそれ、鈴虫って…あ、もしかして、あっ、そっか、鈴虫寺か！ わかっちゃった！", nowStoryName);
 setTalk("aoi", "やっと気づきましたか…。実は私は最初からそう言いたかったんですけど。", nowStoryName);
@@ -36,4 +38,4 @@ nowStoryName = "mainStory2";
 /*-----------------------end-----------------------*/
 
 // 次のページ指定
-setNextPage("");
+setNextPage("/play/chapter05/a");

@@ -8,25 +8,74 @@ function checkCode(story,func){
     const argument = story.getWord();
     if(characterCode=="playSe"){
         playSe(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="playBgm"){
         playBGM(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="showCharacter"){
         showCharacter(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="hideCharacter"){
         hideCharacter(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="chengeBackImg"){
         chengeBackImg(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="showTempImage"){
         showTempImage(argument);
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else if(characterCode=="hideTempImage"){
         hideTempImage();
-        func();
+        if(func==nextChoiceStory&&getStoryNextStatus(`choice${selectNum}Story`)==0){
+            nextBtnClick();
+            if(okNum==selectNum){
+                cancelChoise(); // ループから抜ける
+            }
+        }else{
+            func();
+        }
     }else{
         talkCharacter(story.getCharacterId(),story.getWord());
     }
@@ -81,7 +130,6 @@ function nextChoiceStory(){
         }
     }else{
         showSpeech("すでに選択されました．");
-        showBtn();
     }
 }
 

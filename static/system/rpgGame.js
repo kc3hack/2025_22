@@ -1,6 +1,9 @@
 // セリフのテキストを取得
 const speechBoxElem = document.getElementById("message");
 
+// 右クリックの禁止
+document.oncontextmenu = function() {return false;}
+
 // セリフを表示
 function writeSpeech(text){
     hideChoise();
@@ -25,6 +28,7 @@ function showSpeech(text){
     hideBtn();
     /* 1文字づつtextに書き出すプログラム */
     const audioElem = new Audio("/static/se/moji.mp3");
+    audioElem.volume = 1;
     audioElem.play();
     let i=0;
     let outText="";
