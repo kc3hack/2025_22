@@ -31,11 +31,12 @@ setTalk("shota", "いやいや、滝の水を感じるだけさ！ でも、涼�
 setTalk("aoi", "そこはグッとこらえてください。", nowStoryName);
 
 setNarration("二人は古い紙を見つける", nowStoryName);
-
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "うわっ！ なんだこれ！？ 井戸、竜、滝行の絵が描かれてる！ 古い紙だけど、かなり詳細だな。", nowStoryName);
 setTalk("aoi", "これは……まさに何かの手がかりですね。でも、これだけじゃ意味がわからない。", nowStoryName);
 setTalk("shota", "うーん、でも竜に井戸、滝行……何か、古代の儀式とか伝説に関わってる感じがするな。", nowStoryName);
 setTalk("aoi", "その通りですね。では、この絵からどう読み解いていくべきかしら．．．", nowStoryName);
+setHideTempImage(nowStoryName);
 // 選択肢を設定
 setChoice(2, "あなたの行動を選択して下さい", "魔法陣を書いて儀式をしてみる", "漢字で書いてみる", "Siriに聞いてみる");
 
@@ -55,6 +56,7 @@ setTalk("shota", "うーん、分かったよ…。じゃあ、もう一度じ�
 setTalk("aoi", "その方が賢明です。魔法陣よりも、きっとこっちの方が役に立つはずですから。", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "よし、葵！ 俺が漢字で書いてみるから、何かヒントがあるかもしれないぞ！", nowStoryName);
 setTalk("aoi", "ええ、翔太さんが漢字で書くのですね。", nowStoryName);
 setTalk("shota", "じゃあ、まず井戸！ これは『井』だな！ よし、次は竜だ！ 竜は…『龍』かな？ それとも、こっちの『竜』？", nowStoryName);
@@ -76,12 +78,15 @@ setTalk("aoi", "翔太さん、それはただ漢字を書いただけですよ�
 setTalk("shota", "いやいや、見てみろよ！ これで何かがひらめくんだ！", nowStoryName);
 // 選択肢3
 nowStoryName = "choice3Story";
+setShowTempImage("nazo02.png",nowStoryName);
 setTalk("shota", "うーん、これはどういう意味だろう？ んー...そうだ！ Siriに聞いてみよう！", nowStoryName);
+setHideTempImage(nowStoryName);
 setTalk("aoi", "翔太さん、真剣に考えてるんですか？ そんなところでSiriに頼っても、答えてくれるわけないでしょう。", nowStoryName);
 setTalk("shota", "だって、便利だし、もしかしたらヒントが出るかもって思ってさ。", nowStoryName);
 setTalk("aoi", "まあ、たしかに今の時代、テクノロジーに頼るのも一つの手だけど、少しは自分で考えなさいよ。", nowStoryName);
 setTalk("shota", "はは、そうだな。でも、少しでも手がかりが見つかるかもしれないからさ！", nowStoryName);
 setTalk("aoi", "仕方ないわね…。でも、本当に大事なのは、この絵の中の詳細な部分だと思うから、もう少し深く観察してみましょう。", nowStoryName);
+
 // メインストーリー2
 nowStoryName = "mainStory2";
 
