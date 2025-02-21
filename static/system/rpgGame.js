@@ -28,7 +28,7 @@ function showSpeech(text){
     hideBtn();
     /* 1文字づつtextに書き出すプログラム */
     const audioElem = new Audio("/static/se/moji.mp3");
-    audioElem.volume = 0.7;
+    audioElem.volume = 1;
     audioElem.play();
     let i=0;
     let outText="";

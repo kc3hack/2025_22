@@ -3,7 +3,7 @@ const tapAudio = new Audio("/static/se/tap.mp3");   // tapのSE
 
 // tap音をプレイ
 function playTapSE(){
-    tapAudio.volume = 0.7
+    tapAudio.volume = 1;
     tapAudio.play();    // tapのSEを再生
 }
 
@@ -18,6 +18,7 @@ function chengePlayTapSe(url){
 // seをプレイ
 function playSe(fileName){
     const newSe = new Audio(`/static/se/${fileName}`);
+    newSe.volume = 1;
     newSe.play();
 }
 
@@ -31,7 +32,7 @@ function playBGM(fileName){
         nowBgm.pause();
     }
     nowBgm = BGM;
-    BGM.volume = 0.1;  // 音量設定（0~1)
+    BGM.volume = 0.5;  // 音量設定（0~1)
     BGM.play();    // 再生開始
     BGM.loop = true;   // ループ
 }
