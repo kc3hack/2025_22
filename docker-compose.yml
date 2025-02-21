@@ -2,7 +2,7 @@ services:
   app:
     build: .
     ports:
-      - 8080:5000
+      - 80:8080
     container_name: app
     working_dir: '/app/'
     command: python main.py
