@@ -32,7 +32,7 @@ function playBGM(fileName){
         nowBgm.pause();
     }
     nowBgm = BGM;
-    BGM.volume = 0.5;  // 音量設定（0~1)
+    BGM.volume = 0.2;  // 音量設定（0~1)
     BGM.play();    // 再生開始
     BGM.loop = true;   // ループ
 }
