@@ -9,7 +9,9 @@ setBackImage("suzumusidera.png",nowStoryName);  // 画像を設定
 setPlayBgm("tennkyuu.mp3",nowStoryName);   // BGMを設定
 
 // 選択肢を設定
-setNarration("二人は鈴虫寺に到着した");
+setNarration("二人は鈴虫寺に到着した",nowStoryName);
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 
 setPlaySe("natunoyama1.mp3",nowStoryName);
 
@@ -51,7 +53,7 @@ setTalk("aoi", "まあ、冗談でも、素敵な願い事が叶うといいで�
 
 setPlayBgm("yuugure.MP3",nowStoryName);
 
-setNarration("鈴虫寺での散策を終え、二人が境内を歩いていると、再び謎の老人が現れる");
+setNarration("鈴虫寺での散策を終え、二人が境内を歩いていると、再び謎の老人が現れる",nowStoryName);
 
 setTalk("rojin", "宝は見つけたようだな。", nowStoryName);
 
@@ -94,7 +96,7 @@ setTalk("rojin", "フフ、じゃあな。お前らの冒険は、まだまだ�
 
 setHideCharacter("rojin",nowStoryName);
 
-setNarration("謎の老人は微笑みながら消えていき、二人は静かな境内に立ち尽くす");
+setNarration("謎の老人は微笑みながら消えていき、二人は静かな境内に立ち尽くす",nowStoryName);
 
 setTalk("shota", "なんだか、すごく感動的だな。自分たちが守ってきたのは、目に見えるものだけじゃなかったんだって、今になって気づいたよ。", nowStoryName);
 

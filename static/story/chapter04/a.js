@@ -44,7 +44,7 @@ setChoice(1, "あなたの行動を選択して下さい", "辺りを隈なく�
 
 // 選択肢1
 nowStoryName = "choice1Story";
-setNarration("葵は周囲を注意深く調査しながら歩く。すると、古びた石碑を発見した。");
+setNarration("葵は周囲を注意深く調査しながら歩く。すると、古びた石碑を発見した。",nowStoryName);
 
 setTalk("aoi", "翔太さん、これを見てください。石碑みたいですが、かなり古いものですね。", nowStoryName);
 setTalk("shota", "うわ、本当だ！ こんな場所にこんなものがあったなんて…何が書かれてるんだ？", nowStoryName);
@@ -57,7 +57,7 @@ setTalk("aoi", "まずは解読してみましょう。もしかしたら、何�
 setTalk("shota", "よし、やってみよう！", nowStoryName);
 // 選択肢2
 nowStoryName = "choice2Story";
-setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる");
+setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる",nowStoryName);
 
 setTalk("aoi", "ふむ…この大地…歴史の鼓動を感じますね…。この石垣も、大地の一部…。まるで、戦国の時代に包まれるような…zzz…", nowStoryName);
 setTalk("shota", "おいおいおい、寝るなーーー！！！", nowStoryName);

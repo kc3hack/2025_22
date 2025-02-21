@@ -7,7 +7,9 @@
 let nowStoryName = "mainStory1";
 setBackImage("wakayamajho.png",nowStoryName);   // 画像を設定
 setPlayBgm("syuuennwokanaderumono.mp3",nowStoryName);  // BGMを設定
-setNarration("葵と翔太が歩いていると、近くで占い師がウロウロしているのを見つける");
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
+setNarration("葵と翔太が歩いていると、近くで占い師がウロウロしているのを見つける",nowStoryName);
 setShowCharacter("shota",nowStoryName);
 setShowCharacter("aoi",nowStoryName);
 setShowCharacter("uranaishi",nowStoryName);

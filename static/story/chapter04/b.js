@@ -23,11 +23,11 @@ setTalk("rojin", "お前ら、4つのヒントすら覚えられんのか！？ 
 setTalk("shota", "あ、すいません！ ちゃんと思い出しますから！", nowStoryName);
 setTalk("rojin", "あの占い師、宝狙いよって…まぁ、あんなのがいるからこっちも面倒だ…まあ、いい！とにかくお前ら、早く行け！", nowStoryName);
 setHideCharacter("rojin",nowStoryName);
-setNarration("謎の老人が不満そうに消えていく");
+setNarration("謎の老人が不満そうに消えていく",nowStoryName);
 
 setTalk("shota", "また勝手に消えやがって…まるで、ゲームのボスキャラが倒された瞬間に消えるみたいじゃん！ また、謎のヒントだけ残してってたよ！", nowStoryName);
 
-setNarration("謎の老人が消えた後、翔太と葵は考え込みながら歩いている");
+setNarration("謎の老人が消えた後、翔太と葵は考え込みながら歩いている",nowStoryName);
 
 setTalk("shota", "えーっと、今までの答えは『巣（す）』、『ず』、『む』、『し』… これをつなげると…んー？『涼しむ寺』？", nowStoryName);
 setTalk("aoi", "涼しむ寺？ それ、ただの涼しい場所を探してるみたいじゃないですか！ 翔太さん、それを組み合わせると、答えは．．．", nowStoryName);

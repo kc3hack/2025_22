@@ -7,6 +7,8 @@
 let nowStoryName = "mainStory1";
 setBackImage("jinja.jpg",nowStoryName);  // 画像を設定
 setPlayBgm("akisame.mp3",nowStoryName);   // BGMを設定
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 setNarration("翔太と葵は、神社に到着した。", nowStoryName);
 
 setTalk("shota", "さて、いよいよ大神神社に到着だな！ でも、なんでここに行こうと思ったんだ？", nowStoryName);
