@@ -64,8 +64,26 @@ def pageNotFound(e):
     return render_template("error.html")
 
 #--------------------------------------------通信関係--------------------------------------------
+from flask_socketio import SocketIO, join_room, leave_room, send, emit
 
+socketio = SocketIO(app, cors_allowed_origins="*")
 
+# クライアントがルームに参加した時の処理
+@socketio.on("join")
+def handle_join(data):
+    room = data["room"]
+    join_room(room)
+    print(f"クライアントがルームに参加しました: {room}")
+    emit("message", {"character": "System", "text": f"ルーム {room} に参加しました"}, to=room)
+
+# クライアントからチャットメッセージを受信した時の処理
+@socketio.on("send_chat")
+def handle_send_chat(data):
+    character = data["character"]
+    text = data["text"]
+    room = data["to"] # クライアントから送信された 'to' パラメータを room 変数に格納
+    print(f"ルーム {room} (toパラメータ) にメッセージを送信: {character} - {text}") # ログ出力に room (toパラメータ) を明示
+    emit("message", {"character": character, "text": text}, to=room) # emit に room (toパラメータ) を使用
 
 
 
