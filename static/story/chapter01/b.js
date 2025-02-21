@@ -9,7 +9,8 @@ setPlayBgm("souryou.mp3",nowStoryName);   // BGMを設定
 setBackImage("huruhonyaSoto.jpg",nowStoryName);  // 画像を設定
 setNarration("翔太と葵は協力して「浪速の財」を探す冒険を始めることに決める。", nowStoryName);
 setNarration("最初の手がかりを元に、大阪の名所を巡りながら謎を解いていく。", nowStoryName);
-
+setShowCharacter("aoi",nowStoryName);
+setShowCharacter("shota",nowStoryName);
 setTalk("shota", "最初の手がかりは、この古文書に書かれた言葉の通り、何かが『四つに分かれし』らしい。まずは、歴史のありそうな神社に行ってみるか？", nowStoryName);
 // 選択肢を設定
 setChoice(1, "あなたの行動を選択してください．", "神社に行く", "町の古い商店街を調べる", "街角の占い師に聞いてみる");

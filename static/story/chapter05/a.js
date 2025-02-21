@@ -108,6 +108,9 @@ setTalk("aoi", "これからも、その言葉を胸に、いろんな場所を�
 
 setTalk("shota", "うん、これからも一緒に、たくさんの宝を見つけていこう！", nowStoryName);
 
+setHideCharacter("aoi",nowStoryName);
+setHideCharacter("shota",nowStoryName);
+
 setPlaySe("natunoyama2.mp3",nowStoryName);
 
 setBackImage("yuhi.jpg",nowStoryName);
