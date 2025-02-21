@@ -45,7 +45,7 @@ setChoice(1, "あなたの行動を選択して下さい", "辺りを隈なく�
 // 選択肢1
 nowStoryName = "choice1Story";
 setNarration("葵は周囲を注意深く調査しながら歩く。すると、古びた石碑を発見した。",nowStoryName);
-
+setShowTempImage("nazo04.png",nowStoryName);
 setTalk("aoi", "翔太さん、これを見てください。石碑みたいですが、かなり古いものですね。", nowStoryName);
 setTalk("shota", "うわ、本当だ！ こんな場所にこんなものがあったなんて…何が書かれてるんだ？", nowStoryName);
 
@@ -55,6 +55,7 @@ setTalk("aoi", "これは…暗号のようですね。何か意味がありそ�
 setTalk("shota", "やった！ ついに手がかりを見つけたかも！ どんな謎が隠されてるんだろう？", nowStoryName);
 setTalk("aoi", "まずは解読してみましょう。もしかしたら、何か重要な情報が隠されているかもしれません。", nowStoryName);
 setTalk("shota", "よし、やってみよう！", nowStoryName);
+
 // 選択肢2
 nowStoryName = "choice2Story";
 setNarration("葵がふと地面に手をつき、ゆっくりと寝転がる",nowStoryName);
