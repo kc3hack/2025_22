@@ -5,14 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPGSystem|ChoseCharacter</title>
     <link rel="shortcut icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/system/rpgGame.css">
+    <style>
+        /* 背景画像 */
+        .backImg{
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .characterChose{
+            position: absolute;
+            /*height: 25vh;*/
+            height: 50vh;
+            top: 10%;
+        }
+        .characterChose:hover{
+            border: solid 3px white;
+        }
+
+        .aoiImg{
+            right: 20%;
+        }
+
+
+        .shotaImg{
+            left: 20%;
+        }
+        
+    </style>
 </head>
 <body>
-    <a href="/play/chapter01/as">翔太</a>
-    <a href="/play/chapter01/aa">葵</a>
-    <a href="/play/chapterEnd">エンディング</a>
+
+    <!--背景画像-->
+    <img class="backImg" src="/static/file/backImg/sora.jpg">
+
+    <!--翔太-->
+    <img class="characterChose shotaImg" src="/static/file/character/shota.jpg" onclick="useShota();">
+
+    <!--葵-->
+    <img class="characterChose aoiImg" src="/static/file/character/aoi.jpg" onclick="useAoi();">
+
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
+
+    <!--吹き出し-->
+    <div id="speechBox">
+        <div id="message">プレイヤーのキャラクターを選択してください。</div>
+    </div>
+
+
     <script>
         // 右クリックの禁止
         document.oncontextmenu = function() {return false;}
+
+        playBGM("yoake.m4a");
+
+        function useShota(){
+            chengePlayTapSe("/play/chapter01/as");
+        }
+
+        function useAoi(){
+            chengePlayTapSe("/play/chapter01/aa");
+        }
     </script>
+
 </body>
 </html>
