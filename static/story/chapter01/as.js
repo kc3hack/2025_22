@@ -7,14 +7,15 @@
 let nowStoryName = "mainStory1";
 setPlayBgm("kodokunashonin.mp3",nowStoryName);   // BGMを設定
 setBackImage("huruhonya.jpg",nowStoryName);  // 画像を設定
+setShowCharacter("shota",nowStoryName);
 setNarration("あなたは大阪の静かな古本屋に足を踏み入れる。", nowStoryName);
 setNarration("埃っぽい棚の中から一冊の古びた本を見つける。", nowStoryName);
 setNarration("手に取ると、厚い紙に「浪速の財、四つに分かれし」と書かれている。", nowStoryName);
 
-setShowCharacter("shota",nowStoryName);
 setTalk("shota", "この文字…江戸時代の文書か。何か大きな秘密が隠されているのかもしれない…。", nowStoryName);
 
 setNarration("その瞬間、店のドアが開き、誰かが入ってきた。", nowStoryName);
+setShowCharacter("aoi",nowStoryName);
 setNarration("入ってきたのは、関西に関する取材をしているジャーナリストの葵だった。", nowStoryName);
 setNarration("彼女はあなたの手にした古文書を見て、興味深そうに近づいてくる。", nowStoryName);
 

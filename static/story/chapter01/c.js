@@ -40,14 +40,16 @@ setTalk("shota", "あれは！！", nowStoryName);
 setTalk("aoi", "はぁ．．．。聞いてないし．．．", nowStoryName);
 
 setNarration("翔太は、境内にひっそりと佇む石碑を見つける。石碑には不思議な刻印が施されていた。", nowStoryName);
-
+setShowTempImage("nazo01.png",nowStoryName);
 setTalk("aoi", "これ、見たことない刻印…。これも手がかりなのかしら？", nowStoryName);
 setTalk("shota", "もしかしたら、この刻印が『四つに分かれし』に関連しているのかもしれない。もっと調べてみよう。", nowStoryName);
+setHideTempImage(nowStoryName);
 // 選択肢を設定
 setChoice(1, "あなたの行動を選択して下さい", "刻印を詳しく調べる", "神社の住職に聞いてみる", "刻印の解読を試みる");
 
 // 選択肢1
 nowStoryName = "choice1Story";
+setShowTempImage("nazo01.png",nowStoryName);
 setTalk("shota", "よし、この刻印を詳しく調べてみるか！", nowStoryName);
 setTalk("aoi", "風化していますが、まだ読めそうですね。", nowStoryName);
 setTalk("shota", "ふむふむ……この線の入り方……これは……。", nowStoryName);
@@ -57,6 +59,7 @@ setTalk("aoi", "違いますよね？", nowStoryName);
 setTalk("shota", "いやでも、見てみろよ！ なんかカッコいいし、Tシャツとかにプリントされてそうじゃない？", nowStoryName);
 setTalk("aoi", "そんな軽いノリで刻印を解読しないでください。", nowStoryName);
 setTalk("shota", "うーん、こういうときは手でなぞるとわかるかも！", nowStoryName);
+setHideTempImage(nowStoryName);
 
 setNarration("翔太は刻印を指でなぞってみた", nowStoryName);
 
@@ -93,8 +96,10 @@ setTalk("jushoku", "うむ。おぬしは確実に触りたがる顔をしてお
 setTalk("shota", "住職さんまで！？", nowStoryName);
 setTalk("aoi", "では、まずはその artefact の手がかりを集めましょう。住職様、ご協力ありがとうございました。", nowStoryName);
 setTalk("jushoku", "うむ、気をつけるのじゃぞ。", nowStoryName);
+setHideCharacter("jushoku",nowStoryName);
 // 選択肢3
 nowStoryName = "choice3Story";
+setShowTempImage("nazo01.png",nowStoryName);
 setTalk("shota", "よし……この石碑に刻まれた文字を解読してみるか……。", nowStoryName);
 setTalk("aoi", "翔太さん、大丈夫ですか？ かなり風化していますが……。", nowStoryName);
 setTalk("shota", "問題ない！ こういうのはな、集中してじーっと見つめれば、自然と意味が浮かんでくるんだ……。", nowStoryName);
@@ -112,8 +117,10 @@ setTalk("aoi", "それはただの風化した模様です！", nowStoryName);
 setTalk("shota", "ぐぬぬ……！ じゃあ葵、これが読めるのか？", nowStoryName);
 setTalk("aoi", "ええ、見せてください……ふむふむ……。なるほど、わかりませんね。", nowStoryName);
 setTalk("shota", "え...", nowStoryName);
+setHideTempImage(nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
+setShowTempImage("nazo01.png",nowStoryName);
 setNarration("刻印を調べているうちに、翔太は不思議な模様が一部隠れていることに気づく。\nそれを掘り起こすと、そこには古い紙が現れた。", nowStoryName);
 
 setTalk("shota", "この紙、漢字がたくさん書かれているな……。", nowStoryName);
