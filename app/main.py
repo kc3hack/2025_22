@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template,redirect,url_for
 from waitress import serve
 
 app = Flask(__name__)
@@ -56,7 +56,8 @@ def sendPhoto():
     cv2.imshow('view',cvImage)
     cv2.waitKey(0)
     '''
-    return "ok"
+    return render_template("/hintoSystem/ans.html",msg="結果が出力されています．")
+
 
 # エンドロール
 @app.route("/play/chapterEnd")

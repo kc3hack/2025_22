@@ -28,14 +28,9 @@
     <h2>謎解きヒントシステム</h2>
 
     <div class="box">
-        <h3>画像ヒント</h3>
-        <form action="/hinto/sendPhoto" method="post" enctype="multipart/form-data">
-            <p>画像をアップロードしてください．</p>
-            <input type="file" accept=".jpeg, .png, .jpg" name="Img" required>
-            <p><input type="checkbox" required>サーバーで送信されたファイルを解析することに同意する．</p>
-            <button onclick="window.location.replace('/hinto');" class="btn">キャンセル</button><input type="submit" class="btn" value="送信">
-        </form>
-        <p>※ファイルはサーバーにアップロードされ，解析が行われます．個人情報が含まれないようご注意ください．</p>
+        <h3>画像ヒント - 結果</h3>
+        <p>{{ msg }}</p>
+        <button onclick="window.location.replace('/hinto/OCRSystem');" class="btn">戻る</button>
     </div>
     
 </body>
