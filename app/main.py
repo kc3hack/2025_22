@@ -89,6 +89,7 @@ def sendPhoto():
 # エンドロール
 @app.route("/play/chapterEnd")
 def PlayChapterEnd():
+    session.clear() # セッションを削除
     return render_template("/play/end/end.html")
 
 # クレジット
