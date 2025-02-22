@@ -23,15 +23,40 @@ def PlayStart():
 def choseCharacter():
     return render_template("/play/choseCharacter/choseCharacter.html")
 
+# ヒントシステム
+@app.route("/hinto")
+def showHint():
+    return render_template("/hintoSystem/hinto.html")
+
+# ヒントシステム(QRコードを表示)
+@app.route("/hinto/showQR")
+def showQR():
+    return render_template("/hintoSystem/showQR.html")
+
 # QRシステム
-@app.route("/play/QRSystem")
+@app.route("/hinto/QRSystem")
 def PlayChapter03QRSystem():
-    return render_template("index.html")
+    return render_template("/hintoSystem/QR.html")
 
 # OCRシステム
-@app.route("/play/OCRSystem")
+@app.route("/hinto/OCRSystem")
 def PlayChapter04OCRSystem():
-    return render_template("index.html")
+    return render_template("/hintoSystem/OCR.html")
+
+import base64
+import numpy
+import cv2
+# POSTデータを取得（OCR）
+@app.route("/hinto/sendPhoto",methods=['POST'])
+def sendPhoto():
+    Img = request.files['Img'].read()
+    npArray = numpy.frombuffer(Img,numpy.uint8)
+    cvImage = cv2.imdecode(npArray,cv2.IMREAD_COLOR)
+    '''
+    cv2.imshow('view',cvImage)
+    cv2.waitKey(0)
+    '''
+    return "ok"
 
 # エンドロール
 @app.route("/play/chapterEnd")
