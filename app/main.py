@@ -65,7 +65,7 @@ def pageNotFound(e):
     return render_template("error.html")
 
 #--------------------------------------------通信関係--------------------------------------------
-'''
+
 from flask_socketio import SocketIO, join_room, leave_room, send, emit
 
 socketio = SocketIO(app, cors_allowed_origins="*")
@@ -94,18 +94,20 @@ def handle_send_chat(data):
 
 
 
+
+
 '''
 
 if __name__ == '__main__':
     serve(app,host='0.0.0.0',port=5000)    
 
+'''
+
 
 #-----------------------------------------------------------------------------------------------
     
-'''
+
 
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run(host="0.0.0.0",port=5000)
-
-'''
