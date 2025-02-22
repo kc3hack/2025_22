@@ -26,38 +26,8 @@
     <!-- socket io js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
 
-    <script>
-        /*---------------------------通信関係---------------------------*/
-
-        const socket = io(location.host);
-
-        socket.on("connect", () => {
-            console.log("Socket.IOに接続しました");
-        });
-
-        socket.on("message", (data) => {
-            console.log("キャラクター名:", data.character);
-            console.log("会話内容:", data.text);
-            talk(data.character,data.text);
-        });
-
-        function joinRoom(roomName) {
-            socket.emit("join", { room: roomName });
-        }
-
-        function sendChat(character, text, roomName) {
-            socket.emit("send_chat", { character: character, text: text, to: roomName });
-        }
-
-
-        joinRoom("test");
-        
-
-
-
-        
-        /*-------------------------------------------------------------*/
-    </script>
+    <!-- communication js -->
+    <script src="/static/js/chat/communication.js"></script>
     
 </body>
 </html>

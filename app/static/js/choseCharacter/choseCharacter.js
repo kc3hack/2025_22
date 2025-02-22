@@ -7,10 +7,10 @@ const mesSpeech = document.getElementById("message");
 
 function useShota(){
     mesSpeech.innerText = "しばらくお待ちください．";
-    chengePlayTapSe("/play/chapter01/as");
+    chengePlayTapSe("/play/entryRoom/shota");
 }
 
 function useAoi(){
     mesSpeech.innerText = "しばらくお待ちください．";
-    chengePlayTapSe("/play/chapter01/aa");
+    chengePlayTapSe("/play/entryRoom/aoi");
 }

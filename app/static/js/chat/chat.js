@@ -19,6 +19,6 @@ function getTextBox(){
 // 送信
 function submit(){
     playTapSE();
-    sendChat("test",getTextBox(),"test");
+    sendChat(getTextBox());
     textBox.value = "";
 }

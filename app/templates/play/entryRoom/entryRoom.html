@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGSystem|EntryRoom</title>
+    <link rel="shortcut icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/system/rpgGame.css">
+    <link rel="stylesheet" href="/static/css/choseCharacter/choseCharacter.css">
+</head>
+<body>
+
+    <!--背景画像-->
+    <img class="backImg" src="/static/file/backImg/sora.jpg">
+
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
+    <!--吹き出し-->
+    <div id="speechBox">
+        <div id="message">ルーム名を入力してください．</div>
+        <form action="/play/setRoom" method="post">
+            <input type="text" name="roomName"><button>送信</button>
+        </form>
+    </div>
+
+</body>
+</html>

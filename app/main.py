@@ -1,7 +1,14 @@
-from flask import Flask, request, render_template,redirect,url_for
+from flask import Flask, request, render_template,redirect,url_for,session
 from waitress import serve
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
+
+
+load_dotenv()
+
+app.secret_key = os.getenv('SECRETKEY')
     
 # トップページ
 @app.route('/')
@@ -22,6 +29,26 @@ def PlayStart():
 @app.route("/play/choseCharacter")
 def choseCharacter():
     return render_template("/play/choseCharacter/choseCharacter.html")
+
+# ルーム名
+@app.route("/play/entryRoom/<string:character>")
+def entryRoom(character):
+    if(character=="shota"):
+        session["character"] = "shota"
+    elif(character=="aoi"):
+        session["character"] = "aoi"
+    return render_template("play/entryRoom/entryRoom.html")
+
+# ルームの登録
+@app.route("/play/setRoom",methods=["POST"])
+def setROom():
+    roomName = request.form["roomName"]
+    session["roomName"] = roomName
+    if(session["character"]=="shota"):
+        return redirect("/play/chapter01/as")
+    elif(session["character"]=="aoi"):
+        return redirect("/play/chapter01/aa")
+
 
 # ヒントシステム
 @app.route("/hinto")
@@ -98,20 +125,16 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 # クライアントがルームに参加した時の処理
 @socketio.on("join")
-def handle_join(data):
-    room = data["room"]
-    join_room(room)
-    print(f"クライアントがルームに参加しました: {room}")
-    emit("message", {"character": "System", "text": f"ルーム {room} に参加しました"}, to=room)
+def handle_join():
+    print(session["roomName"])
+    join_room(session["roomName"])
+    emit("message", {"character": "システム通知", "text": f"{session["character"]}がルーム {session["roomName"]} に参加しました"}, to=session["roomName"])
 
 # クライアントからチャットメッセージを受信した時の処理
 @socketio.on("send_chat")
 def handle_send_chat(data):
-    character = data["character"]
     text = data["text"]
-    room = data["to"] # クライアントから送信された 'to' パラメータを room 変数に格納
-    print(f"ルーム {room} (toパラメータ) にメッセージを送信: {character} - {text}") # ログ出力に room (toパラメータ) を明示
-    emit("message", {"character": character, "text": text}, to=room) # emit に room (toパラメータ) を使用
+    emit("message", {"character": session["character"], "text": text}, to=session["roomName"]) # emit に room (toパラメータ) を使用
 
 
 
