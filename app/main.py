@@ -113,6 +113,11 @@ def showStory(chapter,code):
 def showNazo(chapter,code):
     return render_template("/system/nazotokiLayout.html",jsOriginal = f"/{chapter}/{code}")
 
+# 裏コマンド
+@app.route('/sys/sideMode')
+def sideMode():
+    return render_template("/sideMode/sideMode.html")
+
 # ページが存在しない（404）
 @app.errorhandler(404)
 def pageNotFound(e):
