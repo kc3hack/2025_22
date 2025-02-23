@@ -24,20 +24,21 @@ function getMyCharacter(){
 
 
 /*----------------通信関係----------------*/
+
+
 const socket = io(location.host);
 
 socket.on("connect", () => {
     //console.log("Socket.IOに接続しました");
-    socket.emit("join");    // ルームに参加
     joinNazo(); // 参加を送信
 });
 
 
-let memberNum = 0;
+let NazomemberNum = 0;
 // 参加者が来たことを記録
 socket.on("joinCharacterNazo", (data) => {
-    memberNum++;
-    if(memberNum==2){
+    NazomemberNum++;
+    if(NazomemberNum==2){
         // スタートする
         socket.emit("memberOK");
     }else{
@@ -47,6 +48,7 @@ socket.on("joinCharacterNazo", (data) => {
 
 socket.on("nazoStart",()=>{
     showControl();
+    start = true;
 });
 
 

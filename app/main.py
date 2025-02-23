@@ -141,9 +141,8 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 # クライアントがルームに参加した時の処理
 @socketio.on("join")
 def handle_join():
-    print(session["roomName"])
     join_room(session["roomName"])
-    emit("message", {"character": "システム通知", "text": f"{session["character"]}がルーム {session["roomName"]} に参加しました"}, to=session["roomName"])
+    emit("message", {"character": "システム通知", "text": f"{session["character"]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
 
 # クライアントからチャットメッセージを受信した時の処理
 @socketio.on("send_chat")
@@ -162,9 +161,10 @@ def choiceNum(data):
     num = data["choiceNum"]
     emit("startChoice",{"choiceNum":num},to=session["roomName"])
 
-# 選択肢へ参加
+# 謎解きへの参加
 @socketio.on("joinNazo")
 def joinChoice():
+    join_room(session["roomName"])
     emit("joinCharacterNazo",{"character":session["character"]},to=session["roomName"])
 
 # 選択肢のスタート
