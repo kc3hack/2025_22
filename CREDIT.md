@@ -18,10 +18,10 @@ https://www.youtube.com/@tak_mfk6101
 
 エンディング
 「夏の夜空 feat. 宮舞モカ」
-作曲：Tak_mfk様
+作曲：Tak_mfk
 
 SE
-効果音ラボ様
+効果音ラボ
 https://soundeffect-lab.info/
 
 ## アニメーション
