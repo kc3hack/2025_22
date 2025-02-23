@@ -138,11 +138,13 @@ from flask_socketio import SocketIO, join_room, leave_room, send, emit
 
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# クライアントがルームに参加した時の処理
+charaName = {"shota":"翔太","aoi":"葵"}
+
+# クライアントが参加した時の処理
 @socketio.on("join")
 def handle_join():
     join_room(session["roomName"])
-    emit("message", {"character": "システム通知", "text": f"{session["character"]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
+    emit("message", {"character": "system", "text": f"{charaName[session["character"]]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
 
 # クライアントからチャットメッセージを受信した時の処理
 @socketio.on("send_chat")

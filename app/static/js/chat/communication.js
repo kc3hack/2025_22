@@ -4,6 +4,7 @@ socket.on("connect", () => {
     //console.log("Socket.IOに接続しました");
 });
 
+
 socket.on("message", (data) => {
     talk(data.character,data.text);
 });
