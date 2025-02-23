@@ -162,10 +162,21 @@ def choiceNum(data):
     num = data["choiceNum"]
     emit("startChoice",{"choiceNum":num},to=session["roomName"])
 
+# 選択肢へ参加
+@socketio.on("joinNazo")
+def joinChoice():
+    emit("joinCharacterNazo",{"character":session["character"]},to=session["roomName"])
+
 # 選択肢のスタート
 @socketio.on("choiceStart")
 def choiceStart():
-    emit("start")
+    emit("start",to=session["roomName"])
+
+
+# 謎スタート
+@socketio.on("memberOK")
+def nazoStart():
+    emit("nazoStart",to=session["roomName"])
 
 
 

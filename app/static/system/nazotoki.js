@@ -16,6 +16,7 @@ const notificateBox = document.getElementById("notificateBox");
 // セリフボタン
 const doAnswer = document.getElementById("doAnswer");
 const doChat = document.getElementById("doChat");
+const nazo = document.getElementById("nazo");
 
 // 回答番号
 let ansNum;
@@ -102,3 +103,23 @@ function hideChatBox(){
     doChat.innerText = "▶ チャットを開く";
     doChat.onclick = showChatBox;
 }
+
+
+// 操作ボタン表示
+function showControl(){
+    doAnswer.style.display = "block";
+    doChat.style.display = "block";
+    nazo.style.display = "block";
+    document.getElementById("message").style.display = "none";
+}
+
+// 操作ボタン非表示
+function hideControl(){
+    doAnswer.style.display = "none";
+    doChat.style.display = "none";
+    nazo.style.display = "none";
+    document.getElementById("message").style.display = "block";
+}
+
+// ボタンを初期非表示
+hideControl();

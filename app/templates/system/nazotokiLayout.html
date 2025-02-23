@@ -18,8 +18,11 @@
     
     <!--吹き出し-->
     <div id="speechBox">
+        <div id="message"></div>
         <div id="doAnswer" class="choiceBtn" onclick="showAnswerBtn();">▶ 回答ボタンを表示する</div>
         <div id="doChat" class="choiceBtn" onclick="showChatBox();">▶ チャットを開く</div>
+        <div id="nazo" class="choiceBtn" onclick="console.log('ツール起動');">▶ 謎解きヒントツール</div>
+        <div id="nextBtn">▼</div>
     </div>
 
     <!--選択肢-->
@@ -46,6 +49,12 @@
         </div>
         <button id="agreeBtn" class="Btn" onclick="hideResult();">閉じる</button>
     </div>
+
+    <!-- socket io js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+
+    <!--connectionNazo js-->
+    <script src="/static/system/connectionNazo.js"></script>
 
     <!--js gameAudio-->
     <script src="/static/system/gameAudio.js"></script>
