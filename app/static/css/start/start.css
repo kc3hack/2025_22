@@ -1,0 +1,73 @@
+/* ボタンエリア */
+.btnBoxLayout{
+    bottom: 10%;    /* 下からの位置 */
+    position: absolute; /* 絶対配置 */
+    /* 左右中央揃え */
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+/* ボタンプロパティー */
+.btnProperty{
+    width: 20vw;
+    letter-spacing: 2px;
+    font-size: 2.0em;
+}
+
+/* スタートボタン */
+.startBtn{
+    background-color: rgb(21, 96, 130);
+    color: white;
+}
+.startBtn:hover{
+    background-color: rgb(13, 76, 104);
+}
+
+/* 背景画像 */
+.backImg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/* 選択ボタン */
+
+#box{
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    background-color: rgba(0, 0, 0,0.6);
+    color: white;
+    padding: 0.5em;
+    font-size: 2vw;
+    width: 50vw;
+    height: 15vh;
+    text-align: center;
+    border: solid;
+}
+
+/* 選択肢関連 */
+/* 選択肢を選んだ時にホバー */
+.choiceBtn:hover{
+    background-color: rgba(255, 255, 255, 0.498);
+}
+
+.choiceBtn{
+    padding: 0.5vh;
+}
+.upDownCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    width: 50vw;
+}

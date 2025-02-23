@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>謎解きヒントシステム|QRコード</title>
+    <link rel="shortcut icon" href="/static/icon.png">
+    <style>
+        body {
+            padding: 10px;
+            background-color: rgb(246, 246, 246);
+        }
+        .box{
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            border: solid;
+            text-align: center;
+            height: 68vh;
+        }
+        .btn{
+            position:absolute;
+            top: 82%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            -webkit-transform: translate(-50%,-55%);
+            -ms-transform: translate(-50%,-55%);
+        }
+
+        #video{
+            position:absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            -webkit-transform: translate(-50%,-55%);
+            -ms-transform: translate(-50%,-55%);
+            height: 50vh;
+        }
+
+        #rect-canvas{
+            position:absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            -webkit-transform: translate(-50%,-55%);
+            -ms-transform: translate(-50%,-55%);
+            height: 50vh;
+        }
+
+        #camera-canvas{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            -webkit-transform: translate(-50%,-55%);
+            -ms-transform: translate(-50%,-55%);
+            height: 50vh;
+        }
+
+        #qr-msg{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            -webkit-transform: translate(-50%,-55%);
+            -ms-transform: translate(-50%,-55%);
+
+            background-color: rgba(12, 54, 108, 0.817);
+            color: white;
+            padding: 10px;
+
+            font: bold;
+
+            border: solid 2px white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>謎解きヒントシステム</h2>
+
+    <div class="box">
+        <h3>QRコードヒント</h3>
+        <div id="wrapper">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="camera-canvas"></canvas>
+            <canvas id="rect-canvas"></canvas>
+            <span id="qr-msg">QRコード: 見つかりません</span>
+        </div>
+        <button onclick="window.location.replace('/hinto');" class="btn">戻る</button>
+    </div>
+     
+    <script src="/static/js/qr/jsQR.js"></script>
+    <script src="/static/js/qr/script.js"></script>
+</body>
+</html>

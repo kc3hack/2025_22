@@ -1,0 +1,64 @@
+/* 背景画像 */
+.backImg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* キャラクター */
+.characterChose{
+    position: absolute;
+    /*height: 25vh;*/
+    height: 50vh;
+    top: 10%;
+}
+.characterChose:hover{
+    border: solid 3px white;
+}
+
+/* 葵 */
+.aoiImg{
+    right: 20%;
+}
+
+/* 翔太 */
+.shotaImg{
+    left: 20%;
+}
+
+
+
+
+
+/* 入力欄 */
+.entryBox{
+    position: absolute;
+    left: 10%;
+    top: 60%;
+
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+
+    width: 60vw;
+
+    font-size: xx-large;
+}
+
+/* 確定ボタン */
+.entryBtn{
+    position: absolute;
+    right: 10%;
+    top: 60%;
+
+    transform: translateY(-60%);
+    -webkit-transform: translateY(-60%);
+    -ms-transform: translateY(-60%);
+
+    width: 10vw;
+
+    font-size: x-large;
+    font-weight: bold;
+}

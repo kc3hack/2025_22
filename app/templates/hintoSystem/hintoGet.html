@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>謎解きヒントシステム|文字システム</title>
+    <link rel="shortcut icon" href="/static/icon.png">
+    <style>
+        body {
+            padding: 10px;
+            background-color: rgb(246, 246, 246);
+        }
+        .box{
+            margin: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            border: solid;
+            text-align: center;
+        }
+        .btn{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>謎解きヒントシステム</h2>
+
+    <div class="box">
+        <h3>文字ヒント</h3>
+        <form action="/hinto/post" method="post" enctype="multipart/form-data">
+            <p>文字を入力してください．</p>
+            <input type="text" name="input">
+            <button onclick="window.location.replace('/hinto');" class="btn">キャンセル</button><input type="submit" class="btn" value="送信">
+        </form>
+    </div>
+    
+</body>
+</html>

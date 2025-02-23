@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGSystem | {{ jsOriginal }}</title>
+    <link rel="shortcut icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/system/rpgGame.css">
+</head>
+<body>
+    
+    <!--背景-->
+    <img id="backImg">
+
+    <!--画像を表示-->
+    <img id="tempImage">
+    
+    <!--キャラクター-->
+    <img id="shota" class="character">
+    <img id="rojin" class="character">
+    <img id="jushoku" class="character">
+    <img id="uranaishi" class="character">
+    <img id="aoi" class="character">
+
+    <!--吹き出し-->
+    <div id="speechBox">
+        <div id="message"></div>
+        <div id="choice1" class="choiceBtn"></div>
+        <div id="choice2" class="choiceBtn"></div>
+        <div id="choice3" class="choiceBtn"></div>
+        <div id="nextBtn">▼</div>
+    </div>
+
+    <!-- socket io js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+
+    <!--connection js-->
+    <script src="/static/system/connection.js"></script>
+
+    <!--js gameAudio-->
+    <script src="/static/system/gameAudio.js"></script>
+
+    <!--js rpgGame-->
+    <script src="/static/system/rpgGame.js"></script>
+    
+    <!--js sys-->
+    <script src="/static/system/sys.js"></script>
+
+    <!--js rpgStorySys-->
+    <script src="/static/system/rpgStorySys.js"></script>
+
+    <!--js rpgLib-->
+    <script src="/static/system/rpgLib.js"></script>
+
+    <!--js original-->
+    <!--<script src="/static/js/main/{{ jsOriginal }}.js"></script>-->
+
+    <!--js rpgStory-->
+    <script src="/static/story/{{ jsOriginal }}.js"></script>
+
+    <!--js event-->
+    <script src="/static/system/event.js"></script>
+
+    <script>
+        // 初回の文字を表示
+        window.onload = setTimeout(nextStory,500);
+    </script>
+
+</body>
+</html>

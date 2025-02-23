@@ -1,0 +1,112 @@
+/* 選択ボタン */
+#answerBox{
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-30%);
+    -webkit-transform: translate(-50%,-30%);
+    -ms-transform: translate(-50%,-30%);
+    background-color: rgba(0, 0, 0,0.6);
+    color: white;
+    padding: 0.5em;
+    font-size: 2vw;
+    width: 50vw;
+    height: 40vh;
+    text-align: center;
+    border: solid;
+    display: none;
+}
+/* 選択肢を中央に */
+.answerCenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    width: 50vw;
+}
+
+/* メッセージの位置 */
+.mesBox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    width: 80vw;
+}
+
+/* noteタイトル */
+.title{
+    font-size: 3vw;
+}
+
+/* noteタイトル */
+.textMes{
+    font-size: 2vw;
+}
+
+/* ボタン */
+.Btn{
+
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+
+    width: 35vw;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+/* 通知 */
+#notificateBox{
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+
+    text-align: center;
+
+    width: 80vw;
+    height: 70vh;
+    border: 2px solid;
+
+    display: none;
+}
+
+
+/* 選択肢を選んだ時にホバー */
+.choiceBtn:hover{
+    background-color: rgba(255, 255, 255, 0.498);
+}
+
+/* チャットボックス */
+#chatBox{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    -webkit-transform: translate(-50%,-10%);
+    -ms-transform: translate(-50%,-10%);
+
+    width: 90vw;
+    height: 60vh;
+    border: solid white;
+
+    display: none;
+}

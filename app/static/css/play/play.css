@@ -1,0 +1,109 @@
+/* body */
+body{
+    overflow: hidden;
+    position: relative;
+}
+
+/* ゲーム画面 */
+#gameScreen{
+    border: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* 画面上に表示 */
+.screen{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* お知らせ */
+#note{ 
+    background-color:rgba(58, 116, 167, 0.411);
+}
+
+/* 警告 */
+.warning{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color:rgba(58, 116, 167, 0.411);
+    display: none;
+}
+
+
+
+/* ご注意 */
+.noteBox{
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding: 20px;
+
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+
+    text-align: center;
+
+    width: 80vw;
+    height: 70vh;
+    border: 2px solid;
+}
+
+/* ボタン */
+.Btn{
+
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+
+    width: 35vw;
+    font-size: x-large;
+    font-weight: bold;
+
+}
+
+/* noteタイトル */
+.title{
+    font-size: 3vw;
+}
+
+/* noteタイトル */
+.textMes{
+    font-size: 2vw;
+}
+
+/* noteタイトル（縦） */
+.titleBeside{
+    font-size: 5vw;
+}
+
+/* noteタイトル（縦） */
+.textMesBeside{
+    font-size: 3vw;
+}
+
+/* メッセージの位置 */
+.mesBox{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    width: 80vw;
+}
