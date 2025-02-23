@@ -64,3 +64,31 @@ function memberStatus(){
 }
 
 /*------------------------------------*/
+
+// キャラクター
+const notiNameSet = {"shota":"翔太","aoi":"葵","system":"システム通知"};
+
+// 通知を表示
+function showNotification(chatName,chatMessage){
+
+    const icon = document.getElementById("icon");
+    const notificationName = document.getElementById("notificationName");
+    const notificationMes = document.getElementById("notificationMes");
+
+    notificationName.innerText = notiNameSet[chatName];
+    notificationMes.innerText = chatMessage;
+    
+    icon.src = `/static/file/character/${chatName}.jpg`;
+
+    console.log(icon.src);
+
+    const toastLive = document.getElementById('liveToast');
+    const toast = new bootstrap.Toast(toastLive);
+    toast.show();
+
+}
+
+
+socket.on("message", (data) => {
+    showNotification(data.character,data.text);
+});
