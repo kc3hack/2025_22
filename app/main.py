@@ -164,10 +164,6 @@ def sessionInfo():
 
     return f"キャラクター:{characterName} ルーム名:{roomName}<br><a href='/sys/sideMode'>戻る</a>"
 
-# 現在のプレイヤー
-@app.route("/counter")
-def counter():
-    return f"翔太:{participantsDB.participantShota} 葵:{participantsDB.participantAoi}"
 
 #--------------------------------------------通信関係--------------------------------------------
 
