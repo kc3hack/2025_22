@@ -84,6 +84,11 @@ setTalk("aoi", "よし、じゃあ次は『天空のドドーン！』で行く�
 setTalk("shota", "もう何でもいいけど、少し落ち着こうな…", nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
+setPlayBgm("cryonicpulse.mp3",nowStoryName)
+setHideCharacter("shota",nowStoryName);
+setHideCharacter("aoi",nowStoryName);
+setShowTempImage("08.png",nowStoryName);
+setNarration("謎解きヒントシステムの画像認識システムを使いましょう!!", nowStoryName);
 
 
 /*-----------------------end-----------------------*/

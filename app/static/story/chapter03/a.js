@@ -108,6 +108,11 @@ setTalk("aoi", "忍者なら、画面の向こう側にいる人の存在にも�
 setTalk("shota", "まあ、忍者っぽいから、俺たちも任務みたいな感じで解読するか！", nowStoryName);
 // メインストーリー2
 nowStoryName = "mainStory2";
+setPlayBgm("cryonicpulse.mp3",nowStoryName)
+setHideCharacter("shota",nowStoryName);
+setHideCharacter("aoi",nowStoryName);
+setShowTempImage("07.png",nowStoryName);
+setNarration("謎解きヒントシステムのQR読み取りシステムを使いましょう!!", nowStoryName);
 
 
 /*-----------------------end-----------------------*/

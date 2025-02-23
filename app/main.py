@@ -216,15 +216,14 @@ def nazoStart():
     emit("nazoStart",to=session["roomName"])
 
 
-'''
 
 if __name__ == '__main__':
-    serve(app,host='0.0.0.0',port=500,threads=10)    
+    serve(app,host='0.0.0.0',port=8080)
 
-'''
 
 #-----------------------------------------------------------------------------------------------
-    
+'''
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run(host="0.0.0.0",port=5000)
+'''
