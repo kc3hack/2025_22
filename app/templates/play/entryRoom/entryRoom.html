@@ -7,6 +7,36 @@
     <link rel="shortcut icon" href="/static/icon.png">
     <link rel="stylesheet" href="/static/system/rpgGame.css">
     <link rel="stylesheet" href="/static/css/choseCharacter/choseCharacter.css">
+    <style>
+        .entryBox{
+            position: absolute;
+            left: 10%;
+            top: 60%;
+
+            transform: translateY(-60%);
+            -webkit-transform: translateY(-60%);
+            -ms-transform: translateY(-60%);
+
+            width: 60vw;
+
+            font-size: xx-large;
+        }
+
+        .entryBtn{
+            position: absolute;
+            right: 10%;
+            top: 60%;
+
+            transform: translateY(-60%);
+            -webkit-transform: translateY(-60%);
+            -ms-transform: translateY(-60%);
+
+            width: 10vw;
+
+            font-size: x-large;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -20,7 +50,7 @@
     <div id="speechBox">
         <div id="message">ルーム名を入力してください．</div>
         <form action="/play/setRoom" method="post">
-            <input type="text" name="roomName"><button>送信</button>
+            <input type="text" name="team" class="entryBox"><button class="entryBtn">確定</button>
         </form>
     </div>
 
