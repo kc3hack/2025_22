@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 import base64
 import numpy
-import cv2
+#import cv2
 #import hintoOcr
 import participantsDB
 
@@ -219,7 +219,7 @@ def nazoStart():
 
 
 if __name__ == '__main__':
-    serve(app,host='0.0.0.0',port=8080)
+    serve(app,host='0.0.0.0',port=5000,threads=10)
 
 
 #-----------------------------------------------------------------------------------------------
