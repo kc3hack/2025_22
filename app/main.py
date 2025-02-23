@@ -1,11 +1,17 @@
 from flask import Flask, request, render_template,redirect,url_for,session,jsonify
+from flask_socketio import SocketIO, join_room, leave_room, send, emit
 from waitress import serve
 from dotenv import load_dotenv
 import os
+import base64
+import numpy
+import cv2
 
 app = Flask(__name__)
 
+socketio = SocketIO(app, cors_allowed_origins="*")
 
+# 環境変数の利用
 load_dotenv()
 
 app.secret_key = os.getenv('SECRETKEY')
@@ -49,7 +55,6 @@ def setROom():
     elif(session["character"]=="aoi"):
         return redirect("/play/chapter01/aa")
 
-
 # ヒントシステム
 @app.route("/hinto")
 def showHint():
@@ -70,9 +75,6 @@ def PlayChapter03QRSystem():
 def PlayChapter04OCRSystem():
     return render_template("/hintoSystem/OCR.html")
 
-import base64
-import numpy
-import cv2
 # POSTデータを取得（OCR）
 @app.route("/hinto/sendPhoto",methods=['POST'])
 def sendPhoto():
@@ -134,27 +136,13 @@ def getCharacter():
 
 #--------------------------------------------通信関係--------------------------------------------
 
-from flask_socketio import SocketIO, join_room, leave_room, send, emit
-
-socketio = SocketIO(app, cors_allowed_origins="*")
-
 charaName = {"shota":"翔太","aoi":"葵"}
 
+# メインRPG-------------------
 # クライアントが参加した時の処理
 @socketio.on("join")
 def handle_join():
     join_room(session["roomName"])
-    
-@socketio.on("chatJoin")
-def chatJoin():
-    join_room(session["roomName"])
-    emit("message", {"character": "system", "text": f"{charaName[session["character"]]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
-
-# クライアントからチャットメッセージを受信した時の処理
-@socketio.on("send_chat")
-def handle_send_chat(data):
-    text = data["text"]
-    emit("message", {"character": session["character"], "text": text}, to=session["roomName"]) # emit に room (toパラメータ) を使用
 
 # 選択肢へ参加
 @socketio.on("joinChoice")
@@ -167,28 +155,34 @@ def choiceNum(data):
     num = data["choiceNum"]
     emit("startChoice",{"choiceNum":num},to=session["roomName"])
 
-# 謎解きへの参加
+# 選択肢のスタート
+@socketio.on("choiceStart")
+def choiceStart():
+    emit("start",to=session["roomName"])
+    
+# チャット-------------------
+@socketio.on("chatJoin")
+def chatJoin():
+    join_room(session["roomName"])
+    emit("message", {"character": "system", "text": f"{charaName[session["character"]]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
+
+# クライアントからチャットメッセージを受信した時の処理
+@socketio.on("send_chat")
+def handle_send_chat(data):
+    text = data["text"]
+    emit("message", {"character": session["character"], "text": text}, to=session["roomName"]) # emit に room (toパラメータ) を使用
+
+# 謎解き-------------------
+# 謎解きシステムへの参加
 @socketio.on("joinNazo")
 def joinChoice():
     join_room(session["roomName"])
     emit("joinCharacterNazo",{"character":session["character"]},to=session["roomName"])
 
-# 選択肢のスタート
-@socketio.on("choiceStart")
-def choiceStart():
-    emit("start",to=session["roomName"])
-
-
 # 謎スタート
 @socketio.on("memberOK")
 def nazoStart():
     emit("nazoStart",to=session["roomName"])
-
-
-
-
-
-
 
 
 '''
@@ -198,11 +192,8 @@ if __name__ == '__main__':
 
 '''
 
-
 #-----------------------------------------------------------------------------------------------
     
-
-
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run(host="0.0.0.0",port=5000)

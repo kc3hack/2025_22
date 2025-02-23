@@ -256,3 +256,6 @@ setTalk("shota","ただいま！！",nowStoryName);
 // 次のページ指定
 setNextPage("/play/nazotokiSample");
 ```
+
+### デバッグ環境
+http://localhost:5000/sys/sideMode

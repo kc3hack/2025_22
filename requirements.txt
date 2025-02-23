@@ -3,3 +3,4 @@ waitress==3.0.2
 Flask-SocketIO==5.5.1
 numpy==2.2.3
 python-dotenv==1.0.1
+opencv-python==4.11.0.86 
