@@ -147,6 +147,18 @@ def getCharacter():
         return jsonify({"character":session["character"]})
     else:
         return jsonify({"character":"none"})
+    
+# 登録データの確認
+@app.route("/session/info")
+def sessionInfo():
+    characterName = "情報なし"
+    roomName = "情報なし"
+    if "character" in session:
+        characterName = session["character"]
+    if "roomName" in session:
+        roomName = session["roomName"]
+
+    return f"キャラクター:{characterName} ルーム名:{roomName}<br><a href='/sys/sideMode'>戻る</a>"
 
 #--------------------------------------------通信関係--------------------------------------------
 
