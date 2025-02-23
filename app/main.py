@@ -4,7 +4,6 @@ from waitress import serve
 from dotenv import load_dotenv
 import os
 import base64
-import numpy
 import participantsDB
 
 # キーワード
@@ -226,12 +225,11 @@ def joinChoice():
 def nazoStart():
     emit("nazoStart",to=session["roomName"])
 
-'''
 if __name__ == '__main__':
     serve(app,host='0.0.0.0',port=5000,threads=10)
-'''
- 
 #-----------------------------------------------------------------------------------------------
+'''
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run(host="0.0.0.0",port=5000)
+'''
