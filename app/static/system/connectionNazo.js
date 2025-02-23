@@ -34,14 +34,14 @@ socket.on("connect", () => {
 });
 
 
-let NazomemberNum = 0;
+let NazoMemberNum = 0;
 // 参加者が来たことを記録
 socket.on("joinCharacterNazo", (data) => {
-    NazomemberNum++;
-    if(NazomemberNum==2){
+    NazoMemberNum++;
+    if(NazoMemberNum==2){
         // スタートする
         socket.emit("memberOK");
-    }else{
+    }else if(NazoMemberNum<2){
         showOnlyMes(`${getMyCharacter()=="shota"?"葵":"翔太"}を待っています...`);
     }
 });
