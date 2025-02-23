@@ -60,7 +60,7 @@ def entryRoom(character):
 
 # ルームの登録
 @app.route("/play/setRoom",methods=["POST"])
-def setROom():
+def setRoom():
     roomName = request.form["roomName"]
     session["roomName"] = roomName
     if(session["character"]=="shota"):
