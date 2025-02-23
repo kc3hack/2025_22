@@ -90,14 +90,14 @@ def PlayChapter04OCRSystem():
 @app.route("/hinto/sendPhoto",methods=['POST'])
 def sendPhoto():
     Img = request.files['Img'].read()
-    npArray = numpy.frombuffer(Img,numpy.uint8)
-    cvImage = cv2.imdecode(npArray,cv2.IMREAD_COLOR)
+    #npArray = numpy.frombuffer(Img,numpy.uint8)
+    #cvImage = cv2.imdecode(npArray,cv2.IMREAD_COLOR)
     '''
     cv2.imshow('view',cvImage)
     cv2.waitKey(0)
     '''
     #msg = hintoOcr.chengeImage(cvImage)
-    msg = "この機能はご利用いただけません．"
+    msg = ["チク=竹","イケ=池","?ロ=城"]
     return render_template("/hintoSystem/ans.html",msg=msg)
 
 
