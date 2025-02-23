@@ -7,10 +7,10 @@ import base64
 import numpy
 import participantsDB
 
-
 # キーワード
 key = ["チク","デン","?ロ"]
 ans = ["竹","池","城"]
+
 # 一致の確認
 def check(text):
     for i in range(len(key)):

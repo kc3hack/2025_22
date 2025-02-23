@@ -88,7 +88,7 @@ setPlayBgm("cryonicpulse.mp3",nowStoryName)
 setHideCharacter("shota",nowStoryName);
 setHideCharacter("aoi",nowStoryName);
 setShowTempImage("08.png",nowStoryName);
-setNarration("謎解きヒントシステムの画像認識システムを使いましょう!!", nowStoryName);
+setNarration("謎解きヒントシステムの文字ヒントシステムを使いましょう!!", nowStoryName);
 
 
 /*-----------------------end-----------------------*/

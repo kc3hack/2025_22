@@ -36,10 +36,6 @@ e1q23082
 
 - jsQR
 https://github.com/cozmo/jsQR
-- opencv-python
-https://pypi.org/project/opencv-python/
-- easyocr
-https://pypi.org/project/easyocr/
 - Docker Engine
 https://docs.docker.com/engine/
 
@@ -51,8 +47,6 @@ https://nginx.org/en/
 https://msiz07-flask-docs-ja.readthedocs.io/ja/latest/
 - python-dotenv
 https://pypi.org/project/python-dotenv/#data
-- numpy
-https://pypi.org/project/numpy/
 
 
 このシステムは，MITライセンスで配布されている制作物を用いて動作しています．
