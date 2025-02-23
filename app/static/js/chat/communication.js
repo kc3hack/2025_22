@@ -10,7 +10,7 @@ socket.on("message", (data) => {
 });
 
 function joinRoom() {
-    socket.emit("join");
+    socket.emit("chatJoin");
 }
 
 function sendChat(text) {

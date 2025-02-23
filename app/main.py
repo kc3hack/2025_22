@@ -144,6 +144,10 @@ charaName = {"shota":"翔太","aoi":"葵"}
 @socketio.on("join")
 def handle_join():
     join_room(session["roomName"])
+    
+@socketio.on("chatJoin")
+def chatJoin():
+    join_room(session["roomName"])
     emit("message", {"character": "system", "text": f"{charaName[session["character"]]}がルーム{session["roomName"]} に参加しました"}, to=session["roomName"])
 
 # クライアントからチャットメッセージを受信した時の処理
