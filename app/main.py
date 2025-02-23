@@ -5,9 +5,18 @@ from dotenv import load_dotenv
 import os
 import base64
 import numpy
-#import cv2
-#import hintoOcr
 import participantsDB
+
+
+# キーワード
+key = ["チク","デン","?ロ"]
+ans = ["竹","池","城"]
+# 一致の確認
+def check(text):
+    for i in range(len(key)):
+        if(key[i]==text):
+            return ans[i]
+    return None
 
 app = Flask(__name__)
 
@@ -81,13 +90,13 @@ def showQR():
 def PlayChapter03QRSystem():
     return render_template("/hintoSystem/QR.html")
 
-# OCRシステム
-@app.route("/hinto/OCRSystem")
-def PlayChapter04OCRSystem():
-    return render_template("/hintoSystem/OCR.html")
+# 文字ヒントゲットシステム
+@app.route("/hinto/mojiSystem")
+def PlayChapter04HintoGet():
+    return render_template("/hintoSystem/hintoGet.html")
 
-# POSTデータを取得（OCR）
-@app.route("/hinto/sendPhoto",methods=['POST'])
+# POSTデータを取得
+@app.route("/hinto/post",methods=['POST'])
 def sendPhoto():
     #Img = request.files['Img'].read()
     #npArray = numpy.frombuffer(Img,numpy.uint8)
@@ -96,8 +105,9 @@ def sendPhoto():
     cv2.imshow('view',cvImage)
     cv2.waitKey(0)
     '''
+    dt = request.form["input"]
     #msg = hintoOcr.chengeImage(cvImage)
-    msg = ["チク=竹","イケ=池","?ロ=城"]
+    msg = check(dt)
     return render_template("/hintoSystem/ans.html",msg=msg)
 
 
@@ -216,15 +226,12 @@ def joinChoice():
 def nazoStart():
     emit("nazoStart",to=session["roomName"])
 
-
-
+'''
 if __name__ == '__main__':
     serve(app,host='0.0.0.0',port=5000,threads=10)
-
-
-#-----------------------------------------------------------------------------------------------
 '''
+ 
+#-----------------------------------------------------------------------------------------------
 if __name__ == '__main__':
     app.debug = True    #デバッグモードを利用する
     app.run(host="0.0.0.0",port=5000)
-'''
