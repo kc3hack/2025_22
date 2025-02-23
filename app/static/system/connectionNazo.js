@@ -90,5 +90,7 @@ function showNotification(chatName,chatMessage){
 
 
 socket.on("message", (data) => {
-    showNotification(data.character,data.text);
+    if(data.character!=myCharacter){
+        showNotification(data.character,data.text);
+    }
 });
