@@ -89,7 +89,7 @@ def PlayChapter04OCRSystem():
 # POSTデータを取得（OCR）
 @app.route("/hinto/sendPhoto",methods=['POST'])
 def sendPhoto():
-    Img = request.files['Img'].read()
+    #Img = request.files['Img'].read()
     #npArray = numpy.frombuffer(Img,numpy.uint8)
     #cvImage = cv2.imdecode(npArray,cv2.IMREAD_COLOR)
     '''
