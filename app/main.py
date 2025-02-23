@@ -7,7 +7,7 @@ import base64
 import numpy
 import cv2
 import hintoOcr
-
+import participantsDB
 
 app = Flask(__name__)
 
@@ -45,18 +45,27 @@ def entryRoom(character):
         session["character"] = "shota"
     elif(character=="aoi"):
         session["character"] = "aoi"
-    return render_template("play/entryRoom/entryRoom.html")
+    return render_template("play/entryRoom/entryRoom.html",mes="")
 
 # ルームの登録
 @app.route("/play/setRoom",methods=["POST"])
 def setRoom():
     roomName = request.form["roomName"]
-    session["roomName"] = roomName
     if(session["character"]=="shota"):
-        return redirect("/play/chapter01/as")
+        if(participantsDB.setShota(roomName)):
+            session["roomName"] = roomName
+            return redirect("/play/chapter01/as")
+        else:
+            return render_template("play/entryRoom/entryRoom.html",mes="すでに登録されています．")
     elif(session["character"]=="aoi"):
-        return redirect("/play/chapter01/aa")
-
+        if(participantsDB.setAoi(roomName)):
+            session["roomName"] = roomName
+            return redirect("/play/chapter01/aa")
+        else:
+            return render_template("play/entryRoom/entryRoom.html",mes="すでに登録されています．")
+    else:
+        return "エラー"
+        
 # ヒントシステム
 @app.route("/hinto")
 def showHint():
@@ -94,6 +103,12 @@ def sendPhoto():
 # エンドロール
 @app.route("/play/chapterEnd")
 def PlayChapterEnd():
+    if("character" in session):
+        print("削除")
+        if(session["character"]=="shota"):
+            participantsDB.outShota(session["roomName"])
+        elif(session["character"]=="aoi"):
+            participantsDB.outAoi(session["roomName"])
     session.clear() # セッションを削除
     return render_template("/play/end/end.html")
 
@@ -148,6 +163,11 @@ def sessionInfo():
         roomName = session["roomName"]
 
     return f"キャラクター:{characterName} ルーム名:{roomName}<br><a href='/sys/sideMode'>戻る</a>"
+
+# 現在のプレイヤー
+@app.route("/counter")
+def counter():
+    return f"翔太:{participantsDB.participantShota} 葵:{participantsDB.participantAoi}"
 
 #--------------------------------------------通信関係--------------------------------------------
 
