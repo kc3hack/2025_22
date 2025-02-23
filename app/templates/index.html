@@ -5,11 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>「幻宝伝説 関西に眠る記憶」</title>
     <link rel="shortcut icon" href="/static/icon.png">
+    <style>
+        body{
+            background-color: antiquewhite;
+            padding: 10px;
+        }
+        .screen{
+            padding: 5px;
+            width: 50vw;
+            align-items: center;
+            border: 5px solid white;
+        }
+        .center{
+            text-align: center;
+            border: 5px solid white;
+        }
+        video{
+            width: 50vw;
+            border: 5px solid white;
+        }
+
+        .box{
+            background-color: rgb(21, 185, 188);
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+            font-weight: bold;
+            font-size: 2vw;
+            color: white;
+            border: 5px solid white;
+            
+        }
+        .icon{
+            width: 25vw;
+        }
+        image{
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>「幻宝伝説 関西に眠る記憶」</h1>
-    <a href="/play" target="_blank">ゲーム</a>
-    <a href="/hinto">ヒントシステム</a>
-    <p>※テスト用のページです．</p>
+    <div class="box">
+        「幻宝伝説 関西に眠る記憶」公式サイト
+    </div>
+    <div class="center">
+        <img src="/static/file/start/top.png" class="screen">
+        <br>
+        <a href="/play">ゲームをプレイする</a>
+        <br>
+        <video controls aria-controls="nodownload">
+            <source src="/static/file/introduceMovie.mp4" type="video/mp4">
+        </video>
+        <img src="/static/file/introduce.jpg" class="screen">
+    </div>
+    <br>
+    <div class="center">
+        <img src="/static/file/momiji.png" class="icon">
+    </div>
+    <br>
+    <div class="center">
+        <a >制作：モミジ</a>    
+    </div>
 </body>
 </html>
