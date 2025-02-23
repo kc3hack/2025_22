@@ -26,30 +26,33 @@ nowStoryName = "choice3Story";
 // メインストーリー2
 nowStoryName = "mainStory2";
 setPlayBgm("cryonicpulse.mp3",nowStoryName);   // BGMを設定
-setBackImage("sora.jpg",nowStoryName);  // 画像を設定
-setNarration("このゲームは2人でプレイするRPGゲームです．",nowStoryName);  // ナレーション
-setNarration("まず，どちらがどのプレイヤーでプレイするか決めてください．",nowStoryName);
+setBackImage("setumei.png",nowStoryName);
+setNarration("これから、このゲームの説明をします。",nowStoryName); 
+setNarration("このゲームは2人でプレイするRPGゲームです。",nowStoryName);  // ナレーション
+setNarration("まず、どちらがどのプレイヤーでプレイするか決めてください。",nowStoryName);
 setShowTempImage("01.png",nowStoryName);
 setTalk("shota","翔太",nowStoryName);
 setHideCharacter("shota",nowStoryName);
 setTalk("aoi","葵",nowStoryName);
 setHideCharacter("aoi",nowStoryName);
-setNarration("この二人から選んでください．",nowStoryName);
-setNarration("続いて，プレイするチーム名を決めてください．",nowStoryName);
+setNarration("この二人から選んでください。",nowStoryName);
 setShowTempImage("02.png",nowStoryName);
-setNarration("決まりましたか？",nowStoryName);
-setNarration("続いては，謎解きコーナーの説明をします．",nowStoryName);
+setNarration("続いて、プレイするチーム名を決めてください。",nowStoryName);
+setHideTempImage(nowStoryName);
+setNarration("続いては、謎解きコーナーの説明をします。",nowStoryName);
 setShowTempImage("03.png",nowStoryName);
-setNarration("謎解きコーナーではこのような画面に切り替わります．",nowStoryName);
+setNarration("謎解きコーナーではこのような画面に切り替わります。",nowStoryName);
 setShowTempImage("05.png",nowStoryName);
-setNarration("チャット欄を使って，二人で謎を解いていきましょう．",nowStoryName);
+setNarration("チャット欄を使って、二人で謎を解いていきましょう。",nowStoryName);
 setShowTempImage("04.png",nowStoryName);
-setNarration("「回答欄ボタンを表示する」から，回答をしてください．",nowStoryName);
-setNarration("必ず2人で話し合って，答えをチャットで送りあって決めてから，2人とも回答をしてください．",nowStoryName);
+setNarration("「回答欄ボタンを表示する」から、回答をしてください。",nowStoryName);
+setNarration("必ず2人でチャットで話し合いを行い答えを決めたうえで、2人とも回答を行ってください。",nowStoryName);
 setShowTempImage("04.png",nowStoryName);
-setNarration("指定された箇所では，謎解きヒントツールも利用してみましょう．",nowStoryName);
-setNarration("それでは，ゲームをお楽しみください！！",nowStoryName);
-
+setNarration("指定された箇所では、謎解きヒントツールも利用してみましょう。",nowStoryName);
+setNarration("謎解きヒントツールは別ウインドウで動作します．",nowStoryName);
+setNarration("ゲームに戻ってくるときは、ヒントツールのウインドウを閉じてください。",nowStoryName);
+setHideTempImage(nowStoryName);
+setNarration("それでは、ゲームをお楽しみください！！",nowStoryName);
 
 /*-----------------------end-----------------------*/
 
