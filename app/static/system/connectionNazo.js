@@ -86,6 +86,9 @@ function showNotification(chatName,chatMessage){
     const toast = new bootstrap.Toast(toastLive);
     toast.show();
 
+    const notificationAudio = new Audio("/static/se/notification.mp3");
+    notificationAudio.play();
+
 }
 
 
