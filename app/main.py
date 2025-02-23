@@ -6,7 +6,7 @@ import os
 import base64
 import numpy
 import cv2
-import hintoOcr
+#import hintoOcr
 import participantsDB
 
 app = Flask(__name__)
@@ -96,7 +96,8 @@ def sendPhoto():
     cv2.imshow('view',cvImage)
     cv2.waitKey(0)
     '''
-    msg = hintoOcr.chengeImage(cvImage)
+    #msg = hintoOcr.chengeImage(cvImage)
+    msg = "この機能はご利用いただけません．"
     return render_template("/hintoSystem/ans.html",msg=msg)
 
 
