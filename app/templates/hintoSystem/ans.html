@@ -29,7 +29,9 @@
 
     <div class="box">
         <h3>画像ヒント - 結果</h3>
-        <p>{{ msg }}</p>
+        {% for dt in msg %}
+            <p>{{ dt }}</p>
+        {% endfor %}
         <button onclick="window.location.replace('/hinto/OCRSystem');" class="btn">戻る</button>
     </div>
     

@@ -6,19 +6,8 @@ import os
 import base64
 import numpy
 import cv2
+import hintoOcr
 
-
-import easyocr
-
-reader = easyocr.Reader(['ja'])
-
-# 画像にtextが含まれているか確認する
-def checkImgData(img,text):
-    result = reader.readtext(img)
-    for data in result:
-        if data[1] == text:
-            return True
-    return False
 
 app = Flask(__name__)
 
@@ -98,7 +87,7 @@ def sendPhoto():
     cv2.imshow('view',cvImage)
     cv2.waitKey(0)
     '''
-    msg = checkImgData(cvImage,"日本語")
+    msg = hintoOcr.chengeImage(cvImage)
     return render_template("/hintoSystem/ans.html",msg=msg)
 
 
