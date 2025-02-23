@@ -12,7 +12,7 @@ setNarration("翔太と葵のとある１日．．．",nowStoryName);
 
 
 // 選択肢を設定
-setChoice(1,"あなたの行動を選択してください．","プログラムの勉強をする","Java演習をする","C演習をする");
+setChoice(1,"あなたの行動を選択してください．","プログラムの勉強をする","Java演習をする","C演習をする","shota");
 
 // 選択肢1
 nowStoryName = "choice1Story"

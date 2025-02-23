@@ -13,7 +13,7 @@ setShowCharacter("aoi",nowStoryName);
 setShowCharacter("shota",nowStoryName);
 setTalk("shota", "最初の手がかりは、この古文書に書かれた言葉の通り、何かが『四つに分かれし』らしい。まずは、歴史のありそうな神社に行ってみるか？", nowStoryName);
 // 選択肢を設定
-setChoice(1, "あなたの行動を選択してください．", "神社に行く", "町の古い商店街を調べる", "街角の占い師に聞いてみる");
+setChoice(1, "あなたの行動を選択してください．", "神社に行く", "町の古い商店街を調べる", "街角の占い師に聞いてみる","aoi");
 
 // 選択肢1
 nowStoryName = "choice1Story";

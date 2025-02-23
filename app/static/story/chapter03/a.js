@@ -56,7 +56,7 @@ setTalk("aoi", "ちょっと見てみますね…", nowStoryName);
 setShowTempImage("nazo03.png",nowStoryName);
 
 // 選択肢を設定
-setChoice(3, "あなたの行動を選択して下さい", "暗記パンを取り出す", "炎上しそうな発言をツイートする", "QRコードを読み込む");
+setChoice(3, "あなたの行動を選択して下さい", "暗記パンを取り出す", "炎上しそうな発言をツイートする", "QRコードを読み込む","aoi");
 
 // 選択肢1
 nowStoryName = "choice1Story";

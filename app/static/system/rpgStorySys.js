@@ -91,7 +91,12 @@ function nextStory(){
         // 選択肢
         // 正しい選択肢
         setNextChoice(okNum);
-        showChoice(choiceMes,choiceText[0],choiceText[1],choiceText[2]);
+        if(memberStatus()){
+            showChoice(choiceMes,choiceText[0],choiceText[1],choiceText[2]);
+        }else{
+            showOnlyMes(`${getMyCharacter()=="shota"?"葵":"翔太"}を待っています...`);
+            joinChoice();
+        }
     }else if(getStoryStatus("mainStory2")){
         // ストーリー2
         const nowStoryMain2 = getStory("mainStory2");

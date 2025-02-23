@@ -36,5 +36,5 @@ function setHideTempImage(storyId){};
 // 次のページを設定
 function setNextPage(url){};
 
-// 選択肢を設定（正しい選択肢，テキスト,選択肢1,選択肢2,選択肢3）
-function setChoice(ans,text,choice1,choice2,choice3){};
+// 選択肢をセット(選択番号，メッセージ，選択肢1,選択肢2,選択肢3,回答者)
+function setChoice(choiceNum,mes,choice01,choice02,choice03,ansCharacter){};

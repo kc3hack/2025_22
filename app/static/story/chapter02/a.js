@@ -38,7 +38,7 @@ setTalk("shota", "うーん、でも竜に井戸、滝行……何か、古代�
 setTalk("aoi", "その通りですね。では、この絵からどう読み解いていくべきかしら．．．", nowStoryName);
 setHideTempImage(nowStoryName);
 // 選択肢を設定
-setChoice(2, "あなたの行動を選択して下さい", "魔法陣を書いて儀式をしてみる", "漢字で書いてみる", "Siriに聞いてみる");
+setChoice(2, "あなたの行動を選択して下さい", "魔法陣を書いて儀式をしてみる", "漢字で書いてみる", "Siriに聞いてみる","shota");
 
 // 選択肢1
 nowStoryName = "choice1Story";

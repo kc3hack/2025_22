@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template,redirect,url_for,session
+from flask import Flask, request, render_template,redirect,url_for,session,jsonify
 from waitress import serve
 from dotenv import load_dotenv
 import os
@@ -118,10 +118,19 @@ def showNazo(chapter,code):
 def sideMode():
     return render_template("/sideMode/sideMode.html")
 
+
 # ページが存在しない（404）
 @app.errorhandler(404)
 def pageNotFound(e):
     return render_template("error.html")
+
+# sessionAPI
+@app.route("/sessionAPI/character")
+def getCharacter():
+    if "character" in session:
+        return jsonify({"character":session["character"]})
+    else:
+        return jsonify({"character":"none"})
 
 #--------------------------------------------通信関係--------------------------------------------
 
@@ -142,7 +151,21 @@ def handle_send_chat(data):
     text = data["text"]
     emit("message", {"character": session["character"], "text": text}, to=session["roomName"]) # emit に room (toパラメータ) を使用
 
+# 選択肢へ参加
+@socketio.on("joinChoice")
+def joinChoice():
+    emit("joinCharacter",{"character":session["character"]},to=session["roomName"])
 
+# 選択肢を送信
+@socketio.on("choiseNum")
+def choiceNum(data):
+    num = data["choiceNum"]
+    emit("startChoice",{"choiceNum":num},to=session["roomName"])
+
+# 選択肢のスタート
+@socketio.on("choiceStart")
+def choiceStart():
+    emit("start")
 
 
 

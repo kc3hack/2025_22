@@ -347,29 +347,33 @@ function setNextChoice(num){
 // 選択肢1が選択された
 function next01(){
     selectNum = 1;
-    next();
+    sendChoise(selectNum);
 }
 
 // 選択肢2が選択された
 function next02(){
     selectNum = 2;
-    next();
+    sendChoise(selectNum);
 }
 
 // 選択肢3が選択された
 function next03(){
     selectNum = 3
-    next();
+    sendChoise(selectNum);
 }
 
-// 選択肢をセット(選択番号，メッセージ，選択肢1,選択肢2,選択肢3)
-function setChoice(choiceNum,mes,choice01,choice02,choice03){
+// 回答者
+let choiseCharacter;
+
+// 選択肢をセット(選択番号，メッセージ，選択肢1,選択肢2,選択肢3,回答者)
+function setChoice(choiceNum,mes,choice01,choice02,choice03,ansCharacter){
     okNum = choiceNum;
     choiceMes = mes;
     choiceText[0] = choice01;
     choiceText[1] = choice02;
     choiceText[2] = choice03;
     choiceStatus = true;
+    choiseCharacter = ansCharacter;
 }
 
 
@@ -383,4 +387,16 @@ function showTempImage(fileName){
 // 追加画像非表示
 function hideTempImage(){
     tempImage.style.display = 'none';
+}
+
+// 回答者を取得
+function getAnswerCharacter(){
+    return choiseCharacter;
+}
+
+// メッセージのみを表示（次へボタンを非表示）
+function showOnlyMes(mes){
+    hideBtn();
+    message.innerText = mes;
+    message.style.display = 'block';
 }

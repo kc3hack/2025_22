@@ -45,7 +45,7 @@ setTalk("aoi", "これ、見たことない刻印…。これも手がかりな�
 setTalk("shota", "もしかしたら、この刻印が『四つに分かれし』に関連しているのかもしれない。もっと調べてみよう。", nowStoryName);
 setHideTempImage(nowStoryName);
 // 選択肢を設定
-setChoice(1, "あなたの行動を選択して下さい", "刻印を詳しく調べる", "神社の住職に聞いてみる", "刻印の解読を試みる");
+setChoice(1, "あなたの行動を選択して下さい", "刻印を詳しく調べる", "神社の住職に聞いてみる", "刻印の解読を試みる","shota");
 
 // 選択肢1
 nowStoryName = "choice1Story";
